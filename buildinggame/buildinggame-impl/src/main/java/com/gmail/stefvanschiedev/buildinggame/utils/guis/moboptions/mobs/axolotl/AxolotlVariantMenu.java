@@ -25,14 +25,14 @@ class AxolotlVariantMenu extends ChestGui {
      * @since 10.0.0
      */
     AxolotlVariantMenu(@NotNull Axolotl axolotl) {
-        super(1, ChatColor.GREEN + "Axolotl variant");
+        super(1, ChatColor.GREEN + "美西螈变种");
 
         var pane = new OutlinePane(5, 1);
 
         //lucy
         var lucy = new ItemStack(Material.PINK_WOOL);
         ItemMeta lucyMeta = lucy.getItemMeta();
-        lucyMeta.setDisplayName(ChatColor.GREEN + "Lucy");
+        lucyMeta.setDisplayName(ChatColor.GREEN + "露西");
         lucy.setItemMeta(lucyMeta);
 
         pane.addItem(new GuiItem(lucy, event -> {
@@ -44,7 +44,7 @@ class AxolotlVariantMenu extends ChestGui {
         //wild
         var wild = new ItemStack(Material.BROWN_WOOL);
         ItemMeta wildMeta = wild.getItemMeta();
-        wildMeta.setDisplayName(ChatColor.GREEN + "Wild");
+        wildMeta.setDisplayName(ChatColor.GREEN + "野生");
         wild.setItemMeta(wildMeta);
 
         pane.addItem(new GuiItem(wild, event -> {
@@ -56,7 +56,7 @@ class AxolotlVariantMenu extends ChestGui {
         //gold
         var gold = new ItemStack(Material.YELLOW_WOOL);
         ItemMeta goldMeta = gold.getItemMeta();
-        goldMeta.setDisplayName(ChatColor.GREEN + "Gold");
+        goldMeta.setDisplayName(ChatColor.GREEN + "金色");
         gold.setItemMeta(goldMeta);
 
         pane.addItem(new GuiItem(gold, event -> {
@@ -68,7 +68,7 @@ class AxolotlVariantMenu extends ChestGui {
         //cyan
         var cyan = new ItemStack(Material.CYAN_WOOL);
         ItemMeta cyanMeta = cyan.getItemMeta();
-        cyanMeta.setDisplayName(ChatColor.GREEN + "Cyan");
+        cyanMeta.setDisplayName(ChatColor.GREEN + "青色");
         cyan.setItemMeta(cyanMeta);
 
         pane.addItem(new GuiItem(cyan, event -> {
@@ -80,7 +80,7 @@ class AxolotlVariantMenu extends ChestGui {
         //blue
         var blue = new ItemStack(Material.BLUE_WOOL);
         ItemMeta blueMeta = blue.getItemMeta();
-        blueMeta.setDisplayName(ChatColor.GREEN + "Blue");
+        blueMeta.setDisplayName(ChatColor.GREEN + "蓝色");
         blue.setItemMeta(blueMeta);
 
         pane.addItem(new GuiItem(blue, event -> {

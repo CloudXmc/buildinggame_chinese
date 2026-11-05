@@ -349,29 +349,29 @@ public class Arena implements TransitionSystem {
 		//check if everything is set up
 		if (!isSetup()) {
 			MessageManager.getInstance().send(player, ChatColor.RED +
-                    "Your arena isn't setup right, you still need to do this:");
+                    "你的竞技场尚未正确设置，还需要完成以下事项：");
 
 			if (lobby == null)
-				MessageManager.getInstance().send(player, ChatColor.RED + " - The lobby of arena " + getName()
-                        + "(/bg setlobby " + getName() + ')');
+				MessageManager.getInstance().send(player, ChatColor.RED + " - 竞技场 " + getName() + " 的大厅尚未设置"
+                        + "（/bg setlobby " + getName() + "）");
 
 			if (MainSpawnManager.getInstance().getMainSpawn() == null)
 				MessageManager.getInstance().send(player, ChatColor.RED +
-                        " - The main spawn (/bg setmainspawn)");
+                        " - 主出生点（/bg setmainspawn）");
 
 			getPlots().stream().filter(plot -> plot.getBoundary() == null).forEach(plot ->
-					MessageManager.getInstance().send(player, ChatColor.RED + " - The boundary of plot " +
-                            plot.getId() + " (/bg setbounds " + getName() + ' ' + plot.getId() + ')'));
+					MessageManager.getInstance().send(player, ChatColor.RED + " - 地块 " + plot.getId() + " 的边界尚未设置"
+                            + "（/bg setbounds " + getName() + " " + plot.getId() + "）"));
 
 			getPlots().stream().filter(plot -> plot.getFloor() == null).forEach(plot ->
-					MessageManager.getInstance().send(player, ChatColor.RED + " - The floor of plot " +
-                            plot.getId() + " (/bg setfloor " + getName() + ' ' + plot.getId() + ')'));
+					MessageManager.getInstance().send(player, ChatColor.RED + " - 地块 " + plot.getId() + " 的地板尚未设置"
+                            + "（/bg setfloor " + getName() + " " + plot.getId() + "）"));
 
 			return;
 		}
 		
 		if (ArenaManager.getInstance().getArena(player) != null) {
-			MessageManager.getInstance().send(player, ChatColor.RED + "You're already in a game");
+			MessageManager.getInstance().send(player, ChatColor.RED + "你已经在游戏中了");
 			return;
 		}
 
@@ -381,7 +381,7 @@ public class Arena implements TransitionSystem {
 		}
 		
 		if (isFull()) {
-			MessageManager.getInstance().send(player, ChatColor.RED + "This arena is full");
+			MessageManager.getInstance().send(player, ChatColor.RED + "此竞技场已满");
 			return;
 		}
 		
@@ -422,7 +422,7 @@ public class Arena implements TransitionSystem {
 		
 		if (this.currentGamePhase instanceof LobbyGamePhase) {
             if (this.lobby == null) {
-                throw new IllegalStateException("Lobby is not set");
+                throw new IllegalStateException("大厅尚未设置");
             }
 
             this.lobby.teleport(player);
@@ -494,8 +494,8 @@ public class Arena implements TransitionSystem {
 
                     if (item != null && item.getType() != Material.AIR) {
                         Main.getInstance().getLogger().warning(
-                            "The leave item overrides a different item. This other item will not be visible. " +
-                                "Please change the slots in the config.yml file to fix this."
+                            "离开物品覆盖了另一个物品，该物品将不可见。" +
+                                "请修改 config.yml 中的槽位以解决此问题。"
                         );
                     }
 
@@ -539,7 +539,7 @@ public class Arena implements TransitionSystem {
         Arena arena = ArenaManager.getInstance().getArena(player);
 
         if (arena == null) {
-			MessageManager.getInstance().send(player, ChatColor.RED + "You're not in a game");
+			MessageManager.getInstance().send(player, ChatColor.RED + "你不在游戏中");
 			return;
 		}
 
@@ -553,7 +553,7 @@ public class Arena implements TransitionSystem {
 
         //this shouldn't happen unless you screwed up with the api
         if (plot == null) {
-            MessageManager.getInstance().send(player, "You're not in a game");
+            MessageManager.getInstance().send(player, "你不在游戏中");
             arena.leave(player);
             return;
         }
@@ -561,7 +561,7 @@ public class Arena implements TransitionSystem {
 		GamePlayer p = plot.getGamePlayer(player);
 
         if (p == null) {
-            throw new IllegalStateException("Plot is missing game player");
+            throw new IllegalStateException("地块缺少游戏玩家");
         }
 
 		p.restore();

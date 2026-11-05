@@ -52,7 +52,7 @@ public final class Conditional {
         else if (operator == Operator.UNEQUAL)
             return !equals;
 
-        throw new IllegalStateException("Conditional was incorrectly parse");
+        throw new IllegalStateException("条件解析有误");
     }
 
     /**

@@ -24,7 +24,7 @@ public class CreeperMenu extends RemoveMenu {
         //powered
         var powered = new ItemStack(Material.REDSTONE);
         var poweredMeta = powered.getItemMeta();
-        poweredMeta.setDisplayName(ChatColor.GREEN + "Change whether this creeper is charged");
+        poweredMeta.setDisplayName(ChatColor.GREEN + "更改此苦力怕是否为高压");
         powered.setItemMeta(poweredMeta);
 
         pane.insertItem(new GuiItem(powered, event -> {

@@ -176,7 +176,7 @@ public enum Version {
             case "1.21.6", "1.21.7", "1.21.8" -> V1_21_6_8;
             case "1.21.9", "1.21.10" -> V1_21_9_10;
             case "1.21.11" -> V1_21_11;
-            default -> throw new UnsupportedVersionException("This server's version is not supported");
+            default -> throw new UnsupportedVersionException("当前服务器版本不受支持");
         };
     }
 }

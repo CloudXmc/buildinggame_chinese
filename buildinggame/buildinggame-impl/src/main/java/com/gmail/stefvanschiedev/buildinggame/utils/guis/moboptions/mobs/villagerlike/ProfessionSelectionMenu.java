@@ -22,14 +22,14 @@ class ProfessionSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     ProfessionSelectionMenu(Creature villagerLike) {
-        super(2, ChatColor.GREEN + "Select profession");
+        super(2, ChatColor.GREEN + "选择职业");
 
         var pane = new OutlinePane(9, 2);
 
         //armorer
         var armorer = new ItemStack(Material.IRON_CHESTPLATE);
         var armorerMeta = armorer.getItemMeta();
-        armorerMeta.setDisplayName(ChatColor.GREEN + "Armorer");
+        armorerMeta.setDisplayName(ChatColor.GREEN + "盔甲匠");
         armorer.setItemMeta(armorerMeta);
 
         pane.addItem(new GuiItem(armorer, event -> {
@@ -45,7 +45,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //butcher
         var butcher = new ItemStack(Material.BEEF);
         var butcherMeta = butcher.getItemMeta();
-        butcherMeta.setDisplayName(ChatColor.GREEN + "Butcher");
+        butcherMeta.setDisplayName(ChatColor.GREEN + "屠夫");
         butcher.setItemMeta(butcherMeta);
 
         pane.addItem(new GuiItem(butcher, event -> {
@@ -61,7 +61,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //cartographer
         var cartographer = new ItemStack(Material.MAP);
         var cartographerMeta = cartographer.getItemMeta();
-        cartographerMeta.setDisplayName(ChatColor.GREEN + "Cartographer");
+        cartographerMeta.setDisplayName(ChatColor.GREEN + "制图师");
         cartographer.setItemMeta(cartographerMeta);
 
         pane.addItem(new GuiItem(cartographer, event -> {
@@ -77,7 +77,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //cleric
         var cleric = new ItemStack(Material.BREWING_STAND);
         var clericMeta = cleric.getItemMeta();
-        clericMeta.setDisplayName(ChatColor.GREEN + "Cleric");
+        clericMeta.setDisplayName(ChatColor.GREEN + "牧师");
         cleric.setItemMeta(clericMeta);
 
         pane.addItem(new GuiItem(cleric, event -> {
@@ -93,7 +93,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //farmer
         var farmer = new ItemStack(Material.WHEAT);
         var farmerMeta = farmer.getItemMeta();
-        farmerMeta.setDisplayName(ChatColor.GREEN + "Farmer");
+        farmerMeta.setDisplayName(ChatColor.GREEN + "农民");
         farmer.setItemMeta(farmerMeta);
 
         pane.addItem(new GuiItem(farmer, event -> {
@@ -109,7 +109,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //fisherman
         var fisherman = new ItemStack(Material.COD);
         var fishermanMeta = fisherman.getItemMeta();
-        fishermanMeta.setDisplayName(ChatColor.GREEN + "Fisherman");
+        fishermanMeta.setDisplayName(ChatColor.GREEN + "渔夫");
         fisherman.setItemMeta(fishermanMeta);
 
         pane.addItem(new GuiItem(fisherman, event -> {
@@ -125,7 +125,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //fletcher
         var fletcher = new ItemStack(Material.ARROW);
         var fletcherMeta = fletcher.getItemMeta();
-        fletcherMeta.setDisplayName(ChatColor.GREEN + "Fletcher");
+        fletcherMeta.setDisplayName(ChatColor.GREEN + "制箭师");
         fletcher.setItemMeta(fletcherMeta);
 
         pane.addItem(new GuiItem(fletcher, event -> {
@@ -141,7 +141,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //leatherworker
         var leatherworker = new ItemStack(Material.LEATHER);
         var leatherworkerMeta = leatherworker.getItemMeta();
-        leatherworkerMeta.setDisplayName(ChatColor.GREEN + "Leatherworker");
+        leatherworkerMeta.setDisplayName(ChatColor.GREEN + "皮匠");
         leatherworker.setItemMeta(leatherworkerMeta);
 
         pane.addItem(new GuiItem(leatherworker, event -> {
@@ -157,7 +157,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //librarian
         var librarian = new ItemStack(Material.BOOK);
         var librarianMeta = librarian.getItemMeta();
-        librarianMeta.setDisplayName(ChatColor.GREEN + "Librarian");
+        librarianMeta.setDisplayName(ChatColor.GREEN + "图书管理员");
         librarian.setItemMeta(librarianMeta);
 
         pane.addItem(new GuiItem(librarian, event -> {
@@ -173,7 +173,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //mason
         var mason = new ItemStack(Material.BRICK);
         var masonMeta = mason.getItemMeta();
-        masonMeta.setDisplayName(ChatColor.GREEN + "Mason");
+        masonMeta.setDisplayName(ChatColor.GREEN + "石匠");
         mason.setItemMeta(masonMeta);
 
         pane.addItem(new GuiItem(mason, event -> {
@@ -189,7 +189,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //nitwit
         var nitwit = new ItemStack(Material.DIAMOND_HOE);
         var nitwitMeta = nitwit.getItemMeta();
-        nitwitMeta.setDisplayName(ChatColor.GREEN + "Nitwit");
+        nitwitMeta.setDisplayName(ChatColor.GREEN + "傻子");
         nitwit.setItemMeta(nitwitMeta);
 
         pane.addItem(new GuiItem(nitwit, event -> {
@@ -205,7 +205,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //shepherd
         var shepherd = new ItemStack(Material.SHEARS);
         var shepherdMeta = shepherd.getItemMeta();
-        shepherdMeta.setDisplayName(ChatColor.GREEN + "Shepherd");
+        shepherdMeta.setDisplayName(ChatColor.GREEN + "牧羊人");
         shepherd.setItemMeta(shepherdMeta);
 
         pane.addItem(new GuiItem(shepherd, event -> {
@@ -221,7 +221,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //toolsmith
         var toolsmith = new ItemStack(Material.IRON_PICKAXE);
         var toolsmithMeta = toolsmith.getItemMeta();
-        toolsmithMeta.setDisplayName(ChatColor.GREEN + "Toolsmith");
+        toolsmithMeta.setDisplayName(ChatColor.GREEN + "工具匠");
         toolsmith.setItemMeta(toolsmithMeta);
 
         pane.addItem(new GuiItem(toolsmith, event -> {
@@ -237,7 +237,7 @@ class ProfessionSelectionMenu extends ChestGui {
         //weaponsmith
         var weaponsmith = new ItemStack(Material.IRON_SWORD);
         var weaponsmithMeta = weaponsmith.getItemMeta();
-        weaponsmithMeta.setDisplayName(ChatColor.GREEN + "Weaponsmith");
+        weaponsmithMeta.setDisplayName(ChatColor.GREEN + "武器匠");
         weaponsmith.setItemMeta(weaponsmithMeta);
 
         pane.addItem(new GuiItem(weaponsmith, event -> {

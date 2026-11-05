@@ -25,7 +25,7 @@ public class FoxMenu extends BabyMenu {
 
         ItemStack type = new ItemStack(Material.ORANGE_CONCRETE_POWDER);
         ItemMeta typeMeta = type.getItemMeta();
-        typeMeta.setDisplayName(ChatColor.GREEN + "Change the fox's type");
+        typeMeta.setDisplayName(ChatColor.GREEN + "更改狐狸的类型");
         type.setItemMeta(typeMeta);
 
         pane.insertItem(new GuiItem(type, event -> {
@@ -36,7 +36,7 @@ public class FoxMenu extends BabyMenu {
 
         ItemStack sleeping = new ItemStack(Material.LIGHT_BLUE_BED);
         ItemMeta sleepingMeta = sleeping.getItemMeta();
-        sleepingMeta.setDisplayName(ChatColor.GREEN + "Set the fox to be sleeping or be awake");
+        sleepingMeta.setDisplayName(ChatColor.GREEN + "让狐狸睡觉或清醒");
         sleeping.setItemMeta(sleepingMeta);
 
         pane.insertItem(new GuiItem(sleeping, event -> {
@@ -47,7 +47,7 @@ public class FoxMenu extends BabyMenu {
 
         ItemStack sitting = new ItemStack(Material.OAK_STAIRS);
         ItemMeta sittingMeta = sitting.getItemMeta();
-        sittingMeta.setDisplayName(ChatColor.GREEN + "Make the fox sit or stand up");
+        sittingMeta.setDisplayName(ChatColor.GREEN + "让狐狸坐下或站起");
         sitting.setItemMeta(sittingMeta);
 
         pane.insertItem(new GuiItem(sitting, event -> {
@@ -58,7 +58,7 @@ public class FoxMenu extends BabyMenu {
 
         ItemStack crouching = new ItemStack(Material.SOUL_SAND);
         ItemMeta crouchingMeta = crouching.getItemMeta();
-        crouchingMeta.setDisplayName(ChatColor.GREEN + "Make the fox crouch or stand");
+        crouchingMeta.setDisplayName(ChatColor.GREEN + "让狐狸蹲下或站立");
         crouching.setItemMeta(crouchingMeta);
 
         pane.insertItem(new GuiItem(crouching, event -> {

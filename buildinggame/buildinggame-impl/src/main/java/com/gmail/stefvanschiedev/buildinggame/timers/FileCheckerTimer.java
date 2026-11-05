@@ -75,7 +75,7 @@ public class FileCheckerTimer extends BukkitRunnable {
                 }
 
                 if (debug)
-                    LOGGER.info("Detected changes in the config.yml");
+                    LOGGER.info("检测到 config.yml 有改动");
 
                 SETTINGS_MANAGER.refreshConfig();
 
@@ -86,7 +86,7 @@ public class FileCheckerTimer extends BukkitRunnable {
                 }
 
                 if (debug)
-                    LOGGER.info("Detected changes in the messages.yml");
+                    LOGGER.info("检测到 messages.yml 有改动");
 
                 SETTINGS_MANAGER.refreshMessages();
 

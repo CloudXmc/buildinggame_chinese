@@ -23,7 +23,7 @@ public class ChestMenu extends BabyMenu {
         //chest
         var chest = new ItemStack(Material.CHEST);
         var chestMeta = chest.getItemMeta();
-        chestMeta.setDisplayName(ChatColor.GREEN + "Set/Remove chest");
+        chestMeta.setDisplayName(ChatColor.GREEN + "设置/移除箱子");
         chest.setItemMeta(chestMeta);
 
         pane.insertItem(new GuiItem(chest, event -> {

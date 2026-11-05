@@ -58,7 +58,7 @@ public final class MaxPlayersManager {
             }
 
             if (SettingsManager.getInstance().getConfig().getBoolean("debug"))
-                Main.getInstance().getLogger().info("Loaded max players for " + name);
+                Main.getInstance().getLogger().info("已加载最大玩家数：" + name);
 		}
 	}
 }

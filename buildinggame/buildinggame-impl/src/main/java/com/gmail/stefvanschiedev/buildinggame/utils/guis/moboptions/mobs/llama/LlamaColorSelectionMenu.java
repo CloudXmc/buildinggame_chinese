@@ -20,14 +20,14 @@ class LlamaColorSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     LlamaColorSelectionMenu(Llama llama) {
-        super(1, ChatColor.GREEN + "Change the llama color");
+        super(1, ChatColor.GREEN + "更改羊驼颜色");
 
         var pane = new StaticPane(5, 1);
 
         //brown
         var brown = new ItemStack(Material.BROWN_WOOL);
         var brownMeta = brown.getItemMeta();
-        brownMeta.setDisplayName(ChatColor.GREEN + "Brown");
+        brownMeta.setDisplayName(ChatColor.GREEN + "棕色");
         brown.setItemMeta(brownMeta);
 
         pane.addItem(new GuiItem(brown, event -> {
@@ -39,7 +39,7 @@ class LlamaColorSelectionMenu extends ChestGui {
         //creamy
         var creamy = new ItemStack(Material.SANDSTONE);
         var creamyMeta = creamy.getItemMeta();
-        creamyMeta.setDisplayName(ChatColor.GREEN + "Creamy");
+        creamyMeta.setDisplayName(ChatColor.GREEN + "奶油色");
         creamy.setItemMeta(creamyMeta);
 
         pane.addItem(new GuiItem(creamy, event -> {
@@ -51,7 +51,7 @@ class LlamaColorSelectionMenu extends ChestGui {
         //gray
         var gray = new ItemStack(Material.GRAY_WOOL);
         var grayMeta = gray.getItemMeta();
-        grayMeta.setDisplayName(ChatColor.GREEN + "Gray");
+        grayMeta.setDisplayName(ChatColor.GREEN + "灰色");
         gray.setItemMeta(grayMeta);
 
         pane.addItem(new GuiItem(gray, event -> {
@@ -63,7 +63,7 @@ class LlamaColorSelectionMenu extends ChestGui {
         //white
         var white = new ItemStack(Material.WHITE_WOOL);
         var whiteMeta = white.getItemMeta();
-        whiteMeta.setDisplayName(ChatColor.GREEN + "White");
+        whiteMeta.setDisplayName(ChatColor.GREEN + "白色");
         white.setItemMeta(whiteMeta);
 
         pane.addItem(new GuiItem(white, event -> {

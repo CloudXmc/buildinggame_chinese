@@ -39,7 +39,7 @@ public final class GoatMenu extends BabyMenu {
 
         var leftHorn = new ItemStack(Material.GOAT_HORN);
         ItemMeta leftHornMeta = leftHorn.getItemMeta();
-        leftHornMeta.setDisplayName(ChatColor.GREEN + "Change the visibility of the left horn");
+        leftHornMeta.setDisplayName(ChatColor.GREEN + "更改左角的可见性");
         leftHorn.setItemMeta(leftHornMeta);
 
         pane.addItem(new GuiItem(leftHorn, event -> {
@@ -50,7 +50,7 @@ public final class GoatMenu extends BabyMenu {
 
         var rightHorn = new ItemStack(Material.GOAT_HORN);
         ItemMeta rightHornMeta = rightHorn.getItemMeta();
-        rightHornMeta.setDisplayName(ChatColor.GREEN + "Change the visibility of the right horn");
+        rightHornMeta.setDisplayName(ChatColor.GREEN + "更改右角的可见性");
         rightHorn.setItemMeta(rightHornMeta);
 
         pane.addItem(new GuiItem(rightHorn, event -> {

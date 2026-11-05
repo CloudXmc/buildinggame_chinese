@@ -24,7 +24,7 @@ public class SheepMenu extends ColorMenu {
         //sheared
         var shears = new ItemStack(Material.SHEARS);
         var shearsMeta = shears.getItemMeta();
-        shearsMeta.setDisplayName(ChatColor.GREEN + "Change whether this sheep is sheared");
+        shearsMeta.setDisplayName(ChatColor.GREEN + "更改此羊是否已被剪毛");
         shears.setItemMeta(shearsMeta);
 
         pane.insertItem(new GuiItem(shears, event -> {

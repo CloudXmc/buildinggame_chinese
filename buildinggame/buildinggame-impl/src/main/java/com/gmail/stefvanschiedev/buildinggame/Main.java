@@ -101,15 +101,15 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-		getLogger().info("Loading files");
+		getLogger().info("正在加载配置文件");
 		SettingsManager.getInstance().setup(this, true);
 
 		//loading metrics
-		getLogger().info("Loading metrics");
+		getLogger().info("正在加载统计信息");
         new MetricsLite(this, BSTATS_PLUGIN_ID);
 		
 		if (SettingsManager.getInstance().getConfig().getBoolean("loading.load-after-plugins")) {
-			getLogger().info("Waiting until other plugins are loaded");
+			getLogger().info("等待其他插件加载完成");
 		
 			load.runTaskTimer(this, 20L, 20L);
 		} else
@@ -139,7 +139,7 @@ public class Main extends JavaPlugin {
             fileChecker.cancel();
         }
 
-        getLogger().info("BuildingGame has been disabled");
+        getLogger().info("BuildingGame 已禁用");
 
         instance = null;
 	}
@@ -161,17 +161,17 @@ public class Main extends JavaPlugin {
             Gui.registerProperty("response", ConfirmationMenu.Response::valueOf);
         }
 		
-		getLogger().info("Loading files");
+		getLogger().info("正在加载配置文件");
 		SettingsManager.getInstance().setup(this, false);
 		
-		getLogger().info("Loading arenas");
+		getLogger().info("正在加载竞技场");
 		ArenaManager.getInstance().setup();
 		ArenaModeManager.getInstance().setup();
 		LobbyManager.getInstance().setup();
 		MinPlayersManager.getInstance().setup();
         MatchesManager.getInstance().setup();
 		
-		getLogger().info("Loading plots");
+		getLogger().info("正在加载地块");
 		PlotManager.getInstance().setup();
 		//has to be down here for some config stuff
         MaxPlayersManager.getInstance().setup();
@@ -179,12 +179,12 @@ public class Main extends JavaPlugin {
 		BoundaryManager.getInstance().setup();
 		FloorManager.getInstance().setup();
 		
-		getLogger().info("Loading main spawn");
+		getLogger().info("正在加载主出生点");
 		MainSpawnManager.getInstance().setup();
 
         PluginManager pm = Bukkit.getPluginManager();
 
-		getLogger().info("Loading soft dependencies");
+		getLogger().info("正在加载软依赖");
 		if (pm.isPluginEnabled("Vault"))
 			SDVault.getInstance().setup();
 
@@ -201,20 +201,20 @@ public class Main extends JavaPlugin {
                 //290 is the first version with offline player support
                 if (number >= 290) {
                     if (!new PlaceholderAPIPlaceholders().register())
-                        getLogger().warning("Unable to register placeholders for PlaceholderAPI");
+                        getLogger().warning("无法为 PlaceholderAPI 注册占位符");
                 } else
                     getLogger().warning(
-                        "PlaceholderAPI is outdated, update to a later version to keep BuildingGame compatible with PlaceholderAPI."
+                        "PlaceholderAPI 版本过旧，请更新到较新版本以保证 BuildingGame 的兼容性。"
                     );
             } catch (NumberFormatException e) {
                 getLogger().warning(
-                    "Unable to get PlaceholderAPI version, contact the plugin author about this."
+                    "无法获取 PlaceholderAPI 版本，请联系插件作者。"
                 );
                 e.printStackTrace();
             }
         }
 
-		getLogger().info("Loading commands");
+		getLogger().info("正在加载命令");
 		if (!reload) {
             var manager = new BukkitCommandManager(this);
 
@@ -226,7 +226,7 @@ public class Main extends JavaPlugin {
                 var arena = ArenaManager.getInstance().getArena(context.popFirstArg());
 
                 if (arena == null)
-                    throw new InvalidCommandArgument("This arena doesn't exist");
+                    throw new InvalidCommandArgument("该竞技场不存在");
 
                 return arena;
             });
@@ -234,7 +234,7 @@ public class Main extends JavaPlugin {
                 var mode = ArenaMode.valueOf(context.popFirstArg().toUpperCase(Locale.getDefault()));
 
                 if (mode == null)
-                    throw new InvalidCommandArgument("This game mode doesn't exist");
+                    throw new InvalidCommandArgument("该游戏模式不存在");
 
                 return mode;
             });
@@ -242,7 +242,7 @@ public class Main extends JavaPlugin {
                 var type = StatType.valueOf(context.popFirstArg().toUpperCase(Locale.getDefault()));
 
                 if (type == null)
-                    throw new InvalidCommandArgument("This statistic type doesn't exist");
+                    throw new InvalidCommandArgument("该统计类型不存在");
 
                 return type;
             });
@@ -263,7 +263,7 @@ public class Main extends JavaPlugin {
             manager.getCommandConditions().addCondition(String.class, "arenanotexist",
                 (context, executionContext, string) -> {
                     if (ArenaManager.getInstance().getArena(string) != null || string.equals("main-spawn"))
-                        throw new ConditionFailedException("Arena already exists");
+                        throw new ConditionFailedException("竞技场已存在");
                 });
             //hd stands for Holographic Displays, but it's shorten to hd since the full name is a bit long
             manager.getCommandConditions().addCondition("hdenabled", context ->
@@ -271,13 +271,13 @@ public class Main extends JavaPlugin {
             manager.registerCommand(new CommandManager());
         }
 		
-		getLogger().info("Loading stats");
+		getLogger().info("正在加载统计数据");
 		StatManager.getInstance().setup();
 
 		//loading achievements should happen after the statistics have been loaded
         Achievement.loadAchievements();
 
-		getLogger().info("Loading listeners");
+		getLogger().info("正在注册事件监听器");
 		if (!reload) {
 			pm.registerEvents(new BlockDispenseItem(), this);
 			pm.registerEvents(new BlockEdit(), this);
@@ -350,10 +350,10 @@ public class Main extends JavaPlugin {
 			}
 		}
 		
-		getLogger().info("Loading signs");
+		getLogger().info("正在加载告示牌");
 		SignManager.getInstance().setup();
 		
-		getLogger().info("Loading timer");
+		getLogger().info("正在加载计时器");
 		new ParticleRender().runTaskTimer(this, 0L, 10L);
 		new ScoreboardUpdater().runTaskTimer(this, 0L, SettingsManager.getInstance().getConfig()
                 .getLong("scoreboard-update-delay"));
@@ -368,14 +368,14 @@ public class Main extends JavaPlugin {
 		String time;
 
 		if (duration < 1000) {
-		    time = duration + " milliseconds";
+		    time = duration + " 毫秒";
         } else if (duration < 60000) {
-		    time = duration / 1000.0 + " seconds";
+		    time = duration / 1000.0 + " 秒";
         } else {
-		    time = (duration / 60000) + ":" + (duration % 60000) / 1000.0 + " minutes";
+		    time = (duration / 60000) + ":" + (duration % 60000) / 1000.0 + " 分钟";
         }
 
-		getLogger().info("BuildingGame has been enabled in " + time + '!');
+		getLogger().info("BuildingGame 已启用，耗时 " + time + '!');
 	}
 
     /**

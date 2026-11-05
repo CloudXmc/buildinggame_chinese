@@ -66,7 +66,7 @@ public final class LobbyManager {
             arena.setLobby(new PotentialLocation(world, x, y, z, yaw, pitch));
 
 			if (SettingsManager.getInstance().getConfig().getBoolean("debug")) {
-                Main.getInstance().getLogger().info("Loaded lobby for " + name);
+                Main.getInstance().getLogger().info("已加载大厅：" + name);
             }
 		}
 	}

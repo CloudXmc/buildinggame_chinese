@@ -26,7 +26,7 @@ public class ColorSelectionMenu extends ChestGui {
      * @param entity the entity to change the color of
      */
     public ColorSelectionMenu(Creature entity) {
-        super(2, ChatColor.GREEN + "Select a color");
+        super(2, ChatColor.GREEN + "选择颜色");
 
         var pane = new OutlinePane(9, 2);
 

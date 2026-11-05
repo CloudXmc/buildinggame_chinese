@@ -236,7 +236,7 @@ public class Plot {
         );
 
         spectator.getInventory().setItem(8, new ItemBuilder(spectator, Material.EMERALD)
-            .setDisplayName(ChatColor.GREEN + "Spectator menu")
+            .setDisplayName(ChatColor.GREEN + "旁观者菜单")
             .setClickEvent(ClickEvent.SPECTATOR_GUI_CLICK)
             .build()
         );
@@ -335,7 +335,7 @@ public class Plot {
             } catch (NumberFormatException e) {
                 if (config.getBoolean("debug"))
                     Main.getInstance().getLogger()
-                        .warning("Unsupported value found in config.yml in voting > point-actions > " + key);
+                        .warning("config.yml 的 voting > point-actions 中存在不支持的值：" + key);
 
                 return;
             }
@@ -810,7 +810,7 @@ public class Plot {
      */
     public void save() {
         if (getBoundary() == null) {
-            Main.getInstance().getLogger().warning("No boundary's found. Disabling auto-resetting plots...");
+            Main.getInstance().getLogger().warning("未找到任何边界，已停止自动重置地块……");
             return;
         }
 

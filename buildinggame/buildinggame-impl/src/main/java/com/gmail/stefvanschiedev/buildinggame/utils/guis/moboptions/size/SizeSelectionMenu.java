@@ -49,14 +49,14 @@ class SizeSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     SizeSelectionMenu(Mob mob) {
-        super(1, ChatColor.GREEN + "Change size");
+        super(1, ChatColor.GREEN + "更改体型");
 
         var pane = new OutlinePane(6, 1);
 
         //small
         var goldNugget = new ItemStack(Material.GOLD_NUGGET);
         var goldNuggetMeta = goldNugget.getItemMeta();
-        goldNuggetMeta.setDisplayName(ChatColor.GREEN + "Small");
+        goldNuggetMeta.setDisplayName(ChatColor.GREEN + "小");
         goldNugget.setItemMeta(goldNuggetMeta);
 
         pane.addItem(new GuiItem(goldNugget, event -> {
@@ -76,7 +76,7 @@ class SizeSelectionMenu extends ChestGui {
         //medium
         var goldIngot = new ItemStack(Material.GOLD_INGOT);
         var goldIngotMeta = goldIngot.getItemMeta();
-        goldIngotMeta.setDisplayName(ChatColor.GREEN + "Medium");
+        goldIngotMeta.setDisplayName(ChatColor.GREEN + "中");
         goldIngot.setItemMeta(goldIngotMeta);
 
         pane.addItem(new GuiItem(goldIngot, event -> {
@@ -96,7 +96,7 @@ class SizeSelectionMenu extends ChestGui {
         //large
         var goldBlock = new ItemStack(Material.GOLD_BLOCK);
         var goldBlockMeta = goldBlock.getItemMeta();
-        goldBlockMeta.setDisplayName(ChatColor.GREEN + "Large");
+        goldBlockMeta.setDisplayName(ChatColor.GREEN + "大");
         goldBlock.setItemMeta(goldBlockMeta);
 
         pane.addItem(new GuiItem(goldBlock, event -> {

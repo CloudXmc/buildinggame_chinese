@@ -29,7 +29,7 @@ public class CowVariantMenu extends ChestGui {
      * @since 12.10.0
      */
     CowVariantMenu(@NotNull Cow cow) {
-        super(1, ChatColor.GREEN + "Change the cow's variant");
+        super(1, ChatColor.GREEN + "更改牛的变种");
 
         setOnGlobalClick(event -> event.setCancelled(true));
 
@@ -40,7 +40,7 @@ public class CowVariantMenu extends ChestGui {
         //temperate
         ItemStack temperate = new ItemStack(Material.BLACK_DYE);
         ItemMeta temperateMeta = temperate.getItemMeta();
-        Objects.requireNonNull(temperateMeta).setDisplayName(ChatColor.GREEN + "Temperate");
+        Objects.requireNonNull(temperateMeta).setDisplayName(ChatColor.GREEN + "温带");
         temperate.setItemMeta(temperateMeta);
 
         pane.addItem(new GuiItem(temperate, event -> setVariant(cow, Cow.Variant.TEMPERATE)));
@@ -48,7 +48,7 @@ public class CowVariantMenu extends ChestGui {
         //cold
         ItemStack cold = new ItemStack(Material.BROWN_DYE);
         ItemMeta coldMeta = cold.getItemMeta();
-        Objects.requireNonNull(coldMeta).setDisplayName(ChatColor.GREEN + "Cold");
+        Objects.requireNonNull(coldMeta).setDisplayName(ChatColor.GREEN + "寒冷");
         cold.setItemMeta(coldMeta);
 
         pane.addItem(new GuiItem(cold, event -> setVariant(cow, Cow.Variant.COLD)));
@@ -56,7 +56,7 @@ public class CowVariantMenu extends ChestGui {
         //warm
         ItemStack warm = new ItemStack(Material.RED_DYE);
         ItemMeta warmMeta = warm.getItemMeta();
-        Objects.requireNonNull(warmMeta).setDisplayName(ChatColor.GREEN + "Warm");
+        Objects.requireNonNull(warmMeta).setDisplayName(ChatColor.GREEN + "温暖");
         warm.setItemMeta(warmMeta);
 
         pane.addItem(new GuiItem(warm, event -> setVariant(cow, Cow.Variant.WARM)));

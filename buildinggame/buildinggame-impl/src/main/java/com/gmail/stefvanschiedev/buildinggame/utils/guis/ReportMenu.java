@@ -41,7 +41,7 @@ public class ReportMenu extends ChestGui {
      * Constructs a new report menu
      */
     public ReportMenu() {
-        super(6, ChatColor.GREEN + "Reports");
+        super(6, ChatColor.GREEN + "举报");
 
         var paginatedPane = new PaginatedPane(9, 5);
 
@@ -69,7 +69,7 @@ public class ReportMenu extends ChestGui {
                 ItemStack head = new ItemStack(Material.PLAYER_HEAD);
                 SkullMeta headMeta = (SkullMeta) head.getItemMeta();
                 headMeta.setDisplayName((player.isOnline() ? ChatColor.GREEN : ChatColor.RED) + player.getName());
-                headMeta.setLore(Collections.singletonList(ChatColor.AQUA + "Reports: " + reports.size()));
+                headMeta.setLore(Collections.singletonList(ChatColor.AQUA + "举报数：" + reports.size()));
                 headMeta.setOwningPlayer(player);
                 head.setItemMeta(headMeta);
 
@@ -80,7 +80,7 @@ public class ReportMenu extends ChestGui {
                         playerReportsGui(player).show(clicker);
                     } else if (event.isRightClick()) {
                         new ConfirmationMenu(ChatColor.GREEN +
-                            "Delete all reports for " + player.getName() + '?', click ->
+                            "确定删除 " + player.getName() + " 的全部举报？", click ->
                             new BukkitRunnable() {
                                 @Override
                                 public void run() {
@@ -91,7 +91,7 @@ public class ReportMenu extends ChestGui {
                                     } else if (click == ConfirmationMenu.Response.DENY) {
                                         show(clicker);
                                     } else {
-                                        throw new IllegalStateException("Unknown confirmation click type");
+                                        throw new IllegalStateException("未知的确认点击类型");
                                     }
                                 }
                             }.runTaskLater(Main.getInstance(), 1L)).show(clicker);
@@ -110,7 +110,7 @@ public class ReportMenu extends ChestGui {
 
         var backItem = new ItemStack(Material.BOOK);
         var backMeta = backItem.getItemMeta();
-        backMeta.setDisplayName(ChatColor.GREEN + "Close");
+        backMeta.setDisplayName(ChatColor.GREEN + "关闭");
         backItem.setItemMeta(backMeta);
 
         backItemPane.addItem(new GuiItem(backItem, event -> event.getWhoClicked().closeInventory()));
@@ -123,7 +123,7 @@ public class ReportMenu extends ChestGui {
 
             var previousPageItem = new ItemStack(Material.SUGAR_CANE);
             var previousPageMeta = previousPageItem.getItemMeta();
-            previousPageMeta.setDisplayName(ChatColor.GREEN + "Previous page");
+            previousPageMeta.setDisplayName(ChatColor.GREEN + "上一页");
             previousPageItem.setItemMeta(previousPageMeta);
 
             previousPageItemPane.addItem(new GuiItem(previousPageItem, event -> {
@@ -142,7 +142,7 @@ public class ReportMenu extends ChestGui {
 
             var nextPageItem = new ItemStack(Material.SUGAR_CANE);
             var nextPageMeta = nextPageItem.getItemMeta();
-            nextPageMeta.setDisplayName(ChatColor.GREEN + "Next page");
+            nextPageMeta.setDisplayName(ChatColor.GREEN + "下一页");
             nextPageItem.setItemMeta(nextPageMeta);
 
             nextPageItemPane.addItem(new GuiItem(nextPageItem, event -> {
@@ -174,7 +174,7 @@ public class ReportMenu extends ChestGui {
     @NotNull
     @Contract(pure = true)
     private ChestGui playerReportsGui(@NotNull OfflinePlayer player) {
-        ChestGui gui = new ChestGui(6, ChatColor.GREEN + player.getName() + "'s reports");
+        ChestGui gui = new ChestGui(6, ChatColor.GREEN + player.getName() + " 的举报");
 
         var paginatedPane = new PaginatedPane(9, 5);
 
@@ -194,10 +194,10 @@ public class ReportMenu extends ChestGui {
 
                 var reportItem = new ItemStack(Material.PAPER);
                 var reportMeta = reportItem.getItemMeta();
-                reportMeta.setDisplayName(ChatColor.GOLD + "Report #" + (index + 1));
+                reportMeta.setDisplayName(ChatColor.GOLD + "举报 #" + (index + 1));
                 reportMeta.setLore(Arrays.asList(
-                    ChatColor.AQUA + "By: " + report.getReporter().getName(),
-                    ChatColor.AQUA + "At: " + report.getDate().format(DateTimeFormatter.RFC_1123_DATE_TIME)
+                    ChatColor.AQUA + "举报者：" + report.getReporter().getName(),
+                    ChatColor.AQUA + "时间：" + report.getDate().format(DateTimeFormatter.RFC_1123_DATE_TIME)
                 ));
                 reportItem.setItemMeta(reportMeta);
 
@@ -221,7 +221,7 @@ public class ReportMenu extends ChestGui {
                                             clicker.closeInventory();
 
                                             MessageManager.getInstance().send(clicker, ChatColor.GREEN +
-                                                    "The schematic has been copied to your clipboard.");
+                                                    "建筑文件已复制到你的剪贴板。");
                                         }
                                     }.runTask(Main.getInstance());
                                 } catch (IOException exception) {
@@ -231,7 +231,7 @@ public class ReportMenu extends ChestGui {
                         }.runTaskAsynchronously(Main.getInstance());
                     } else if (event.isRightClick()) {
                         new ConfirmationMenu(
-                            ChatColor.GREEN + "Are you sure you want to delete this report?", click ->
+                            ChatColor.GREEN + "你确定要删除这条举报吗？", click ->
                             new BukkitRunnable() {
                                 @Override
                                 public void run() {
@@ -242,7 +242,7 @@ public class ReportMenu extends ChestGui {
                                     } else if (click == ConfirmationMenu.Response.DENY) {
                                         gui.show(clicker);
                                     } else {
-                                        throw new IllegalStateException("Unknown confirmation click type");
+                                        throw new IllegalStateException("未知的确认点击类型");
                                     }
                                 }
                             }.runTaskLater(Main.getInstance(), 1L)).show(clicker);
@@ -261,7 +261,7 @@ public class ReportMenu extends ChestGui {
 
         var backItem = new ItemStack(Material.BOOK);
         var backMeta = backItem.getItemMeta();
-        backMeta.setDisplayName(ChatColor.GREEN + "Go back");
+        backMeta.setDisplayName(ChatColor.GREEN + "返回");
         backItem.setItemMeta(backMeta);
 
         backItemPane.addItem(new GuiItem(backItem, event -> show(event.getWhoClicked())));
@@ -274,7 +274,7 @@ public class ReportMenu extends ChestGui {
 
             var previousPageItem = new ItemStack(Material.SUGAR_CANE);
             var previousPageMeta = previousPageItem.getItemMeta();
-            previousPageMeta.setDisplayName(ChatColor.GREEN + "Previous page");
+            previousPageMeta.setDisplayName(ChatColor.GREEN + "上一页");
             previousPageItem.setItemMeta(previousPageMeta);
 
             previousPageItemPane.addItem(new GuiItem(previousPageItem, event -> {
@@ -293,7 +293,7 @@ public class ReportMenu extends ChestGui {
 
             var nextPageItem = new ItemStack(Material.SUGAR_CANE);
             var nextPageMeta = nextPageItem.getItemMeta();
-            nextPageMeta.setDisplayName(ChatColor.GREEN + "Next page");
+            nextPageMeta.setDisplayName(ChatColor.GREEN + "下一页");
             nextPageItem.setItemMeta(nextPageMeta);
 
             nextPageItemPane.addItem(new GuiItem(nextPageItem, event -> {

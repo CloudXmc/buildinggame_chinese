@@ -57,14 +57,14 @@ public class ClickSpectateSign implements Listener {
             OfflinePlayer offlinePlayer = spectateSign.getOfflinePlayer();
 
             if (!offlinePlayer.isOnline()) {
-                MessageManager.getInstance().send(player, ChatColor.RED + offlinePlayer.getName() + " is offline");
+                MessageManager.getInstance().send(player, ChatColor.RED + offlinePlayer.getName() + " 不在线");
                 return;
             }
 
             Arena arena = ArenaManager.getInstance().getArena(offlinePlayer.getPlayer());
 
             if (arena == null) {
-                MessageManager.getInstance().send(player, ChatColor.RED + "This player is not in an arena");
+                MessageManager.getInstance().send(player, ChatColor.RED + "该玩家不在竞技场中");
                 return;
             }
 

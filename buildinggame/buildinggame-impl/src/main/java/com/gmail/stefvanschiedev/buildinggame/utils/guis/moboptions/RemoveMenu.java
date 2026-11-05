@@ -29,13 +29,13 @@ public class RemoveMenu extends ChestGui {
      * @param entity the entity to edit
      */
     public RemoveMenu(Plot plot, Entity entity) {
-        super(1, ChatColor.GREEN + "Modify entity");
+        super(1, ChatColor.GREEN + "修改实体");
 
         pane = new OutlinePane(9, 1);
 
         var remove = new ItemStack(Material.BARRIER);
         var removeMeta = remove.getItemMeta();
-        removeMeta.setDisplayName(ChatColor.RED + "Remove entity");
+        removeMeta.setDisplayName(ChatColor.RED + "移除实体");
         remove.setItemMeta(removeMeta);
 
         pane.addItem(new GuiItem(remove, event -> {

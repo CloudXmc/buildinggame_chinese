@@ -55,7 +55,7 @@ public final class ArenaModeManager {
 			arena.setMode(ArenaMode.valueOf(arenas.getString(name + ".mode")));
 			
 			if (SettingsManager.getInstance().getConfig().getBoolean("debug"))
-				Main.getInstance().getLogger().info("Loaded gamemode for " + name);
+				Main.getInstance().getLogger().info("已加载游戏模式：" + name);
 		}
 	}
 }

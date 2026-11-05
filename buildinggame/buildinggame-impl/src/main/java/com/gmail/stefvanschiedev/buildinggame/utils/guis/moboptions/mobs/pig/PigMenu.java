@@ -27,7 +27,7 @@ public class PigMenu extends BabyMenu {
         //saddle
         var saddle = new ItemStack(Material.SADDLE);
         var saddleMeta = saddle.getItemMeta();
-        saddleMeta.setDisplayName(ChatColor.GREEN + "Change whether this pig has a saddle");
+        saddleMeta.setDisplayName(ChatColor.GREEN + "更改此猪是否装备鞍");
         saddle.setItemMeta(saddleMeta);
 
         pane.insertItem(new GuiItem(saddle, event -> {
@@ -40,7 +40,7 @@ public class PigMenu extends BabyMenu {
             //variant
             var variant = new ItemStack(Material.WHITE_DYE);
             var variantMeta = variant.getItemMeta();
-            Objects.requireNonNull(variantMeta).setDisplayName(ChatColor.GREEN + "Change the pig's variant");
+            Objects.requireNonNull(variantMeta).setDisplayName(ChatColor.GREEN + "更改猪的变种");
             variant.setItemMeta(variantMeta);
 
             super.pane.insertItem(new GuiItem(variant, event -> {

@@ -34,14 +34,14 @@ public class PlaceBucket implements Listener {
 		var plot = arena.getPlot(player);
 		
 		if (plot.getGamePlayer(player).getGamePlayerType() == GamePlayerType.SPECTATOR) {
-			MessageManager.getInstance().send(player, ChatColor.RED + "Spectators can't build");
+			MessageManager.getInstance().send(player, ChatColor.RED + "旁观者不能建造");
 			e.setCancelled(true);
 			return;
 		}
 		
 		if (!plot.getBoundary().isInside(e.getBlockClicked().getRelative(e.getBlockFace()).getLocation())) {
 			e.setCancelled(true);
-			MessageManager.getInstance().send(player, ChatColor.RED + "You can't place blocks outside your plot");
+			MessageManager.getInstance().send(player, ChatColor.RED + "你不能在地块外放置方块");
 		}
 	}
 }

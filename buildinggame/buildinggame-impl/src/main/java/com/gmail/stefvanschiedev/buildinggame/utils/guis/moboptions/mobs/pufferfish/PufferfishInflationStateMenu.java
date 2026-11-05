@@ -20,14 +20,14 @@ class PufferfishInflationStateMenu extends ChestGui {
      * Constructs a new pufferfish inflation state menu
      */
     PufferfishInflationStateMenu(PufferFish pufferfish) {
-        super(1, ChatColor.GREEN + "Set pufferfish inflation state");
+        super(1, ChatColor.GREEN + "设置河豚膨胀状态");
 
         var pane = new OutlinePane(3, 1);
 
         //deflated
         var goldNugget = new ItemStack(Material.GOLD_NUGGET);
         var goldNuggetMeta = goldNugget.getItemMeta();
-        goldNuggetMeta.setDisplayName(ChatColor.GREEN + "Deflated");
+        goldNuggetMeta.setDisplayName(ChatColor.GREEN + "未膨胀");
         goldNugget.setItemMeta(goldNuggetMeta);
 
         pane.addItem(new GuiItem(goldNugget, event -> {
@@ -39,7 +39,7 @@ class PufferfishInflationStateMenu extends ChestGui {
         //half inflated
         var goldIngot = new ItemStack(Material.GOLD_INGOT);
         var goldIngotMeta = goldIngot.getItemMeta();
-        goldIngotMeta.setDisplayName(ChatColor.GREEN + "Half inflated");
+        goldIngotMeta.setDisplayName(ChatColor.GREEN + "半膨胀");
         goldIngot.setItemMeta(goldIngotMeta);
 
         pane.addItem(new GuiItem(goldIngot, event -> {
@@ -51,7 +51,7 @@ class PufferfishInflationStateMenu extends ChestGui {
         //fully inflated
         var goldBlock = new ItemStack(Material.GOLD_BLOCK);
         var goldBlockMeta = goldBlock.getItemMeta();
-        goldBlockMeta.setDisplayName(ChatColor.GREEN + "Fully inflated");
+        goldBlockMeta.setDisplayName(ChatColor.GREEN + "完全膨胀");
         goldBlock.setItemMeta(goldBlockMeta);
 
         pane.addItem(new GuiItem(goldBlock, event -> {

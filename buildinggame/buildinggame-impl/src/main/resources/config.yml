@@ -1,3 +1,6 @@
+# BuildingGame 配置文件（简体中文注释版）
+# 数值型选项请保持原样，颜色与材质 ID 必须使用英文
+
 timers:
   build: 300
   vote: 15
@@ -46,16 +49,16 @@ particles:
     z: 0.5
 
 subjects:
-- dog
-- house
-- toilet
-- superman
-- superhero
-- car
-- book
-- candy
-- flower
-- headset
+- 小狗
+- 房子
+- 马桶
+- 超人
+- 超级英雄
+- 汽车
+- 书
+- 糖果
+- 花
+- 耳机
 
 scoreboards:
   main:
@@ -274,8 +277,9 @@ gui:
     enabled: true
 
 
-#Possible colors: BLACK, BLUE, BROWN, CYAN, GRAY, GREEN, LIGHT_BLUE, LIME, MAGENTA, ORANGE,PINK, PURPLE, RED, SILVER, WHITE,YELLOW
-#If you have glass-colors-enabled enabled but the stained glass colors do not show, check your console
+#可选颜色：BLACK, BLUE, BROWN, CYAN, GRAY, GREEN, LIGHT_BLUE, LIME, MAGENTA, ORANGE, PINK, PURPLE, RED, SILVER, WHITE, YELLOW
+#注意：颜色值必须使用英文，否则玻璃颜色不会生效
+#如果已启用 glass-colors-enabled 但染色玻璃颜色不显示，请检查控制台输出
 signs:
   glass-colors-enabled: false
   glass-colors:

@@ -25,14 +25,14 @@ class IronGolemCrackedMenu extends ChestGui {
      * @since 8.0.0
      */
     IronGolemCrackedMenu(@NotNull IronGolem ironGolem) {
-        super(1, ChatColor.GREEN + "Change the cracked state of an iron golem");
+        super(1, ChatColor.GREEN + "更改铁傀儡的破损程度");
 
         var pane = new OutlinePane(9, 1);
 
         //80, 160
         var noCracks = new ItemStack(Material.IRON_CHESTPLATE);
         var noCracksMeta = noCracks.getItemMeta();
-        noCracksMeta.setDisplayName(ChatColor.GREEN + "No cracks");
+        noCracksMeta.setDisplayName(ChatColor.GREEN + "无破损");
         noCracks.setItemMeta(noCracksMeta);
 
         pane.addItem(new GuiItem(noCracks, event -> {
@@ -45,7 +45,7 @@ class IronGolemCrackedMenu extends ChestGui {
         var chipped = new ItemStack(Material.IRON_CHESTPLATE);
         var chippedMeta = chipped.getItemMeta();
         ((Damageable) chippedMeta).setDamage((IronGolemMenu.MAX_DAMAGE - 1) / 3 * 2);
-        chippedMeta.setDisplayName(ChatColor.GREEN + "Chipped");
+        chippedMeta.setDisplayName(ChatColor.GREEN + "轻微破损");
         chipped.setItemMeta(chippedMeta);
 
         pane.addItem(new GuiItem(chipped, event -> {
@@ -58,7 +58,7 @@ class IronGolemCrackedMenu extends ChestGui {
         var damaged = new ItemStack(Material.IRON_CHESTPLATE);
         var damagedMeta = damaged.getItemMeta();
         ((Damageable) damagedMeta).setDamage((IronGolemMenu.MAX_DAMAGE - 1) / 3);
-        damagedMeta.setDisplayName(ChatColor.GREEN + "Damaged");
+        damagedMeta.setDisplayName(ChatColor.GREEN + "中度破损");
         damaged.setItemMeta(damagedMeta);
 
         pane.addItem(new GuiItem(damaged, event -> {
@@ -71,7 +71,7 @@ class IronGolemCrackedMenu extends ChestGui {
         var severelyDamaged = new ItemStack(Material.IRON_CHESTPLATE);
         var severelyDamagedMeta = severelyDamaged.getItemMeta();
         ((Damageable) severelyDamagedMeta).setDamage(IronGolemMenu.MAX_DAMAGE - 1);
-        severelyDamagedMeta.setDisplayName(ChatColor.GREEN + "Severely damaged");
+        severelyDamagedMeta.setDisplayName(ChatColor.GREEN + "严重破损");
         severelyDamaged.setItemMeta(severelyDamagedMeta);
 
         pane.addItem(new GuiItem(severelyDamaged, event -> {

@@ -25,13 +25,13 @@ class MooshroomTypeSelectionMenu extends ChestGui {
      * @since 7.0.0
      */
     MooshroomTypeSelectionMenu(@NotNull MushroomCow mushroomCow) {
-        super(1, ChatColor.GREEN + "Change the mooshroom's type");
+        super(1, ChatColor.GREEN + "更改哞菇类型");
 
         var pane = new StaticPane(9, 1);
 
         ItemStack red = new ItemStack(Material.RED_DYE);
         ItemMeta redMeta = red.getItemMeta();
-        redMeta.setDisplayName(ChatColor.GREEN + "Red");
+        redMeta.setDisplayName(ChatColor.GREEN + "红色");
         red.setItemMeta(redMeta);
 
         pane.addItem(new GuiItem(red, event -> {
@@ -42,7 +42,7 @@ class MooshroomTypeSelectionMenu extends ChestGui {
 
         ItemStack brown = new ItemStack(Material.BROWN_DYE);
         ItemMeta brownMeta = brown.getItemMeta();
-        brownMeta.setDisplayName(ChatColor.GREEN + "Brown");
+        brownMeta.setDisplayName(ChatColor.GREEN + "棕色");
         brown.setItemMeta(brownMeta);
 
         pane.addItem(new GuiItem(brown, event -> {

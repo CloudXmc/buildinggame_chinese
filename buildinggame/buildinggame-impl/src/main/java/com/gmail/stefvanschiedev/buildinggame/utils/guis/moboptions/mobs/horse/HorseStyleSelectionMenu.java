@@ -20,14 +20,14 @@ class HorseStyleSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     HorseStyleSelectionMenu(Horse horse) {
-        super(1, ChatColor.GREEN + "Change the horse style");
+        super(1, ChatColor.GREEN + "更改马的纹样");
 
         var pane = new OutlinePane(7, 1);
 
         //black dots
         var blackDots = new ItemStack(Material.MELON_SEEDS);
         var blackDotsMeta = blackDots.getItemMeta();
-        blackDotsMeta.setDisplayName(ChatColor.GREEN + "Black dots");
+        blackDotsMeta.setDisplayName(ChatColor.GREEN + "黑点");
         blackDots.setItemMeta(blackDotsMeta);
 
         pane.addItem(new GuiItem(blackDots, event -> {
@@ -39,7 +39,7 @@ class HorseStyleSelectionMenu extends ChestGui {
         //none
         var none = new ItemStack(Material.BARRIER);
         var noneMeta = none.getItemMeta();
-        noneMeta.setDisplayName(ChatColor.GREEN + "None");
+        noneMeta.setDisplayName(ChatColor.GREEN + "无");
         none.setItemMeta(noneMeta);
 
         pane.addItem(new GuiItem(none, event -> {
@@ -51,7 +51,7 @@ class HorseStyleSelectionMenu extends ChestGui {
         //white
         var white = new ItemStack(Material.WHITE_WOOL);
         var whiteMeta = white.getItemMeta();
-        whiteMeta.setDisplayName(ChatColor.GREEN + "White");
+        whiteMeta.setDisplayName(ChatColor.GREEN + "白色");
         white.setItemMeta(whiteMeta);
 
         pane.addItem(new GuiItem(white, event -> {
@@ -63,7 +63,7 @@ class HorseStyleSelectionMenu extends ChestGui {
         //white dots
         var whiteDots = new ItemStack(Material.PUMPKIN_SEEDS);
         var whiteDotsMeta = whiteDots.getItemMeta();
-        whiteDotsMeta.setDisplayName(ChatColor.GREEN + "White dots");
+        whiteDotsMeta.setDisplayName(ChatColor.GREEN + "白点");
         whiteDots.setItemMeta(whiteDotsMeta);
 
         pane.addItem(new GuiItem(whiteDots, event -> {
@@ -75,7 +75,7 @@ class HorseStyleSelectionMenu extends ChestGui {
         //whitefield
         var whitefield = new ItemStack(Material.BOOK);
         var whitefieldMeta = whitefield.getItemMeta();
-        whitefieldMeta.setDisplayName(ChatColor.GREEN + "Whitefield");
+        whitefieldMeta.setDisplayName(ChatColor.GREEN + "白纹");
         whitefield.setItemMeta(whitefieldMeta);
 
         pane.addItem(new GuiItem(whitefield, event -> {

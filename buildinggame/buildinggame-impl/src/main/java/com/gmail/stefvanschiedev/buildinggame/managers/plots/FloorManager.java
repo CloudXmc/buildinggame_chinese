@@ -80,7 +80,7 @@ public final class FloorManager {
                 if (SettingsManager.getInstance().getConfig().getBoolean("debug")) {
                     Logger logger = Main.getInstance().getLogger();
 
-                    logger.info("Loaded floor for plot " + plotId + " in arena " + arenaName);
+                    logger.info("已加载地块地板 " + plotId + "，所属竞技场 " + arenaName);
                 }
 			})
 		);

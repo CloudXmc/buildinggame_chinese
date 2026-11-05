@@ -26,7 +26,7 @@ final class TropicalFishPatternMenu extends ChestGui {
      * @param tropicalFish the tropical fish to change the pattern of
      */
     TropicalFishPatternMenu(TropicalFish tropicalFish) {
-        super(2, ChatColor.GREEN + "Select a pattern");
+        super(2, ChatColor.GREEN + "选择图案");
 
         var pane = new OutlinePane(9, 2);
 

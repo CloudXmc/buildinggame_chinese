@@ -25,7 +25,7 @@ class CatAppearanceMenu extends ChestGui {
      * {@inheritDoc}
      */
      CatAppearanceMenu(Cat cat) {
-        super(2, ChatColor.GREEN + "Change the cat's appearance");
+        super(2, ChatColor.GREEN + "更改猫的外观");
 
         var pane = new OutlinePane(9, 2);
 
@@ -33,7 +33,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack tabby = new ItemStack(Material.BROWN_BANNER);
         BannerMeta tabbyMeta = (BannerMeta) tabby.getItemMeta();
         tabbyMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.DIAGONAL_RIGHT));
-        tabbyMeta.setDisplayName(ChatColor.GREEN + "Tabby");
+        tabbyMeta.setDisplayName(ChatColor.GREEN + "虎斑");
         tabby.setItemMeta(tabbyMeta);
 
         pane.addItem(new GuiItem(tabby, event -> {
@@ -46,7 +46,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack tuxedo = new ItemStack(Material.BLACK_BANNER);
         BannerMeta tuxedoMeta = (BannerMeta) tuxedo.getItemMeta();
         tuxedoMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.DIAGONAL_RIGHT));
-        tuxedoMeta.setDisplayName(ChatColor.GREEN + "Tuxedo");
+        tuxedoMeta.setDisplayName(ChatColor.GREEN + "燕尾服");
         tuxedo.setItemMeta(tuxedoMeta);
 
         pane.addItem(new GuiItem(tuxedo, event -> {
@@ -59,7 +59,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack red = new ItemStack(Material.ORANGE_BANNER);
         BannerMeta redMeta = (BannerMeta) red.getItemMeta();
         redMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.DIAGONAL_RIGHT));
-        redMeta.setDisplayName(ChatColor.GREEN + "Red");
+        redMeta.setDisplayName(ChatColor.GREEN + "红色");
         red.setItemMeta(redMeta);
 
         pane.addItem(new GuiItem(red, event -> {
@@ -72,7 +72,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack siamese = new ItemStack(Material.WHITE_BANNER);
         BannerMeta siameseMeta = (BannerMeta) siamese.getItemMeta();
         siameseMeta.addPattern(new Pattern(DyeColor.BROWN, PatternType.DIAGONAL_RIGHT));
-        siameseMeta.setDisplayName(ChatColor.GREEN + "Siamese");
+        siameseMeta.setDisplayName(ChatColor.GREEN + "暹罗猫");
         siamese.setItemMeta(siameseMeta);
 
         pane.addItem(new GuiItem(siamese, event -> {
@@ -84,7 +84,7 @@ class CatAppearanceMenu extends ChestGui {
         //british shorthair
         ItemStack britishShorthair = new ItemStack(Material.LIGHT_GRAY_BANNER);
         ItemMeta britishShorthairMeta = britishShorthair.getItemMeta();
-        britishShorthairMeta.setDisplayName(ChatColor.GREEN + "British shorthair");
+        britishShorthairMeta.setDisplayName(ChatColor.GREEN + "英国短毛猫");
         britishShorthair.setItemMeta(britishShorthairMeta);
 
         pane.addItem(new GuiItem(britishShorthair, event -> {
@@ -98,7 +98,7 @@ class CatAppearanceMenu extends ChestGui {
         BannerMeta calicoMeta = (BannerMeta) calico.getItemMeta();
         calicoMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.STRIPE_CENTER));
         calicoMeta.addPattern(new Pattern(DyeColor.BROWN, PatternType.STRIPE_RIGHT));
-        calicoMeta.setDisplayName(ChatColor.GREEN + "Calico");
+        calicoMeta.setDisplayName(ChatColor.GREEN + "三花");
         calico.setItemMeta(calicoMeta);
 
         pane.addItem(new GuiItem(calico, event -> {
@@ -110,7 +110,7 @@ class CatAppearanceMenu extends ChestGui {
         //persian
         ItemStack persian = new ItemStack(Material.WHITE_BANNER);
         ItemMeta persianMeta = persian.getItemMeta();
-        persianMeta.setDisplayName(ChatColor.GREEN + "Persian");
+        persianMeta.setDisplayName(ChatColor.GREEN + "波斯猫");
         persian.setItemMeta(persianMeta);
 
         pane.addItem(new GuiItem(persian, event -> {
@@ -123,7 +123,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack ragdoll = new ItemStack(Material.WHITE_BANNER);
         BannerMeta ragdollMeta = (BannerMeta) ragdoll.getItemMeta();
         ragdollMeta.addPattern(new Pattern(DyeColor.YELLOW, PatternType.DIAGONAL_RIGHT));
-        ragdollMeta.setDisplayName(ChatColor.GREEN + "Ragdoll");
+        ragdollMeta.setDisplayName(ChatColor.GREEN + "布偶猫");
         ragdoll.setItemMeta(ragdollMeta);
 
         pane.addItem(new GuiItem(ragdoll, event -> {
@@ -136,7 +136,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack white = new ItemStack(Material.WHITE_BANNER);
         BannerMeta whiteMeta = (BannerMeta) white.getItemMeta();
         whiteMeta.addPattern(new Pattern(DyeColor.LIGHT_BLUE, PatternType.DIAGONAL_RIGHT));
-        whiteMeta.setDisplayName(ChatColor.GREEN + "White");
+        whiteMeta.setDisplayName(ChatColor.GREEN + "白色");
         white.setItemMeta(whiteMeta);
 
         pane.addItem(new GuiItem(white, event -> {
@@ -148,7 +148,7 @@ class CatAppearanceMenu extends ChestGui {
         //all black
         ItemStack black = new ItemStack(Material.BLACK_BANNER);
         ItemMeta blackMeta = black.getItemMeta();
-        blackMeta.setDisplayName(ChatColor.GREEN + "Black");
+        blackMeta.setDisplayName(ChatColor.GREEN + "黑色");
         black.setItemMeta(blackMeta);
 
         pane.addItem(new GuiItem(black, event -> {
@@ -161,7 +161,7 @@ class CatAppearanceMenu extends ChestGui {
         ItemStack jellie = new ItemStack(Material.GRAY_BANNER);
         BannerMeta jellieMeta = (BannerMeta) jellie.getItemMeta();
         jellieMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.DIAGONAL_RIGHT));
-        jellieMeta.setDisplayName(ChatColor.GREEN + "Jellie");
+        jellieMeta.setDisplayName(ChatColor.GREEN + "杰利");
         jellie.setItemMeta(jellieMeta);
 
         pane.addItem(new GuiItem(jellie, event -> {

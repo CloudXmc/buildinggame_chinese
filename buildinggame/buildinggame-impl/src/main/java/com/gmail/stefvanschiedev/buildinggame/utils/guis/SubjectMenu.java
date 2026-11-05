@@ -172,7 +172,7 @@ public class SubjectMenu {
                         x = (int) Math.floor((double) index / pane.getHeight());
                         y = index % pane.getHeight();
                     } else {
-                        throw new UnsupportedOperationException("Unknown orientation found");
+                        throw new UnsupportedOperationException("未知的排列方向");
                     }
 
                     int xOffset = CONFIG.getInt("subject-gui.percentage-bars.offset.x");

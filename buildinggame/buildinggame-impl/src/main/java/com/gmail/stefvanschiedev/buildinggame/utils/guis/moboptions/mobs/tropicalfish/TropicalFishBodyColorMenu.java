@@ -22,7 +22,7 @@ class TropicalFishBodyColorMenu extends ChestGui {
      * @param tropicalFish the tropical fish to change the color of
      */
     TropicalFishBodyColorMenu(TropicalFish tropicalFish) {
-        super(2, ChatColor.GREEN + "Select a color");
+        super(2, ChatColor.GREEN + "选择颜色");
 
         var pane = new OutlinePane(9, 2);
 

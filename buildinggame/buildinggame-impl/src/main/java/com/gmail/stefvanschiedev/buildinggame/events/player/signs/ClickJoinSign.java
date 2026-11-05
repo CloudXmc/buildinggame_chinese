@@ -77,9 +77,9 @@ public class ClickJoinSign implements Listener {
 
                 if (arena == null)
                     MessageManager.getInstance().send(player,
-                            ChatColor.RED + "Unable to join an arena right now");
+                            ChatColor.RED + "当前无法加入竞技场");
                 else if (playerArena != null)
-                    MessageManager.getInstance().send(player, ChatColor.RED + "You're already in an arena");
+                    MessageManager.getInstance().send(player, ChatColor.RED + "你已经在竞技场中了");
                 else {
                     arena.join(player);
 
@@ -88,7 +88,7 @@ public class ClickJoinSign implements Listener {
             }
         } else {
             if (playerArena != null)
-                MessageManager.getInstance().send(player, ChatColor.RED + "You're already in an arena");
+                MessageManager.getInstance().send(player, ChatColor.RED + "你已经在竞技场中了");
             else {
                 arena.join(player);
 

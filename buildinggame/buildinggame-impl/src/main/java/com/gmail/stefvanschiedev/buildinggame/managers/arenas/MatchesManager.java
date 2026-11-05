@@ -50,7 +50,7 @@ public final class MatchesManager {
             arena.setMaxMatches(arenas.getInt(name + ".matches", 1));
 
             if (SettingsManager.getInstance().getConfig().getBoolean("debug"))
-                Main.getInstance().getLogger().info("Loaded max matches for " + name);
+                Main.getInstance().getLogger().info("已加载最大比赛场数：" + name);
         }
     }
 }

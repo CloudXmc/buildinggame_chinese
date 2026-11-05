@@ -155,7 +155,7 @@ public class PlaceholdersReplacer extends PlaceholdersBaseVisitor<String> {
             return activators.toString();
         }
 
-        return activators.replace(commaIndex, commaIndex + 2, " and ").toString();
+        return activators.replace(commaIndex, commaIndex + 2, " 和 ").toString();
     }
 
     @Override

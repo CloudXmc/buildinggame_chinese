@@ -22,7 +22,7 @@ public class RabbitMenu extends BabyMenu {
         //type
         var type = new ItemStack(Material.BONE);
         var typeMeta = type.getItemMeta();
-        typeMeta.setDisplayName(ChatColor.GREEN + "Change type");
+        typeMeta.setDisplayName(ChatColor.GREEN + "更改类型");
         type.setItemMeta(typeMeta);
 
         pane.insertItem(new GuiItem(type, event -> {

@@ -43,13 +43,13 @@ public class BlockEdit implements Listener {
         var plot = arena.getPlot(player);
 
         if (plot.getGamePlayer(player).getGamePlayerType() == GamePlayerType.SPECTATOR) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "Spectators can't build");
+            MessageManager.getInstance().send(player, ChatColor.RED + "旁观者不能建造");
             e.setCancelled(true);
             return;
         }
 
         if (!(arena.getCurrentPhase() instanceof BuildingGamePhase)) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You can not build right now");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你现在不能建造");
             e.setCancelled(true);
             return;
         }

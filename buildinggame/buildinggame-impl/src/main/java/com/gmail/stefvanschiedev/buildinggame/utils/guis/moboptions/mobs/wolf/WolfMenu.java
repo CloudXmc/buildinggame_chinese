@@ -33,7 +33,7 @@ public class WolfMenu extends ColorMenu {
 
         var variant = new ItemStack(Material.WHITE_WOOL);
         var variantMeta = variant.getItemMeta();
-        variantMeta.setDisplayName(ChatColor.GREEN + "Change the wolf's variant");
+        variantMeta.setDisplayName(ChatColor.GREEN + "更改狼的变种");
         variant.setItemMeta(variantMeta);
 
         pane.insertItem(new GuiItem(variant, event -> {

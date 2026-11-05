@@ -77,7 +77,7 @@ public class JoinSignCreate implements Listener {
         }
 
         if (lines == null) {
-            throw new IllegalStateException("Unable to find required settings for join signs in messages.yml.");
+            throw new IllegalStateException("在 messages.yml 中找不到加入告示牌所需的配置。");
         }
 
 		e.setLine(0, lines[0]);

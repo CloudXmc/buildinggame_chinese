@@ -55,7 +55,7 @@ public final class PlotManager {
                     arena.addPlot(p);
 
                     if (SettingsManager.getInstance().getConfig().getBoolean("debug"))
-                        Main.getInstance().getLogger().info("Loaded plot " + p.getId() + " in arena " +
+                        Main.getInstance().getLogger().info("已加载地块 " + p.getId() + "，所属竞技场 " +
                             arena.getName());
                 });
         });

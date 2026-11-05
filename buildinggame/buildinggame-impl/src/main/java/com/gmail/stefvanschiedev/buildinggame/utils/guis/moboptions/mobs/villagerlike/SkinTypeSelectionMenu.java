@@ -28,7 +28,7 @@ class SkinTypeSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     SkinTypeSelectionMenu(@NotNull Creature villagerLike) {
-        super(1, ChatColor.GREEN + "Select skin type");
+        super(1, ChatColor.GREEN + "选择皮肤类型");
 
         Object nmsVillager = null;
         Object villagerData = null;
@@ -39,7 +39,7 @@ class SkinTypeSelectionMenu extends ChestGui {
                 villagerData = ENTITY_ZOMBIE_VILLAGER_GET_VILLAGER_DATA.invoke(nmsVillager);
             } else if (!(villagerLike instanceof Villager)){
                 throw new UnsupportedOperationException(
-                    "Can't set the skin of anything other than a Villager or ZombieVillager"
+                    "只能为村民或僵尸村民设置皮肤类型"
                 );
             }
         } catch (IllegalAccessException | InvocationTargetException e) {
@@ -54,7 +54,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //plains
         ItemStack plains = new ItemStack(Material.GRASS_BLOCK);
         ItemMeta plainsMeta = plains.getItemMeta();
-        plainsMeta.setDisplayName(ChatColor.GREEN + "Plains");
+        plainsMeta.setDisplayName(ChatColor.GREEN + "平原");
         plains.setItemMeta(plainsMeta);
 
         pane.addItem(new GuiItem(plains, event -> {
@@ -75,7 +75,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //desert
         ItemStack desert = new ItemStack(Material.SAND);
         ItemMeta desertMeta = desert.getItemMeta();
-        desertMeta.setDisplayName(ChatColor.GREEN + "Desert");
+        desertMeta.setDisplayName(ChatColor.GREEN + "沙漠");
         desert.setItemMeta(desertMeta);
 
         pane.addItem(new GuiItem(desert, event -> {
@@ -96,7 +96,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //savanna
         ItemStack savanna = new ItemStack(Material.ACACIA_LOG);
         ItemMeta savannaMeta = savanna.getItemMeta();
-        savannaMeta.setDisplayName(ChatColor.GREEN + "Savanna");
+        savannaMeta.setDisplayName(ChatColor.GREEN + "热带草原");
         savanna.setItemMeta(savannaMeta);
 
         pane.addItem(new GuiItem(savanna, event -> {
@@ -117,7 +117,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //taiga
         ItemStack taiga = new ItemStack(Material.SPRUCE_LOG);
         ItemMeta taigaMeta = taiga.getItemMeta();
-        taigaMeta.setDisplayName(ChatColor.GREEN + "Taiga");
+        taigaMeta.setDisplayName(ChatColor.GREEN + "针叶林");
         taiga.setItemMeta(taigaMeta);
 
         pane.addItem(new GuiItem(taiga, event -> {
@@ -138,7 +138,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //snowy tundra
         ItemStack snowyTundra = new ItemStack(Material.ICE);
         ItemMeta snowyTundraMeta = snowyTundra.getItemMeta();
-        snowyTundraMeta.setDisplayName(ChatColor.GREEN + "Snowy Tundra");
+        snowyTundraMeta.setDisplayName(ChatColor.GREEN + "积雪的苔原");
         snowyTundra.setItemMeta(snowyTundraMeta);
 
         pane.addItem(new GuiItem(snowyTundra, event -> {
@@ -159,7 +159,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //jungle
         ItemStack jungle = new ItemStack(Material.VINE);
         ItemMeta jungleMeta = jungle.getItemMeta();
-        jungleMeta.setDisplayName(ChatColor.GREEN + "Jungle");
+        jungleMeta.setDisplayName(ChatColor.GREEN + "丛林");
         jungle.setItemMeta(jungleMeta);
 
         pane.addItem(new GuiItem(jungle, event -> {
@@ -180,7 +180,7 @@ class SkinTypeSelectionMenu extends ChestGui {
         //swamp
         ItemStack swamp = new ItemStack(Material.LILY_PAD);
         ItemMeta swampMeta = swamp.getItemMeta();
-        swampMeta.setDisplayName(ChatColor.GREEN + "Swamp");
+        swampMeta.setDisplayName(ChatColor.GREEN + "沼泽");
         swamp.setItemMeta(swampMeta);
 
         pane.addItem(new GuiItem(swamp, event -> {

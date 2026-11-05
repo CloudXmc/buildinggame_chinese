@@ -62,9 +62,9 @@ public class NPCFloorChangeTrait extends Trait {
         int cooldown = (int) config.getDouble("gui.floor.cooldown") * 1000;
 
         if (cooldown > 0 && System.currentTimeMillis() - floorChange < cooldown) {
-            MessageManager.getInstance().send(player, ChatColor.YELLOW + "You have to wait " +
+            MessageManager.getInstance().send(player, ChatColor.YELLOW + "你还需要等待 " +
                 (((cooldown - System.currentTimeMillis()) + floorChange) / 1000.0) +
-                " seconds before you can change the floor again");
+                " 秒才能再次更改地板");
             event.setCancelled(true);
             return;
         }

@@ -1,309 +1,309 @@
 global:
-  bossbar-header: "&6Time left:"
+  bossbar-header: "&6剩余时间："
   prefix: "&2[&9BuildingGame&2]&r "
   permissionNode:
-  - "&cYou don't have the required permission for that!"
-  combine-names: " and "
+  - "&c你没有执行此操作所需的权限！"
+  combine-names: " 和 "
 commands:
   setmainspawn:
     success:
-    - "&aBuildinggame main spawn has been set!"
+    - "&a建筑游戏主出生点已设置！"
   createarena:
     success:
-    - "&aArena %arena% created!"
+    - "&a竞技场 %arena% 已创建！"
   deletearena:
     success:
-    - "&aArena %arena% deleted!"
+    - "&a竞技场 %arena% 已删除！"
   setspawn:
     success:
-    - "&aSpawn %place% set!"
+    - "&a出生点 %place% 已设置！"
   deletespawn:
     success:
-    - "&aSpawn %place% deleted!"
+    - "&a出生点 %place% 已删除！"
   setlobby:
     success:
-    - "&aLobby set!"
+    - "&a大厅已设置！"
   setminplayers:
     success:
-    - "&aMinimal amount of players set!"
+    - "&a最少玩家数已设置！"
   setbounds:
     success:
-    - "&aBoundaries for plot %place% in arena %arena% set!"
+    - "&a竞技场 %arena% 中地块 %place% 的边界已设置！"
   forcetheme:
     success:
-    - "&aForced '%theme%' to be the theme"
+    - "&a已强制将 '%theme%' 设为主题"
   stats:
     success:
-    - "&aGames played: %stat_plays%"
-    - "&aFirst places: %stat_first%"
-    - "&aSecond places: %stat_second%"
-    - "&aThird places: %stat_third%"
-    - "&aBlocks placed: %stat_placed%"
-    - "&aBlocks broken: %stat_broken%"
-    - "&aDistance walked: %stat_walked%"
-    - "&aPoints given: %stat_points_given%"
-    - "&aPoints received: %stat_points_received%"
+    - "&a游玩场次：%stat_plays%"
+    - "&a获得第一名：%stat_first%"
+    - "&a获得第二名：%stat_second%"
+    - "&a获得第三名：%stat_third%"
+    - "&a放置方块数：%stat_placed%"
+    - "&a破坏方块数：%stat_broken%"
+    - "&a行走距离：%stat_walked%"
+    - "&a给出的分数：%stat_points_given%"
+    - "&a获得的分数：%stat_points_received%"
   invalid:
-  - "&c%argument% is not valid."
+  - "&c%argument% 无效。"
 leave:
   message:
     lobby:
-    - "&6You have left the game!"
+    - "&6你已离开游戏！"
     in-game:
-    - "&6You have left the game!"
+    - "&6你已离开游戏！"
   other-players:
     lobby:
-    - "&6%player% has left the arena!"
+    - "&6%player% 已离开竞技场！"
     in-game:
-    - "&6%player% has left the arena!"
+    - "&6%player% 已离开竞技场！"
 vote:
   message:
-  - "&6You gave %playerplot%'s build a %points%"
+  - "&6你给 %playerplot% 的建筑打了 %points% 分"
   receiver:
-  - "&6You got %points% points from %sender% for your creation"
+  - "&6你收到了来自 %sender% 的 %points% 分，评分对象是你的作品"
   own-plot:
-  - "&cYou can't vote on your own plot"
+  - "&c你不能给自己的地块投票"
   maxium-votes:
-  - "&cYou can only change your vote %max_votes% times"
+  - "&c你只能修改投票 %max_votes% 次"
   title: ""
   subtitle: ""
   actionbar: ""
 join:
   message:
-  - "&6You have joined the game!"
+  - "&6你已加入游戏！"
   otherPlayers:
-  - "&6%player% joined the game!"
+  - "&6%player% 加入了游戏！"
   no-arena:
-  - "&cNo arena found"
+  - "&c未找到竞技场"
   in-game:
-  - "&cArena is already in game"
+  - "&c该竞技场已经在游戏中了"
   invalid:
-  - "&cThat's not a valid arena"
+  - "&c这不是有效的竞技场"
   plot:
     full:
-    - "&cThis team is full!"
+    - "&c这队已满！"
     message:
-    - "&6You have joined plot %plot%"
+    - "&6你已加入地块 %plot%"
 lobbyCountdown:
   message:
-  - "&6The game starts in %seconds% seconds!"
+  - "&6游戏将在 %seconds% 秒后开始！"
 gameStarts:
   message:
-  - "&6The game has started!"
+  - "&6游戏已开始！"
   subject: 
-  - "&6The subject is %subject%"
-  title: "&aBuild theme: %subject%"
+  - "&6本次主题是 %subject%"
+  title: "&a建造主题：%subject%"
   subtitle: ""
   actionbar: ""
 in-game:
   build-out-bounds:
-  - "&cYou can't build here"
+  - "&c你不能在这里建造"
   move-out-bounds:
-  - "&cYou can't move here"
+  - "&c你不能移动到这里"
   command-blocked:
-  - "&cYou can't use that command while in-game"
+  - "&c游戏进行中你不能使用该命令"
 buildingCountdown:
   message:
-  - "&6You have %seconds% seconds left!"
+  - "&6你还剩 %seconds% 秒！"
   title: ""
   subtitle: ""
   actionbar: ""
   time-up:
     message:
     - ""
-    title: "&cTime is up!"
+    title: "&c时间到！"
     subtitle: ""
     actionbar: ""
 voting:
   message:
-  - "&6%playerplot%'s plot!"
-  title: "&a%playerplot%'s build"
+  - "&6%playerplot% 的地块！"
+  title: "&a%playerplot% 的建筑"
   subtitle: ""
   actionbar: ""
   items:
     second-slot:
-      name: "&4Very Bad"
+      name: "&4很差"
       lore:
       -
     third-slot:
-      name: "&cBad"
+      name: "&c差"
       lore:
       -
     fourth-slot:
-      name: "&aMeh"
+      name: "&a一般"
       lore:
       -
     fifth-slot:
-      name: "&2Good"
+      name: "&2好"
       lore:
       -
     sixth-slot:
-      name: "&eVery Good"
+      name: "&e很好"
       lore:
       -
     seventh-slot:
-      name: "&dAwesome"
+      name: "&d极好"
       lore:
       -
     eighth-slot:
-      name: "&5Excellent"
+      name: "&5卓越"
       lore:
       -
 
 game-ends:
   message:
-  - "&6The game ended!"
+  - "&6游戏已结束！"
   winners:
   - "&61. &b%first_players%"
   - "&62. &b%second_players%"
   - "&63. &b%third_players%"
 winner:
   first:
-  - "&aYou went first with %points%!"
+  - "&a你以 %points% 获得了第一名！"
   second:
-  - "&aYou went second with %points%!"
+  - "&a你以 %points% 获得了第二名！"
   third:
-  - "&aYou went third with %points%!"
-  title: "&6%first% won the game with %first_points%!"
+  - "&a你以 %points% 获得了第三名！"
+  title: "&6%first% 以 %first_points% 赢得了游戏！"
   subtitle: ""
   actionbar: ""
 vault:
   message:
     no-booster:
-    - "&aYou received %money% money!"
+    - "&a你获得了 %money% 金钱！"
     booster:
-    - "&aYou received %money% money!"
+    - "&a你获得了 %money% 金钱！"
   
 particle:
   max-particles:
-  - "&cYou've reached the maximum amount of particles"
+  - "&c你已达到粒子数量上限"
 
 signs:
   join:
-    line-1: "&lBuilding Game"
-    line-2: "&8&0join"
-    line-3: "&nMap: %arena%"
+    line-1: "&l建筑游戏"
+    line-2: "&8&0加入"
+    line-3: "&n地图：%arena%"
     line-4: "%players%/%max_players%"
     random:
-      line-1: "&lBuilding Game"
-      line-2: "&8&0join"
+      line-1: "&l建筑游戏"
+      line-2: "&8&0加入"
       line-3: ""
       line-4: ""
   leave:
-    line-1: "&lBuilding Game"
-    line-2: "&8&0leave"
+    line-1: "&l建筑游戏"
+    line-2: "&8&0离开"
     line-3: ""
     line-4: ""
   stat:
     plays:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Times played"
+      line-3: "&1游玩次数"
       line-4: "&6%amount%"
     first:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Wins"
+      line-3: "&1胜场"
       line-4: "&6%amount%"
     second:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Times second"
+      line-3: "&1第二名次数"
       line-4: "&6%amount%"
     third:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Times third"
+      line-3: "&1第三名次数"
       line-4: "&6%amount%"
     broken:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Blocks broken"
+      line-3: "&1破坏方块数"
       line-4: "&6%amount%"
     placed:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Blocks placed"
+      line-3: "&1放置方块数"
       line-4: "&6%amount%"
     walked:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Blocks walked"
+      line-3: "&1行走方块数"
       line-4: "&6%amount%"
     points-given:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Points given"
+      line-3: "&1给出分数"
       line-4: "&6%amount%"
     points-received:
-      line-1: "&lBuilding Game"
+      line-1: "&l建筑游戏"
       line-2: "&l&e#%number% %player%"
-      line-3: "&1Points received"
+      line-3: "&1获得分数"
       line-4: "&6%amount%"
 
 leader-heads:
   plays:
-    title: "&4Top players"
+    title: "&4游玩次数排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} plays"
+      line-3: "&e{amount} 场"
       line-4: "&c&m------------"
   first:
-    title: "&4Top winners"
+    title: "&4胜场排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} wins"
+      line-3: "&e{amount} 次胜利"
       line-4: "&c&m------------"
   second:
-    title: "&4Top second places"
+    title: "&4第二名排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} second places"
+      line-3: "&e{amount} 次第二名"
       line-4: "&c&m------------"
   third:
-    title: "&4Top third places"
+    title: "&4第三名排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} third places"
+      line-3: "&e{amount} 次第三名"
       line-4: "&c&m------------"
   broken:
-    title: "&4Top broken blocks"
+    title: "&4破坏方块排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} broken blocks"
+      line-3: "&e{amount} 个方块"
       line-4: "&c&m------------"
   placed:
-    title: "&4Top placed blocks"
+    title: "&4放置方块排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} placed blocks"
+      line-3: "&e{amount} 个方块"
       line-4: "&c&m------------"
   walked:
-    title: "&4Top walked blocks"
+    title: "&4行走距离排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} walked blocks"
+      line-3: "&e{amount} 个方块"
       line-4: "&c&m------------"
   points-given:
-    title: "&4Top points given"
+    title: "&4给出分数排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} points given"
+      line-3: "&e{amount} 分"
       line-4: "&c&m------------"
   points-received:
-    title: "&4Top points received"
+    title: "&4获得分数排行"
     lines:
       line-1: "&c&m------------"
       line-2: "&a{name}"
-      line-3: "&e{amount} points received"
+      line-3: "&e{amount} 分"
       line-4: "&c&m------------"
 
 placeholder-api:
@@ -313,342 +313,341 @@ placeholder-api:
       false: "false"
 
 subject-gui:
-  title: "&aVote for a subject"
+  title: "&a为主题投票"
   item:
-    name: "&aVote menu"
+    name: "&a投票菜单"
     lores:
     -
   subject:
     name: "&7%subject%"
     lores:
-    - "&a%votes% votes"
+    - "&a%votes% 票"
   previous-page:
-    name: "&aPrevious page"
+    name: "&a上一页"
     lores:
     -
   close-menu:
-    name: "&aClose menu"
+    name: "&a关闭菜单"
     lores:
     -
   next-page:
-    name: "&aNext page"
+    name: "&a下一页"
     lores:
     -
 
 team-gui:
-  title: "&aTeam selection"
+  title: "&a队伍选择"
   item:
-    name: "&aTeam Selection"
+    name: "&a队伍选择"
     lores:
     -
   team:
-    name: "Team %plot%"
+    name: "队伍 %plot%"
     lores:
     -
-
 gui:
-  options-emerald: "&aOptions"
+  options-emerald: "&a选项"
   options-lores:
-  - "&7Change how your build looks,"
-  - "&7and add lots of cool features"
-  options-title: "&aOptions menu"
+  - "&7更改你的建筑外观，"
+  - "&7并添加许多有趣的功能"
+  options-title: "&a选项菜单"
   particles:
-    name: "&aParticles"
+    name: "&a粒子效果"
     lores:
-    - "&7Add particle effects to your build"
-    title: "&aParticles"
+    - "&7为你的建筑添加粒子特效"
+    title: "&a粒子效果"
     flames:
-      name: "&aFlames"
+      name: "&a火焰"
       lores:
-      - "&7Place a flame particle effect"
+      - "&7放置火焰粒子特效"
     magic-crit:
-      name: "&aMagic crit"
+      name: "&a魔法暴击"
       lores:
-      - "&7Place a magic crit particle effect"
+      - "&7放置魔法暴击粒子特效"
     lava-drip:
-      name: "&aLava drip"
+      name: "&a岩浆滴落"
       lores:
-      - "&7Place a lava drip particle effect"
+      - "&7放置岩浆滴落粒子特效"
     water-drip:
-      name: "&aWater drip"
+      name: "&a水滴落"
       lores:
-      - "&7Place a water drip particle effect"
+      - "&7放置水滴落粒子特效"
     enchantment:
-      name: "&aEnchantment"
+      name: "&a附魔"
       lores:
-      - "&7Place an enchantment particle effect"
+      - "&7放置附魔粒子特效"
     hearts:
-      name: "&aHearts"
+      name: "&a爱心"
       lores:
-      - "&7Place a hearts particle effect"
+      - "&7放置爱心粒子特效"
     angry-villager:
-      name: "&aAngry Villager"
+      name: "&a愤怒的村民"
       lores:
-      - "&7Place an angry villager particle effect"
+      - "&7放置愤怒的村民粒子特效"
     happy-villager:
-      name: "&aHappy villager"
+      name: "&a快乐的村民"
       lores:
-      - "&7Place a happy villager particle effect"
+      - "&7放置快乐的村民粒子特效"
     redstone-magic:
-      name: "&aRedstone magic"
+      name: "&a红石魔法"
       lores:
-      - "&7Place a redstone magic particle effect"
+      - "&7放置红石魔法粒子特效"
     spell:
-      name: "&aSpell"
+      name: "&a咒语"
       lores:
-      - "&7Place a spell particle effect"
+      - "&7放置咒语粒子特效"
     snowball-poof:
-      name: "&aSnowball poof"
+      name: "&a雪球爆散"
       lores: 
-      - "&7Place a snowball poof particle effect"
+      - "&7放置雪球爆散粒子特效"
     smoke:
-      name: "&aSmoke"
+      name: "&a烟雾"
       lores:
-      - "&7Place a smoke particle effect"
+      - "&7放置烟雾粒子特效"
     damage-indicator:
-      name: "&aDamage Indicator"
+      name: "&a伤害指示"
       lores:
-      - "&7Place a damage indicator particle effect"
+      - "&7放置伤害指示粒子特效"
     dragon-breath:
-      name: "&aDragon Breath"
+      name: "&a龙息"
       lores:
-      - "&7Place a dragon breath particle effect"
+      - "&7放置龙息粒子特效"
     end-rod:
-      name: "&aEnd Rod"
+      name: "&a末地烛"
       lores:
-      - "&7Place an end rod particle effect"
+      - "&7放置末地烛粒子特效"
     sweep-attack:
-      name: "&aSweep Attack"
+      name: "&a横扫攻击"
       lores:
-      - "&7Place a sweep attack particle effect"
+      - "&7放置横扫攻击粒子特效"
     falling-dust:
-      name: "&aFalling dust"
+      name: "&a落尘"
       lores:
-      - "&7Place a falling dust particle effect"
+      - "&7放置落尘粒子特效"
     totem:
-      name: "&aTotem"
+      name: "&a不死图腾"
       lores:
-      - "&7Place a totem particle effect"
+      - "&7放置不死图腾粒子特效"
     squid-ink:
-      name: "&aSquid Ink"
+      name: "&a鱿鱼墨汁"
       lore:
-      - "&7Place a squid ink particle effect"
+      - "&7放置鱿鱼墨汁粒子特效"
     nautilus:
-      name: "&aNautilus"
+      name: "&a鹦鹉螺"
       lore:
-      - "&7Place a nautilus particle effect"
+      - "&7放置鹦鹉螺粒子特效"
     campfire-smoke:
-      name: "&aCampfire smoke"
+      name: "&a营火烟雾"
       lore:
-      - "&7Place a campfire smoke particle effect"
+      - "&7放置营火烟雾粒子特效"
     honey:
-      name: "&aHoney"
+      name: "&a蜂蜜"
       lore:
-      - "&7Place a honey particle effect"
+      - "&7放置蜂蜜粒子特效"
     nectar:
-      name: "&aNectar"
+      name: "&a花蜜"
       lore:
-      - "&7Place a nectar particle effect"
+      - "&7放置花蜜粒子特效"
     ash:
-      name: "&aAsh"
+      name: "&a灰烬"
       lore:
-      - "&7Place an ash particle effect"
+      - "&7放置灰烬粒子特效"
     crimson-spore:
-      name: "&aCrimson spore"
+      name: "&a绯红孢子"
       lore:
-      - "&7Place a crimson spore particle effect"
+      - "&7放置绯红孢子粒子特效"
     soul-fire-flame:
-      name: "&aSoul fire flame"
+      name: "&a灵魂火"
       lore:
-      - "&7Place a soul fire flame particle effect"
+      - "&7放置灵魂火粒子特效"
     warped-spore:
-      name: "&aWarped spore"
+      name: "&a诡异孢子"
       lore:
-      - "&7Place a warped spore particle effect"
+      - "&7放置诡异孢子粒子特效"
     obsidian-tear:
-      name: "&aObsidian tear"
+      name: "&a黑曜石泪滴"
       lore:
-      - "&7Place an obsidian tear particle effect"
+      - "&7放置黑曜石泪滴粒子特效"
     soul:
-      name: "&aSoul"
+      name: "&a灵魂"
       lore:
-      - "&7Place a soul particle effect"
+      - "&7放置灵魂粒子特效"
     snowflake:
-      name: "&aSnowflake"
+      name: "&a雪花"
       lore:
-      - "&7Place a snowflake particle effect"
+      - "&7放置雪花粒子特效"
     electric-spark:
-      name: "&aElectric spark"
+      name: "&a电火花"
       lore:
-        - "&7Place an electric spark particle effect"
+        - "&7放置电火花粒子特效"
     wax:
-      name: "&aWax"
+      name: "&a蜡"
       lore:
-        - "&7Place a wax particle effect"
+        - "&7放置蜡粒子特效"
     sculk_soul:
-      name: "&aSculk soul"
+      name: "&a幽匿灵魂"
       lore:
-        - "&7Place a sculk soul particle effect"
+        - "&7放置幽匿灵魂粒子特效"
     cherry_leaves:
-      name: "&aCherry leaves"
+      name: "&a樱花树叶"
       lore:
-      - "&7Place a cherry leaves particle effect"
+      - "&7放置樱花树叶粒子特效"
     clear-particles:
-      name: "&cClear particles"
+      name: "&c清除粒子"
       lores:
-      - "&7Clear all the particles on your plot"
-      - "&cWarning: &7Cannot be undone!"
+      - "&7清除你地块上的所有粒子"
+      - "&c警告：&7此操作无法撤销！"
     back:
-      name: "&aBack"
+      name: "&a返回"
       lores:
-      - "&7Go back to the options menu"
+      - "&7返回选项菜单"
   floor:
-    name: "&aFloor block"
+    name: "&a地板方块"
     lores:
-    - "&7Change the block on the floor of your plot"
-    title: "&aFloor menu"
+    - "&7更改你地块的地板方块"
+    title: "&a地板菜单"
     previous-page:
-      name: "&aPrevious page"
+      name: "&a上一页"
       lores:
       -
     close-menu:
-      name: "&aClose menu"
+      name: "&a关闭菜单"
       lores:
       -
     next-page:
-      name: "&aNext page"
+      name: "&a下一页"
       lores:
       -
   time:
-    name: "&aPlot time"
+    name: "&a地块时间"
     lores:
-    - "&7Change the time that your plot is viewed at"
-    title: "&aTime selection"
+    - "&7更改展示你地块时所处的时间"
+    title: "&a时间选择"
     midnight:
-      name: "&aMidnight"
+      name: "&a午夜"
       lores:
-      - "&7Set the time of your building to Midnight"
+      - "&7将你的建筑时间设为午夜"
     2am:
-      name: "&a2 AM"
+      name: "&a凌晨 2 点"
       lores:
-      - "&7Set the time of your building to 2 AM"
+      - "&7将你的建筑时间设为凌晨 2 点"
     4am:
-      name: "&a4 AM"
+      name: "&a凌晨 4 点"
       lores:
-      - "&7Set the time of your building to 4 AM"
+      - "&7将你的建筑时间设为凌晨 4 点"
     6am:
-      name: "&a6 AM"
+      name: "&a早上 6 点"
       lores:
-      - "&7Set the time of your building to 6 AM"
+      - "&7将你的建筑时间设为早上 6 点"
     8am:
-      name: "&a8 AM"
+      name: "&a早上 8 点"
       lores:
-      - "&7Set the time of your building to 8 AM"
+      - "&7将你的建筑时间设为早上 8 点"
     10am:
-      name: "&a10 AM"
+      name: "&a上午 10 点"
       lores:
-      - "&7Set the time of your building to 10 AM"
+      - "&7将你的建筑时间设为上午 10 点"
     midday:
-      name: "&aMidday"
+      name: "&a正午"
       lores:
-      - "&7Set the time of your building to Midday"
+      - "&7将你的建筑时间设为正午"
     2pm:
-      name: "&a2 PM"
+      name: "&a下午 2 点"
       lores:
-      - "&7Set the time of your building to 2 PM"
+      - "&7将你的建筑时间设为下午 2 点"
     4pm:
-      name: "&a4 PM"
+      name: "&a下午 4 点"
       lores:
-      - "&7Set the time of your building to 4 PM"
+      - "&7将你的建筑时间设为下午 4 点"
     6pm:
-      name: "&a6 PM"
+      name: "&a傍晚 6 点"
       lores:
-      - "&7Set the time of your building to 6 PM"
+      - "&7将你的建筑时间设为傍晚 6 点"
     8pm:
-      name: "&a8 PM"
+      name: "&a晚上 8 点"
       lores:
-      - "&7Set the time of your building to 8 PM"
+      - "&7将你的建筑时间设为晚上 8 点"
     10pm:
-      name: "&a10 PM"
+      name: "&a晚上 10 点"
       lores:
-      - "&7Set the time of your building to 10 PM"
+      - "&7将你的建筑时间设为晚上 10 点"
     back:
-      name: "&aBack"
+      name: "&a返回"
       lores:
-      - "&7Go back to the options menu"
+      - "&7返回选项菜单"
   rain:
-    name: "&aToggle rain"
+    name: "&a切换下雨"
     lores:
-    - "&7Toggle rain on your build plot"
+    - "&7为你的建筑地块切换下雨"
   fly-speed:
-    name: "&aFlight speed"
+    name: "&a飞行速度"
     lores:
-    - "&7Change the speed which you fly at"
-    title: "&7Fly speed selection"
+    - "&7更改你的飞行速度"
+    title: "&7飞行速度选择"
     speed-1:
-      name: "&aFly speed 1"
+      name: "&a飞行速度 1"
       lores:
-      - "&7Set your fly speed to 1"
+      - "&7将你的飞行速度设为 1"
     speed-2:
-      name: "&aFly speed 2"
+      name: "&a飞行速度 2"
       lores:
-      - "&7Set your fly speed to 2"
+      - "&7将你的飞行速度设为 2"
     speed-3:
-      name: "&aFly speed 3"
+      name: "&a飞行速度 3"
       lores:
-      - "&7Set your fly speed to 3"
+      - "&7将你的飞行速度设为 3"
     speed-4:
-      name: "&aFly speed 4"
+      name: "&a飞行速度 4"
       lores:
-      - "&7Set your fly speed to 4"
+      - "&7将你的飞行速度设为 4"
     speed-5:
-      name: "&aFly speed 5"
+      name: "&a飞行速度 5"
       lores:
-      - "&7Set your fly speed to 5" 
+      - "&7将你的飞行速度设为 5" 
     back:
-      name: "&aBack"
+      name: "&a返回"
       lores:
-      - "&7Go back to the options menu"
+      - "&7返回选项菜单"
   heads:
-    name: "&aHeads"
+    name: "&a头颅"
     lores:
-    - "&7Get nice heads to decorate your build"
-    title: "&aHeads"
+    - "&7获取漂亮头颅来装饰你的建筑"
+    title: "&a头颅"
     alphabet:
-      name: "&6Alphabet"
+      name: "&6字母"
       lores:
       -
-      title: "&aAlphabet"
+      title: "&a字母"
       arrow-up:
-        name: "&6Arrow Up"
+        name: "&6向上箭头"
         lores:
         -
       arrow-down:
-        name: "&6Arrow Down"
+        name: "&6向下箭头"
         lores:
         -
       arrow-right:
-        name: "&6Arrow Right"
+        name: "&6向右箭头"
         lores:
         -
       arrow-left:
-        name: "&6Arrow Left"
+        name: "&6向左箭头"
         lores:
         -
       question:
-        name: "&6Question"
+        name: "&6问号"
         lores:
         -
       exclamation:
-        name: "&6Exclamation"
+        name: "&6感叹号"
         lores:
         -
       dot:
-        name: "&6Dot"
+        name: "&6句点"
         lores:
         -
       slash:
-        name: "&6Slash"
+        name: "&6斜杠"
         lores:
         -
       a:
@@ -796,35 +795,35 @@ gui:
         lores:
         -
       arrow-up-2:
-        name: "&6Arrow Up"
+        name: "&6向上箭头"
         lores:
         -
       arrow-down-2:
-        name: "&6Arrow Down"
+        name: "&6向下箭头"
         lores:
         -
       arrow-right-2:
-        name: "&6Arrow Right"
+        name: "&6向右箭头"
         lores:
         -
       arrow-left-2:
-        name: "&6Arrow Left"
+        name: "&6向左箭头"
         lores:
         -
       question-2:
-        name: "&6Question"
+        name: "&6问号"
         lores:
         -
       exclamation-2:
-        name: "&6Exclamation"
+        name: "&6感叹号"
         lores:
         -
       dot-2:
-        name: "&6Dot"
+        name: "&6句点"
         lores:
         -
       slash-2:
-        name: "&6Slash"
+        name: "&6斜杠"
         lores:
         -
       a-2:
@@ -972,7 +971,7 @@ gui:
         lores:
         -
       colon:
-        name: "&6Colon"
+        name: "&6冒号"
         lores:
         -
       diaeresis-a:
@@ -1092,220 +1091,220 @@ gui:
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     blocks:
-      name: "&6Blocks"
+      name: "&6方块"
       lores:
       -
-      title: "&aBlocks"
+      title: "&a方块"
       light-blue-stained-clay:
-        name: "&6Light Blue Stained Clay"
+        name: "&6淡蓝色陶瓦"
         lores:
         -
       blue-wool:
-        name: "&6Blue Wool"
+        name: "&6蓝色羊毛"
         lores:
         -
       black-wool:
-        name: "&6Black Wool"
+        name: "&6黑色羊毛"
         lores:
         -
       wood-plank:
-        name: "&6Wood Plank"
+        name: "&6木板"
         lores:
         -
       podzol:
-        name: "&6Podzol"
+        name: "&6灰化土"
         lores:
         -
       grass:
-        name: "&6Grass"
+        name: "&6草方块"
         lores:
         -
       snow-grass:
-        name: "&6Snow Grass"
+        name: "&6积雪草方块"
         lores:
         -
       dirt:
-        name: "&6Dirt"
+        name: "&6泥土"
         lores:
         -
       mycellium:
-        name: "&6Mycellium"
+        name: "&6菌丝体"
         lores:
         -
       red-sand:
-        name: "&6Red Sand"
+        name: "&6红沙"
         lores:
         -
       sand:
-        name: "&6Sand"
+        name: "&6沙子"
         lores:
         -
       soulsand:
-        name: "&6Soulsand"
+        name: "&6灵魂沙"
         lores:
         -
       netherrack:
-        name: "&6Netherrack"
+        name: "&6下界岩"
         lores:
         -
       mob-spawner:
-        name: "&6Mob Spawner"
+        name: "&6刷怪笼"
         lores:
         -
       netherbrick:
-        name: "&6Netherbrick"
+        name: "&6下界砖"
         lores:
         -
       quartz-ore:
-        name: "&6Quartz Ore"
+        name: "&6下界石英矿石"
         lores:
         -
       enderpearl:
-        name: "&6Enderpearl"
+        name: "&6末影珍珠"
         lores:
         -
       endereye:
-        name: "&6Endereye"
+        name: "&6末影之眼"
         lores:
         -
       ender-portal:
-        name: "&6Ender Portal"
+        name: "&6末地传送门"
         lores:
         -
       ice-block:
-        name: "&6Ice Block"
+        name: "&6冰块"
         lores:
         -
       water:
-        name: "&6Water"
+        name: "&6水"
         lores:
         -
       lava:
-        name: "&6Lava"
+        name: "&6岩浆"
         lores:
         -
       emerald-block:
-        name: "&6Emerald Block"
+        name: "&6绿宝石块"
         lores:
         -
       diamond-block:
-        name: "&6Diamond Block"
+        name: "&6钻石块"
         lores:
         -
       gold-block:
-        name: "&6Gold Block"
+        name: "&6金块"
         lores:
         -
       iron-block:
-        name: "&6Iron Block"
+        name: "&6铁块"
         lores:
         -
       emerald-ore:
-        name: "&6Emerald Ore"
+        name: "&6绿宝石矿石"
         lores:
         -
       redstone-ore:
-        name: "&6Redstone Ore"
+        name: "&6红石矿石"
         lores:
         -
       diamond-ore:
-        name: "&6Diamond Ore"
+        name: "&6钻石矿石"
         lores:
         -
       iron-ore:
-        name: "&6Iron Ore"
+        name: "&6铁矿石"
         lores:
         -
       gold-ore:
-        name: "&6Gold Ore"
+        name: "&6金矿石"
         lores:
         -
       cobblestone:
-        name: "&6Cobblestone"
+        name: "&6圆石"
         lores:
         -
       stone:
-        name: "&6Stone"
+        name: "&6石头"
         lores:
         -
       stone-brick:
-        name: "&6Stone Brick"
+        name: "&6石砖"
         lores:
         -
       stone-brick-2:
-        name: "&6Stone Brick"
+        name: "&6石砖"
         lores:
         -
       chimney:
-        name: "&6Chimney"
+        name: "&6烟囱"
         lores:
         -
       bedrock:
-        name: "&6Bedrock"
+        name: "&6基岩"
         lores:
         -
       brick:
-        name: "&6Brick"
+        name: "&6砖块"
         lores:
         -
       quartz-block:
-        name: "&6Quartz Block"
+        name: "&6石英块"
         lores:
         -
       slime-ball:
-        name: "&6Slime Ball"
+        name: "&6黏液球"
         lores:
         -
       redstone-lamp-on:
-        name: "&6Redstone Lamp (On)"
+        name: "&6红石灯（亮）"
         lores:
         -
       piston:
-        name: "&6Piston"
+        name: "&6活塞"
         lores:
         -
       sticky-piston:
-        name: "&6Sticky Piston"
+        name: "&6黏性活塞"
         lores:
         -
       slime-piston:
-        name: "&6Slime Piston"
+        name: "&6黏液活塞"
         lores:
         -
       half-piston:
-        name: "&6Half Piston"
+        name: "&6半活塞"
         lores:
         -
       dropper:
-        name: "&6Dropper"
+        name: "&6投掷器"
         lores:
         -
       dropper-2:
-        name: "&6Dropper"
+        name: "&6投掷器"
         lores:
         -
       redstone-torch:
-        name: "&6Redstone Torch"
+        name: "&6红石火把"
         lores:
         -
       redstone-torch-2:
-        name: "&6Redstone Torch"
+        name: "&6红石火把"
         lores:
         -
       redstone-block:
-        name: "&6Redstone Block"
+        name: "&6红石块"
         lores:
         -
       tnt:
@@ -1317,846 +1316,846 @@ gui:
         lores:
         -
       jukebox:
-        name: "&6Jukebox"
+        name: "&6唱片机"
         lores:
         -
       jukebox-2:
-        name: "&6Jukebox"
+        name: "&6唱片机"
         lores:
         -
       sponge:
-        name: "&6Sponge"
+        name: "&6海绵"
         lores:
         -
       mossy-stone-brick:
-        name: "&6Mossy stone Brick"
+        name: "&6苔石砖"
         lores:
         -
       hydrated-farmland:
-        name: "&6Hydrated Famrland"
+        name: "&6湿润的耕地"
         lores:
         -
       prismarine:
-        name: "&6Prismarine"
+        name: "&6海晶石"
         lores:
         -
       enchantment-table:
-        name: "&6Enchantment Table"
+        name: "&6附魔台"
         lores:
         -
       cocoa-pod:
-        name: "&6Cocoa Pod"
+        name: "&6可可果"
         lores:
         -
       command-block:
-        name: "&6Command Block"
+        name: "&6命令方块"
         lores:
         -
       prismarine-brick:
-        name: "&6Prismarine Brick"
+        name: "&6海晶石砖"
         lores:
         -
       hay-bale:
-        name: "&6Hay Bale"
+        name: "&6干草捆"
         lores:
         -
       hay-bale-2:
-        name: "&6Hay Bale"
+        name: "&6干草捆"
         lores:
         -
       glowstone:
-        name: "&6Glowstone"
+        name: "&6荧石"
         lores:
         -
       gravel:
-        name: "&6Gravel"
+        name: "&6沙砾"
         lores:
         -
       green-wool:
-        name: "&6Green Wool"
+        name: "&6绿色羊毛"
         lores:
         -
       gray-wool:
-        name: "&6Gray Wool"
+        name: "&6灰色羊毛"
         lores:
         -
       granite:
-        name: "&6Granite"
+        name: "&6花岗岩"
         lores:
         -
       polished-granite:
-        name: "&6Polished Granite"
+        name: "&6磨制花岗岩"
         lores:
         -
       diorite:
-        name: "&6Diorite"
+        name: "&6闪长岩"
         lores:
         -
       polished-diorite:
-        name: "&6Polished Diorite"
+        name: "&6磨制闪长岩"
         lores:
         -
       andesite:
-        name: "&6Andesite"
+        name: "&6安山岩"
         lores:
         -
       polished-andesite:
-        name: "&6Polished Andesite"
+        name: "&6磨制安山岩"
         lores:
         -
       wet-sponge:
-        name: "&6Wet Sponge"
+        name: "&6湿海绵"
         lores:
         -
       lapis-lazuli-block:
-        name: "&6Lapis Lazuli Block"
+        name: "&6青金石块"
         lores:
         -
       lapis-lazuli-ore:
-        name: "&6Lapis Lazuli Ore"
+        name: "&6青金石矿石"
         lores:
         -
       sandstone:
-        name: "&6Sandstone"
+        name: "&6砂岩"
         lores:
         -
       smooth-sandstone:
-        name: "&6Smooth Sandstone"
+        name: "&6平滑砂岩"
         lores:
         -
       cyan-wool:
-        name: "&6Cyan Wool"
+        name: "&6青色羊毛"
         lores:
         -
       brown-wool:
-        name: "&6Brown Wool"
+        name: "&6棕色羊毛"
         lores:
         -
       light-blue-wool:
-        name: "&6Light Blue Wool"
+        name: "&6淡蓝色羊毛"
         lores:
         -
       lime-wool:
-        name: "&6Lime Wool"
+        name: "&6黄绿色羊毛"
         lores:
         -
       magenta-wool:
-        name: "&6Magenta Wool"
+        name: "&6品红色羊毛"
         lores:
         -
       orange-wool:
-        name: "&6Orange Wool"
+        name: "&6橙色羊毛"
         lores:
         -
       pink-wool:
-        name: "&6Pink Wool"
+        name: "&6粉红色羊毛"
         lores:
         -
       purple-wool:
-        name: "&6Purple Wool"
+        name: "&6紫色羊毛"
         lores:
         -
       red-wool:
-        name: "&6Red Wool"
+        name: "&6红色羊毛"
         lores:
         -
       light-gray-wool:
-        name: "&6Light Gray Wool"
+        name: "&6淡灰色羊毛"
         lores:
         -
       white-wool:
-        name: "&6White Wool"
+        name: "&6白色羊毛"
         lores:
         -
       yellow-wool:
-        name: "&6Yellow Wool"
+        name: "&6黄色羊毛"
         lores:
         -
       cracked-stone-brick:
-        name: "&6Cracked Stone Brick"
+        name: "&6裂纹石砖"
         lores:
         -
       mossy-stone-brick-2:
-        name: "&6Mossy Stone Brick"
+        name: "&6苔石砖"
         lores:
         -
       stone-slab:
-        name: "&6Stone Slab"
+        name: "&6石台阶"
         lores:
         -
       snow-block:
-        name: "&6Snow Block"
+        name: "&6雪块"
         lores:
         -
       slime-block:
-        name: "&6Slime Block"
+        name: "&6黏液块"
         lores:
         -
       obsidian:
-        name: "&6Obsidian"
+        name: "&6黑曜石"
         lores:
         -
       smooth-red-sandstone:
-        name: "&6Smooth Red Sandstone"
+        name: "&6平滑红砂岩"
         lores:
         -
       red-sandstone:
-        name: "&6Red Sandstone"
+        name: "&6红砂岩"
         lores:
         -
       note-block:
-        name: "&6Note Block"
+        name: "&6音符盒"
         lores:
         -
       packed-ice-block:
-        name: "&6Packed Ice Block"
+        name: "&6浮冰"
         lores:
         -
       nether-portal:
-        name: "&6Nether Portal"
+        name: "&6下界传送门"
         lores:
         -
       end-stone:
-        name: "&6End Stone"
+        name: "&6末地石"
         lores:
         -
       mossy-cobblestone:
-        name: "&6Mossy Cobblestone"
+        name: "&6苔石"
         lores:
         -
       brick-2:
-        name: "&6Brick"
+        name: "&6砖块"
         lores:
         -
       clay:
-        name: "&6Clay"
+        name: "&6黏土"
         lores:
         -
       coal-ore:
-        name: "&6Coal Ore"
+        name: "&6煤矿石"
         lores:
         -
       coal-block:
-        name: "&6Coal Block"
+        name: "&6煤炭块"
         lores:
         -
       dark-prismarine:
-        name: "&6Dark Prismarine"
+        name: "&6暗海晶石"
         lores:
         -
       dispenser:
-        name: "&6Dispenser"
+        name: "&6发射器"
         lores:
         -
       beacon:
-        name: "&6Beacon"
+        name: "&6信标"
         lores:
         -
       pillar-quartz-block:
-        name: "&6Pillar Quartz Block"
+        name: "&6石英柱"
         lores:
         -
       chiseled-quartz-block:
-        name: "&6Chiseled Quartz Block"
+        name: "&6雕纹石英块"
         lores:
         -
       sea-lantern:
-        name: "&6Sea Lantern"
+        name: "&6海晶灯"
         lores:
         -
       dry-farmland:
-        name: "&6Dry Farmland"
+        name: "&6干燥的耕地"
         lores:
         -
       coarse-dirt:
-        name: "&6Coarse Dirt"
+        name: "&6砂土"
         lores:
         -
       redstone-lamp-off:
-        name: "&6Redstone Lamp (Off)"
+        name: "&6红石灯（灭）"
         lores:
         -
       hardened-clay:
-        name: "&6Hardened Clay"
+        name: "&6陶瓦"
         lores:
         -
       black-stained-clay:
-        name: "&6Black Stained Clay"
+        name: "&6黑色陶瓦"
         lores:
         -
       blue-stained-clay:
-        name: "&6Blue Stained Clay"
+        name: "&6蓝色陶瓦"
         lores:
         -
       brown-stained-clay:
-        name: "&6Brown Stained Clay"
+        name: "&6棕色陶瓦"
         lores:
         -
       cyan-stained-clay:
-        name: "&6Cyan Stained Clay"
+        name: "&6青色陶瓦"
         lores:
         -
       gray-stained-clay:
-        name: "&6Gray Stained Clay"
+        name: "&6灰色陶瓦"
         lores:
         -
       green-stained-clay:
-        name: "&6Green Stained Clay"
+        name: "&6绿色陶瓦"
         lores:
         -
       lime-stained-clay:
-        name: "&6Lime Stained Clay"
+        name: "&6黄绿色陶瓦"
         lores:
         -
       magenta-stained-clay:
-        name: "&6Magenta Stained Clay"
+        name: "&6品红色陶瓦"
         lores:
         -
       orange-stained-clay:
-        name: "&6Orange Stained Clay"
+        name: "&6橙色陶瓦"
         lores:
         -
       pink-stained-clay:
-        name: "&6Pink stained Clay"
+        name: "&6粉红色陶瓦"
         lores:
         -
       red-stained-clay:
-        name: "&6Red Stained Clay"
+        name: "&6红色陶瓦"
         lores:
         -
       purple-stained-clay:
-        name: "&6Purple Stained Clay"
+        name: "&6紫色陶瓦"
         lores:
         -
       white-stained-clay:
-        name: "&6White Stained Clay"
+        name: "&6白色陶瓦"
         lores:
         -
       light-gray-stained-clay:
-        name: "&6Light Gray Stained Clay"
+        name: "&6淡灰色陶瓦"
         lores:
         -
       chiseled-sandstone:
-        name: "&6Chiseled Sandstone"
+        name: "&6雕纹砂岩"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     characters:
-      name: "&6Characters"
+      name: "&6角色"
       lores:
       -
-      title: "&aCharacters"
+      title: "&a角色"
       toy-chica:
-        name: "&6Toy Chica"
+        name: "&6玩具奇卡"
         lores:
         -
       zoidberg:
-        name: "&6Zoidberg"
+        name: "&6佐伊德伯格"
         lores:
         -
       ewok:
-        name: "&6Ewok"
+        name: "&6伊渥克"
         lores:
         -
       mangle:
-        name: "&6Mangle"
+        name: "&6曼果"
         lores:
         -
       zelda:
-        name: "&6Zelda"
+        name: "&6塞尔达"
         lores:
         -
       freddy-fazbear:
-        name: "&6Freddy fazbear"
+        name: "&6弗雷迪·费斯熊"
         lores:
         -
       bonnie:
-        name: "&6Bonnie"
+        name: "&6邦尼"
         lores:
         -
       chica:
-        name: "&6Chica"
+        name: "&6奇卡"
         lores:
         -
       foxie:
-        name: "&6Foxie"
+        name: "&6福克西"
         lores:
         -
       marionette:
-        name: "&6Marionette"
+        name: "&6傀儡"
         lores:
         -
       mangle-2:
-        name: "&6Mangle"
+        name: "&6曼果"
         lores:
         -
       link:
-        name: "&6Link"
+        name: "&6林克"
         lores:
         -
       stitch:
-        name: "&6Stitch"
+        name: "&6史迪奇"
         lores:
         -
       groot:
-        name: "&6Groot"
+        name: "&6格鲁特"
         lores:
         -
       star-lord:
-        name: "&6Star Lord"
+        name: "&6星爵"
         lores:
         -
       boba-fett:
-        name: "&6Boba Fett"
+        name: "&6波巴·费特"
         lores:
         -
       storm-trooper:
-        name: "&6Storm Trooper"
+        name: "&6暴风兵"
         lores:
         -
       clone-trooper:
-        name: "&6Clonhe Trooper"
+        name: "&6克隆兵"
         lores:
         -
       r2d2:
-        name: "&6R2D2"
+        name: "&6R2-D2"
         lores:
         -
       darth-vader:
-        name: "&6Darth Vader"
+        name: "&6达斯·维达"
         lores:
         -
       patrick:
-        name: "&6Patrick"
+        name: "&6派大星"
         lores:
         -
       spongebob:
-        name: "&6Spongebob"
+        name: "&6海绵宝宝"
         lores:
         -
       ice-king:
-        name: "&6Ice King"
+        name: "&6冰霸王"
         lores:
         -
       jake:
-        name: "&6Jake"
+        name: "&6老皮"
         lores:
         -
       finn:
-        name: "&6Finn"
+        name: "&6芬恩"
         lores:
         -
       sonic:
-        name: "&6Sonic"
+        name: "&6索尼克"
         lores:
         -
       metaknight:
-        name: "&6Metaknight"
+        name: "&6金属骑士"
         lores:
         -
       ness:
-        name: "&6Ness"
+        name: "&6奈斯"
         lores:
         -
       wario:
-        name: "&6Wario"
+        name: "&6瓦力欧"
         lores:
         -
       princess-peach:
-        name: "&6Princess Peach"
+        name: "&6碧琪公主"
         lores:
         -
       fox-mccloud:
-        name: "&6Fox McCloud"
+        name: "&6火狐·麦克劳德"
         lores:
         -
       bowser:
-        name: "&6Bowser"
+        name: "&6库巴"
         lores:
         -
       mario:
-        name: "&6Mario"
+        name: "&6马力欧"
         lores:
         -
       luigi:
-        name: "&6Luigi"
+        name: "&6路易吉"
         lores:
         -
       yoshi:
-        name: "&6Yoshi"
+        name: "&6耀西"
         lores:
         -
       ash-ketchum:
-        name: "&6Ash Ketchum"
+        name: "&6小智"
         lores:
         -
       samus:
-        name: "&6Samus"
+        name: "&6萨姆斯"
         lores:
         -
       ganondorf:
-        name: "&6Ganondorf"
+        name: "&6加侬多夫"
         lores:
         -
       toy-bonnie:
-        name: "&6Toy Bonnie"
+        name: "&6玩具邦尼"
         lores:
         -
       toy-freddie:
-        name: "&6Toy Freddie"
+        name: "&6玩具弗雷迪"
         lores:
         -
       toy-chica-2:
-        name: "&6Toy Chica"
+        name: "&6玩具奇卡"
         lores:
         -
       toy-mangle:
-        name: "&6Toy Mangle"
+        name: "&6玩具曼果"
         lores:
         -
       balloon-boy:
-        name: "&6Balloon Boy"
+        name: "&6气球男孩"
         lores:
         -
       vegetta:
-        name: "&6Vegetta"
+        name: "&6贝吉塔"
         lores:
         -
       masterchief:
-        name: "&6Masterchief"
+        name: "&6士官长"
         lores:
         -
       bender:
-        name: "&6Bender"
+        name: "&6班德"
         lores:
         -
       wheatley:
-        name: "&6Wheatley"
+        name: "&6维特利"
         lores:
         -
       wilson:
-        name: "&6Wilson"
+        name: "&6威尔逊"
         lores:
         -
       masterchief-2:
-        name: "&6Masterchief"
+        name: "&6士官长"
         lores:
         -
       batman:
-        name: "&6Batman"
+        name: "&6蝙蝠侠"
         lores:
         -
       joker:
-        name: "&6Joker"
+        name: "&6小丑"
         lores:
         -
       bender-2:
-        name: "&6Bender"
+        name: "&6班德"
         lores:
         -
       captain-america:
-        name: "&6Captain America"
+        name: "&6美国队长"
         lores:
         -
       deadpool:
-        name: "&6Deadpool"
+        name: "&6死侍"
         lores:
         -
       doge:
-        name: "&6Doge"
+        name: "&6神烦狗"
         lores:
         -
       toy-freddy:
-        name: "&6Toy Freddy"
+        name: "&6玩具弗雷迪"
         lores:
         -
       toy-bonnie-2:
-        name: "&6Toy Bonnie"
+        name: "&6玩具邦尼"
         lores:
         -
       goomba:
-        name: "&6Goomba"
+        name: "&6栗宝宝"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     colors:
-      name: "&6Colors"
+      name: "&6颜色"
       lores:
       -
-      title: "&aColors"
+      title: "&a颜色"
       sky-blue:
-        name: "&6Sky Blue"
+        name: "&6天蓝色"
         lores:
         -
       sky-blue-2:
-        name: "&6Sky Blue"
+        name: "&6天蓝色"
         lores:
         -
       baby-blue:
-        name: "&6Baby Blue"
+        name: "&6婴儿蓝"
         lores:
         -
       bright-green:
-        name: "&6Bright Green"
+        name: "&6亮绿色"
         lores:
         -
       green:
-        name: "&6Green"
+        name: "&6绿色"
         lores:
         -
       grass-green:
-        name: "&6Grass Green"
+        name: "&6草绿色"
         lores:
         -
       medium-green:
-        name: "&6Medium Green"
+        name: "&6中绿色"
         lores:
         -
       dark-green:
-        name: "&6Dark Green"
+        name: "&6深绿色"
         lores:
         -
       dark-yellow:
-        name: "&6Dark Yellow"
+        name: "&6深黄色"
         lores:
         -
       yellow:
-        name: "&6Yellow"
+        name: "&6黄色"
         lores:
         -
       light-orange:
-        name: "&6Light Orange"
+        name: "&6浅橙色"
         lores:
         -
       orange:
-        name: "&6Orange"
+        name: "&6橙色"
         lores:
         -
       light-red:
-        name: "&6Light Red"
+        name: "&6浅红色"
         lores:
         -
       red:
-        name: "&6Red"
+        name: "&6红色"
         lores:
         -
       red-2:
-        name: "&6Red"
+        name: "&6红色"
         lores:
         -
       dark-red:
-        name: "&6Dark Red"
+        name: "&6深红色"
         lores:
         -
       azure-blue:
-        name: "&6Azure Blue"
+        name: "&6蔚蓝色"
         lores:
         -
       cyan:
-        name: "&6Cyan"
+        name: "&6青色"
         lores:
         -
       darkish-blue:
-        name: "&6Darkish Blue"
+        name: "&6暗蓝色"
         lores:
         -
       blue:
-        name: "&6Blue"
+        name: "&6蓝色"
         lores:
         -
       dark-cyan:
-        name: "&6Dark Cyan"
+        name: "&6深青色"
         lores:
         -
       dark-blue:
-        name: "&6Dark Blue"
+        name: "&6深蓝色"
         lores:
         -
       purple:
-        name: "&6Purple"
+        name: "&6紫色"
         lores:
         -
       pink:
-        name: "&6Pink"
+        name: "&6粉红色"
         lores:
         -
       magenta:
-        name: "&6Magenta"
+        name: "&6品红色"
         lores:
         -
       pink-2:
-        name: "&6Pink"
+        name: "&6粉红色"
         lores:
         -
       pink-3:
-        name: "&6Pink"
+        name: "&6粉红色"
         lores:
         -
       cream:
-        name: "&6Cream"
+        name: "&6米色"
         lores:
         -
       mokka:
-        name: "&6Mokka"
+        name: "&6摩卡色"
         lores:
         -
       brown:
-        name: "&6Brown"
+        name: "&6棕色"
         lores:
         -
       white-block:
-        name: "&6White Block"
+        name: "&6白色方块"
         lores:
         -
       light-grey:
-        name: "&6Light Grey"
+        name: "&6浅灰色"
         lores:
         -
       grey:
-        name: "&6Grey"
+        name: "&6灰色"
         lores:
         -
       black:
-        name: "&6Black"
+        name: "&6黑色"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
     devices:
-      name: "&6Devices"
+      name: "&6装置"
       lores:
       -
-      title: "&aDevices"
+      title: "&a装置"
       clock:
-        name: "&6Clock"
+        name: "&6时钟"
         lores:
         -
       golden-clock:
-        name: "&6Golden Clock"
+        name: "&6黄金时钟"
         lores:
         -
       antique-clock:
-        name: "&6Antique Clock"
+        name: "&6古董钟"
         lores:
         -
       gamecube:
-        name: "&6Gamecube"
+        name: "&6GameCube"
         lores:
         -
       gamecube-2:
-        name: "&6Gamecube"
+        name: "&6GameCube"
         lores:
         -
       security-camera:
-        name: "&6Security Camera"
+        name: "&6监控摄像头"
         lores:
         -
       camera:
-        name: "&6Camera"
+        name: "&6相机"
         lores:
         -
       speaker:
-        name: "&6Speaker"
+        name: "&6音箱"
         lores:
         -
       headlight:
-        name: "&6Headlight"
+        name: "&6车头灯"
         lores:
         -
       ceiling-lamp:
-        name: "&6Ceiling Lamp"
+        name: "&6吊灯"
         lores:
         -
       microwave:
-        name: "&6Microwave"
+        name: "&6微波炉"
         lores:
         -
       computer:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       computer-2:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       monitor:
-        name: "&6Monitor"
+        name: "&6显示器"
         lores:
         -
       monitor-2:
-        name: "&6Monitor"
+        name: "&6显示器"
         lores:
         -
       old-radio:
-        name: "&6Old Radio"
+        name: "&6老式收音机"
         lores:
         -
       computer-3:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       monitor-3:
-        name: "&6Monitor"
+        name: "&6显示器"
         lores:
         -
       toaster:
-        name: "&6Toaster"
+        name: "&6烤面包机"
         lores:
         -
       toaster-2:
-        name: "&6Toaster"
+        name: "&6烤面包机"
         lores:
         -
       camera-2:
-        name: "&6Camera"
+        name: "&6相机"
         lores:
         -
       telephone:
-        name: "&6Telephone"
+        name: "&6电话"
         lores:
         -
       old-camera:
-        name: "&6Old Camera"
+        name: "&6老式相机"
         lores:
         -
       lantern:
-        name: "&6Lantern"
+        name: "&6灯笼"
         lores:
         -
       lantern-off:
-        name: "&6Lantern-Off"
+        name: "&6灯笼（熄灭）"
         lores:
         -
       shower-head:
-        name: "&6Shower Head"
+        name: "&6淋浴喷头"
         lores:
         -
       aquarium:
-        name: "&6Aquarium"
+        name: "&6水族箱"
         lores:
         -
       instagram:
@@ -2164,995 +2163,995 @@ gui:
         lores:
         -
       siren:
-        name: "&6Siren"
+        name: "&6警报器"
         lores:
         -
       police-siren:
-        name: "&6Police Siren"
+        name: "&6警笛"
         lore:
         -
       computer-4:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       broken-tv:
-        name: "&6Broken TV"
+        name: "&6坏掉的电视"
         lores:
         -
       broken-tv-2:
-        name: "&6Broken TV"
+        name: "&6坏掉的电视"
         lores:
         -
       broken-tv-3:
-        name: "&6Broken TV"
+        name: "&6坏掉的电视"
         lores:
         -
       broken-tv-4:
-        name: "&6Broken TV"
+        name: "&6坏掉的电视"
         lores:
         -
       broken-tv-5:
-        name: "&6Broken TV"
+        name: "&6坏掉的电视"
         lores:
         -
       clock-2:
-        name: "&6Clock"
+        name: "&6时钟"
         lores:
         -
       police-siren-2:
-        name: "&6Police Siren"
+        name: "&6警笛"
         lores:
         -
       computer-5:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       computer-6:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       c4-explosive:
-        name: "&6C4 Explosive"
+        name: "&6C4 炸药"
         lores:
         -
       monitor-4:
-        name: "&6Monitor"
+        name: "&6显示器"
         lores:
         -
       gamecube-3:
-        name: "&6Gamecube"
+        name: "&6GameCube"
         lores:
         -
       computer-7:
-        name: "&6Computer"
+        name: "&6电脑"
         lores:
         -
       clock-3:
-        name: "&6Clock"
+        name: "&6时钟"
         lores:
         -
       black-clock:
-        name: "&6Black Clock"
+        name: "&6黑色时钟"
         lores:
         -
       hot-toaster:
-        name: "&6Hot Toaster"
+        name: "&6热烤面包机"
         lores:
         -
       keypad:
-        name: "&6Keypad"
+        name: "&6键盘面板"
         lores:
         -
       speakers:
-        name: "&6Speakers"
+        name: "&6音箱"
         lores:
         -
       blender:
-        name: "&6Blender"
+        name: "&6搅拌机"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     food:
-      name: "&6Food"
+      name: "&6食物"
       lores:
       -
-      title: "&aFood"
+      title: "&a食物"
       nutella:
-        name: "&6Nutella"
+        name: "&6能多益榛子酱"
         lores:
         -
       vegemite:
-        name: "&6Vegemite"
+        name: "&6维吉麦"
         lores:
         -
       bread:
-        name: "&6Bread"
+        name: "&6面包"
         lores:
         -
       cheese:
-        name: "&6Cheese"
+        name: "&6奶酪"
         lores:
         -
       strawberry-jam:
-        name: "&6Strawberry Jam"
+        name: "&6草莓酱"
         lores:
         -
       pancakes:
-        name: "&6Pancakes"
+        name: "&6松饼"
         lores:
         -
       cake:
-        name: "&6Cake"
+        name: "&6蛋糕"
         lores:
         -
       cake-2:
-        name: "&6Cake"
+        name: "&6蛋糕"
         lores:
         -
       can-of-soup:
-        name: "&6Can of Soup"
+        name: "&6罐装汤"
         lores:
         -
       cup-of-milk:
-        name: "&6Cup of Milk"
+        name: "&6一杯牛奶"
         lores:
         -
       chocolate-muffin:
-        name: "&6Chocolate Muffin"
+        name: "&6巧克力玛芬"
         lores:
         -
       muffin:
-        name: "&6Muffin"
+        name: "&6玛芬"
         lores:
         -
       oreo-sandwich:
-        name: "&6Oreo Sandwich"
+        name: "&6奥利奥夹心"
         lores:
         -
       cookie:
-        name: "&6Cookie"
+        name: "&6曲奇"
         lores:
         -
       candy-cane:
-        name: "&6Candy Cane"
+        name: "&6拐杖糖"
         lores:
         -
       chocolatebar:
-        name: "&6Chocolate Bar"
+        name: "&6巧克力棒"
         lores:
         -
       chocolatebar-2:
-        name: "&6Chocolate Bar"
+        name: "&6巧克力棒"
         lores:
         -
       sliced-lemon-citrus-fruit:
-        name: "&6Sliced Lemon (Citrus Fruit)"
+        name: "&6柠檬片（柑橘类）"
         lores:
         -
       cherry:
-        name: "&6Cherry"
+        name: "&6樱桃"
         lores:
         -
       apple:
-        name: "&6Apple"
+        name: "&6苹果"
         lores:
         -
       melon:
-        name: "&6Melon"
+        name: "&6西瓜"
         lores:
         -
       melon-2:
-        name: "&6Melon"
+        name: "&6西瓜"
         lores:
         -
       melon-3:
-        name: "&6Melon"
+        name: "&6西瓜"
         lores:
         -
       melon-4:
-        name: "&6Melon"
+        name: "&6西瓜"
         lores:
         -
       carved-pumpkin:
-        name: "&6Carved Pumpkin"
+        name: "&6雕刻过的南瓜"
         lores:
         -
       pumpkin:
-        name: "&6Pumpkin"
+        name: "&6南瓜"
         lores:
         -
       strawberry:
-        name: "&6Strawberry"
+        name: "&6草莓"
         lores:
         -
       coconut:
-        name: "&6Coconut"
+        name: "&6椰子"
         lores:
         -
       carrot:
-        name: "&6Carrot"
+        name: "&6胡萝卜"
         lores:
         -
       sugarcane:
-        name: "&6Sugarcane"
+        name: "&6甘蔗"
         lores:
         -
       hot-chocolate:
-        name: "&6Hot Chocolate"
+        name: "&6热巧克力"
         lores:
         -
       cup-of-tea:
-        name: "&6Cup of Tea"
+        name: "&6一杯茶"
         lores:
         -
       taco:
-        name: "&6Taco"
+        name: "&6塔可"
         lores:
         -
       taco-2:
-        name: "&6Taco"
+        name: "&6塔可"
         lores:
         -
       baked-potatoe:
-        name: "&6Baked Potatatoe"
+        name: "&6烤马铃薯"
         lores:
         -
       bacon:
-        name: "&6Bacon"
+        name: "&6培根"
         lores:
         -
       fries:
-        name: "&6Fries"
+        name: "&6薯条"
         lores:
         -
       hamburger:
-        name: "&6Hamburger"
+        name: "&6汉堡"
         lores:
         -
       hamburger-2:
-        name: "&6Hamburger"
+        name: "&6汉堡"
         lores:
         -
       hamburger-3:
-        name: "&6Hamburger"
+        name: "&6汉堡"
         lores:
         -
       popcorn:
-        name: "&6Popcorn"
+        name: "&6爆米花"
         lores:
         -
       glass-of-coca-cola:
-        name: "&6Glass of Coca-Cola"
+        name: "&6一杯可口可乐"
         lores:
         -
       sushi-mackerel:
-        name: "&6Sushi Mackerel"
+        name: "&6鲭鱼寿司"
         lores:
         -
       sushi-salmon:
-        name: "&6Sushi Salmon"
+        name: "&6三文鱼寿司"
         lores:
         -
       sushi-roll:
-        name: "&6Sushi Roll"
+        name: "&6寿司卷"
         lores:
         -
       riceball:
-        name: "&6Riceball"
+        name: "&6饭团"
         lores:
         -
       corn-block:
-        name: "&6Corn Block"
+        name: "&6玉米块"
         lores:
         -
       ham-cheese-sandwich:
-        name: "&6Ham Cheese Sandwich"
+        name: "&6火腿奶酪三明治"
         lores:
         -
       glass-of-beer:
-        name: "&6Glass of Beer"
+        name: "&6一杯啤酒"
         lores:
         -
       medieval-beer:
-        name: "&6Medieval Beer"
+        name: "&6中世纪啤酒"
         lores:
         -
       ham:
-        name: "&6Ham"
+        name: "&6火腿"
         lores:
         -
       mushroom-stew:
-        name: "&6Mushroom Stew"
+        name: "&6蘑菇煲"
         lores:
         -
       sweet-roll:
-        name: "&6Sweet Roll"
+        name: "&6甜卷"
         lores:
         -
       ice-cream:
-        name: "&6Ice Cream"
+        name: "&6冰淇淋"
         lores:
         -
       lemon:
-        name: "&6Lemon"
+        name: "&6柠檬"
         lores:
         -
       plum:
-        name: "&6Plum"
+        name: "&6李子"
         lores:
         -
       salad:
-        name: "&6Salad"
+        name: "&6沙拉"
         lores:
         -
       white-frosted-donut:
-        name: "&6White Frosted Donut"
+        name: "&6白色糖霜甜甜圈"
         lores:
         -
       pink-frosted-donut:
-        name: "&6Pink Frosted Donut"
+        name: "&6粉色糖霜甜甜圈"
         lores:
         -
       chocolate-frosted-donut:
-        name: "&6Chocolate Frosted Donut"
+        name: "&6巧克力糖霜甜甜圈"
         lores:
         -
       turkey:
-        name: "&6Turkey"
+        name: "&6火鸡"
         lores:
         -
       bento-box:
-        name: "&6Bento Box"
+        name: "&6便当盒"
         lores:
         -
       coconut-2:
-        name: "&6Coconut"
+        name: "&6椰子"
         lores:
         -
       coconut-3:
-        name: "&6Coconut"
+        name: "&6椰子"
         lores:
         -
       plate-of-cookies:
-        name: "&6Plate of Cookies"
+        name: "&6一盘曲奇"
         lores:
         -
       marshmallow:
-        name: "&6Marshmallow"
+        name: "&6棉花糖"
         lores:
         -
       hamburger-4:
-        name: "&6Hamburger"
+        name: "&6汉堡"
         lores:
         -
       bowl-of-rice:
-        name: "&6Bowl of Rice"
+        name: "&6一碗米饭"
         lores:
         -
       sushi-roll-2:
-        name: "&6Sushi Roll"
+        name: "&6寿司卷"
         lores:
         -
       bowl-of-spaghetti:
-        name: "&6Bowl of Spaghetti"
+        name: "&6一碗意大利面"
         lores:
         -
       bowl-of-noodles:
-        name: "&6Bowl of Noodles"
+        name: "&6一碗面"
         lores:
         -
       bowl-of-noodles-2:
-        name: "&6Bowl of Noodles"
+        name: "&6一碗面"
         lores:
         -
       chinese-take-out-box:
-        name: "&6Chinese Take Out Box"
+        name: "&6中式外卖盒"
         lores:
         -
       tomato:
-        name: "&6Tomato"
+        name: "&6番茄"
         lores:
         -
       orange:
-        name: "&6Orange"
+        name: "&6橙子"
         lores:
         -
       green-apple:
-        name: "&6Green Apple"
+        name: "&6青苹果"
         lores:
         -
       lettuce:
-        name: "&6Lettuce"
+        name: "&6生菜"
         lores:
         -
       purple-grapes:
-        name: "&6Purple Grapes"
+        name: "&6紫葡萄"
         lores:
         -
       green-grapes:
-        name: "&6Green Grapes"
+        name: "&6绿葡萄"
         lores:
         -
       red-grapes:
-        name: "&6Red Grapes"
+        name: "&6红葡萄"
         lores:
         -
       sandwich:
-        name: "&6Sandwich"
+        name: "&6三明治"
         lores:
          -
       cherry-pie:
-        name: "&6Cherry Pie"
+        name: "&6樱桃派"
         lores:
         -
       pie:
-        name: "&6Pie"
+        name: "&6派"
         lores:
         -
       chocolate-cake:
-        name: "&6Chocolate Cake"
+        name: "&6巧克力蛋糕"
         lores:
         -
       honey-pot:
-        name: "&6Honey Pot"
+        name: "&6蜜罐"
         lores:
         -
       pepsi:
-        name: "&6Pepsi"
+        name: "&6百事可乐"
         lores:
         -
       coca-cola:
-        name: "&6Coca-Cola"
+        name: "&6可口可乐"
         lores:
         -
       sprite:
-        name: "&6Sprite"
+        name: "&6雪碧"
         lores:
         -
       mello-yello:
-        name: "&6Mello Yello"
+        name: "&6美年达"
         lores:
         -
       fanta:
-        name: "&6Fanta"
+        name: "&6芬达"
         lores:
         -
       mountain-dew:
-        name: "&6Mountain Dew"
+        name: "&6激浪"
         lores:
         -
       tomato-2:
-        name: "&6Tomato"
+        name: "&6番茄"
         lores:
         -
       ripe-tomato:
-        name: "&6Ripe Tomato"
+        name: "&6熟番茄"
         lores:
         -
       raspberry:
-        name: "&6Raspberry"
+        name: "&6覆盆子"
         lores:
         -
       raspberry-2:
-        name: "&6Raspberry"
+        name: "&6覆盆子"
         lores:
         -
       apple-2:
-        name: "&6Apple"
+        name: "&6苹果"
         lores:
         -
       apple-3:
-        name: "&6Apple"
+        name: "&6苹果"
         lores:
         -
       apple-4:
-        name: "&6Apple"
+        name: "&6苹果"
         lores:
         -
       apple-5:
-        name: "&6Apple"
+        name: "&6苹果"
         lores:
         -
       apple-6:
-        name: "&6Apple"
+        name: "&6苹果"
         lores:
         -
       cooked-shrimp:
-        name: "&6Cooked Shrimp"
+        name: "&6熟虾"
         lores:
         -
       sushi-salmon-2:
-        name: "&6Sushi Salmon"
+        name: "&6三文鱼寿司"
         lores:
         -
       sushi:
-        name: "&6Sushi"
+        name: "&6寿司"
         lores:
         -
       sushi-2:
-        name: "&6Sushi"
+        name: "&6寿司"
         lores:
         -
       plastic-cup:
-        name: "&6Plastic Cup"
+        name: "&6塑料杯"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     games:
-      name: "&6Games"
+      name: "&6游戏"
       lores:
       -
-      title: "&aGames"
+      title: "&a游戏"
       beachball:
-        name: "&6Beachball"
+        name: "&6沙滩球"
         lores:
         -
       soccerball:
-        name: "&6Soccerball"
+        name: "&6足球"
         lores:
         -
       bowlingball:
-        name: "&6Bowlingball"
+        name: "&6保龄球"
         lores:
         -
       bowlingball-2:
-        name: "&6Bowlingball"
+        name: "&6保龄球"
         lores:
         -
       bowlingball-3:
-        name: "&6Bowlingball"
+        name: "&6保龄球"
         lores:
         -
       checkerboard:
-        name: "&6Checkerboard"
+        name: "&6棋盘"
         lores:
         -
       poke-ball:
-        name: "&6Poke Ball"
+        name: "&6精灵球"
         lores:
         -
       glados:
-        name: "&6Glados"
+        name: "&6GLaDOS"
         lores:
         -
       turret:
-        name: "&6Turret"
+        name: "&6炮台"
         lores:
         -
       companion-cube:
-        name: "&6Companion Cube"
+        name: "&6伴侣方块"
         lores:
         -
       weighted-cube:
-        name: "&6Weighted Cube"
+        name: "&6加重方块"
         lores:
         -
       white-dice:
-        name: "&6White Dice"
+        name: "&6白色骰子"
         lores:
         -
       red-dice:
-        name: "&6Red Dice"
+        name: "&6红色骰子"
         lores:
         -
       black-dice:
-        name: "&6Black Dice"
+        name: "&6黑色骰子"
         lores:
         -
       portal-core-wheatley:
-        name: "&6Portal Core - Wheatley"
+        name: "&6传送门核心 - 维特利"
         lores:
         -
       great-ball:
-        name: "&6Great Ball"
+        name: "&6超级球"
         lores:
         -
       ultra-ball:
-        name: "&6Ultra Ball"
+        name: "&6高级球"
         lores:
         -
       master-ball:
-        name: "&6Master Ball"
+        name: "&6大师球"
         lores:
         -
       basketball:
-        name: "&6Basketball"
+        name: "&6篮球"
         lores:
         -
       masterchief-halo:
-        name: "&6Masterchief - Halo"
+        name: "&6士官长 - 光环"
         lores:
         -
       yoshi:
-        name: "&6Yoshi"
+        name: "&6耀西"
         lores:
         -
       batman:
-        name: "&6Batman"
+        name: "&6蝙蝠侠"
         lores:
         -
       luigi:
-        name: "&6Luigi"
+        name: "&6路易吉"
         lores:
         -
       mario:
-        name: "&6Mario"
+        name: "&6马力欧"
         lores:
         -
       solved-rubiks-cube:
-        name: "&6Solved Rubik's Cube"
+        name: "&6已还原的魔方"
         lores:
         -
       scrambled-rubiks-cube:
-        name: "&6Scrambled Rubik's Cube"
+        name: "&6打乱的魔方"
         lores:
         -
       chess-board:
-        name: "&6Chess Board"
+        name: "&6国际象棋棋盘"
         lores:
         -
       safari-ball:
-        name: "&6Safari Ball"
+        name: "&6狩猎球"
         lores:
         -
       premier-ball:
-        name: "&6Premier Ball"
+        name: "&6珍藏球"
         lores:
         -
       warp-pipe:
-        name: "&6Warp Pipe"
+        name: "&6传送水管"
         lores:
         -
       goomba:
-        name: "&6Goomba"
+        name: "&6栗宝宝"
         lores:
         -
       orange-core:
-        name: "&6Orange Core"
+        name: "&6橙色核心"
         lores:
         -
       green-core:
-        name: "&6Green Core"
+        name: "&6绿色核心"
         lores:
         -
       illusion-block:
-        name: "&6Illusion Block"
+        name: "&6幻象方块"
         lores:
         -
       illusion-block-2:
-        name: "&6Illusion Block"
+        name: "&6幻象方块"
         lores:
         -
       dragon-ball-1:
-        name: "&6Dragon Ball #1"
+        name: "&6龙珠 #1"
         lores:
         -
       dragon-ball-2:
-        name: "&6Dragon Ball #2"
+        name: "&6龙珠 #2"
         lores:
         -
       dragon-ball-3:
-        name: "&6Dragon Ball #3"
+        name: "&6龙珠 #3"
         lores:
         -
       dragon-ball-4:
-        name: "&6Dragon Ball #4"
+        name: "&6龙珠 #4"
         lores:
         -
       dragon-ball-5:
-        name: "&6Dragon Ball #5"
+        name: "&6龙珠 #5"
         lores:
         -
       dragon-ball-6:
-        name: "&6Dragon Ball #6"
+        name: "&6龙珠 #6"
         lores:
         -
       dragon-ball-7:
-        name: "&6Dragon Ball #7"
+        name: "&6龙珠 #7"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
     interior:
-      name: "&6Interior"
+      name: "&6室内装饰"
       lores:
       -
-      title: "&aInterior"
+      title: "&a室内装饰"
       potted-rose-plant:
-        name: "&6Potted Rose Plant"
+        name: "&6盆栽玫瑰"
         lores:
         -
       potted-salvia-plant:
-        name: "&6Potted Salvia Plant"
+        name: "&6盆栽鼠尾草"
         lores:
         -
       toiletpaper:
-        name: "&6Toiletpaper"
+        name: "&6卫生纸"
         lores:
         -
       toiletroll:
-        name: "&6Toiletroll"
+        name: "&6厕纸卷"
         lores:
         -
       winrar-books:
-        name: "&6WinRAR Books"
+        name: "&6WinRAR 说明书"
         lores:
         -
       bookcase:
-        name: "&6Bookcase"
+        name: "&6书柜"
         lores:
         -
       bookshelf:
-        name: "&6Bookshelf"
+        name: "&6书架"
         lores:
         -
       pile-of-books:
-        name: "&6Pile of Books"
+        name: "&6一堆书"
         lores:
         -
       chest:
-        name: "&6Chest"
+        name: "&6箱子"
         lores:
         -
       enderchest:
-        name: "&6Enderchest"
+        name: "&6末影箱"
         lores:
         -
       iron-chest:
-        name: "&6Iron Chest"
+        name: "&6铁箱"
         lores:
         -
       medicine-chest:
-        name: "&6Medicine Chest"
+        name: "&6药箱"
         lores:
         -
       cabinet:
-        name: "&6Cabinet"
+        name: "&6橱柜"
         lores:
         -
       present:
-        name: "&6Present"
+        name: "&6礼物"
         lores:
         -
       present-2:
-        name: "&6Present"
+        name: "&6礼物"
         lores:
         -
       present-3:
-        name: "&6Present"
+        name: "&6礼物"
         lores:
         -
       globe:
-        name: "&6Globe"
+        name: "&6地球仪"
         lores:
         -
       plant:
-        name: "&6Plant"
+        name: "&6植物"
         lores:
         -
       crafting-table:
-        name: "&6Crafting Table"
+        name: "&6工作台"
         lores:
         -
       potted-daffodil-plant:
-        name: "&6Potted Daffodil Plant"
+        name: "&6盆栽水仙"
         lores:
         -
       potted-camellia-plant:
-        name: "&6Potted Cammelia Plant"
+        name: "&6盆栽山茶"
         lores:
         -
       candle:
-        name: "&6Candle"
+        name: "&6蜡烛"
         lores:
         -
       unlit-candle:
-        name: "&6Unlit Candle"
+        name: "&6未点燃的蜡烛"
         lores:
         -
       old-books:
-        name: "&6Old Books"
+        name: "&6旧书"
         lores:
         -
       potted-azelea-plant:
-        name: "&6Potted Azelea Plant"
+        name: "&6盆栽杜鹃"
         lores:
         -
       white-vase:
-        name: "&6White Vase"
+        name: "&6白色花瓶"
         lores:
         -
       brown-vase:
-        name: "&6Brown Vase"
+        name: "&6棕色花瓶"
         lores:
         -
       pink-vase:
-        name: "&6Pink Vase"
+        name: "&6粉色花瓶"
         lores:
         -
       blue-vase:
-        name: "&6Blue Vase"
+        name: "&6蓝色花瓶"
         lores:
         -
       furnace:
-        name: "&6Furnace"
+        name: "&6熔炉"
         lores:
         -
       cauldron:
-        name: "&6Cauldron"
+        name: "&6炼药锅"
         lores:
         -
       aquarium:
-        name: "&6Aquarium"
+        name: "&6水族箱"
         lores:
         -
       wooden-crate:
-        name: "&6Wooden Crate"
+        name: "&6木箱"
         lores:
         -
       christmas-present:
-        name: "&6Christmas Present"
+        name: "&6圣诞礼物"
         lores:
         -
       books:
-        name: "&6Books"
+        name: "&6书"
         lores:
         -
       chinese-ming-vase:
-        name: "&6Chinese Ming Vase"
+        name: "&6中国明代花瓶"
         lores:
         -
       japanese-lantern:
-        name: "&6Japanese Lantern"
+        name: "&6日式灯笼"
         lores:
         -
       chinese-lantern:
-        name: "&6Chinese Lantern"
+        name: "&6中式灯笼"
         lores:
         -
       globe-2:
-        name: "&6Globe"
+        name: "&6地球仪"
         lores:
         -
       paper-lantern:
-        name: "&6Paper Lantern"
+        name: "&6纸灯笼"
         lores:
         -
       red-candle:
-        name: "&6Red Candle"
+        name: "&6红蜡烛"
         lores:
         -
       unlit-red-candle:
-        name: "&6Unlit Red Candle"
+        name: "&6未点燃的红蜡烛"
         lores:
         -
       stack-of-books:
-        name: "&6Stack of Books"
+        name: "&6一叠书"
         lores:
         -
       stack-of-books-2:
-        name: "&6Stack of Books"
+        name: "&6一叠书"
         lores:
         -
       fish-tank:
-        name: "&6Fish Tank"
+        name: "&6鱼缸"
         lores:
         -
       present-4:
-        name: "&6Present"
+        name: "&6礼物"
         lores:
         -
       present-5:
-        name: "&6Present"
+        name: "&6礼物"
         lores:
         -
       cd-case:
-        name: "&6CD Case"
+        name: "&6CD 盒"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     misc:
-      name: "&6Misc"
+      name: "&6杂项"
       lores:
       -
-      title: "&aMisc"
+      title: "&a杂项"
       gold-pot:
-        name: "&6Gold Pot"
+        name: "&6金罐"
         lores:
         -
       lava-bucket:
-        name: "&6Lava Bucket"
+        name: "&6岩浆桶"
         lores:
         -
       milk-bucket:
-        name: "&6Milk Bucket"
+        name: "&6牛奶桶"
         lores:
         -
       empty-bucket:
-        name: "&6Empty Bucket"
+        name: "&6空桶"
         lores:
         -
       water-bucket:
-        name: "&6Water Bucket"
+        name: "&6水桶"
         lores:
         -
       mailbox:
-        name: "&6Mailbox"
+        name: "&6邮箱"
         lores:
         -
       space-helmet:
-        name: "&6Space Helmet"
+        name: "&6太空头盔"
         lores:
         -
       space-helmet-2:
-        name: "&6Space Helmet"
+        name: "&6太空头盔"
         lores:
         -
       football-helmet:
-        name: "&6Football Helmet"
+        name: "&6橄榄球头盔"
         lores:
         -
       eye:
-        name: "&6Eye"
+        name: "&6眼睛"
         lores:
         -
       red-mushroom:
-        name: "&6Red Mushroom"
+        name: "&6红色蘑菇"
         lores:
         -
       pine-cone:
-        name: "&6Pine Cone"
+        name: "&6松果"
         lores:
         -
       cannonball:
-        name: "&6Cannonball"
+        name: "&6炮弹"
         lores:
         -
       cannonball-2:
-        name: "&6Cannonball"
+        name: "&6炮弹"
         lores:
         -
       target:
-        name: "&6Target"
+        name: "&6靶子"
         lores:
         -
       cactus:
-        name: "&6Cactus"
+        name: "&6仙人掌"
         lores:
         -
       facebook:
@@ -3164,43 +3163,43 @@ gui:
         lores:
         -
       youtube:
-        name: "&6Youtube"
+        name: "&6YouTube"
         lores:
         -
       firecharge:
-        name: "&6Firecharge"
+        name: "&6火焰弹"
         lores:
         -
       portable-grill:
-        name: "&6Portable Grill"
+        name: "&6便携烤架"
         lores:
         -
       wilson-castaway:
-        name: "&6Wilson - Castaway"
+        name: "&6威尔逊 - 漂流者"
         lores:
         -
       mailbox-2:
-        name: "&6Mailbox"
+        name: "&6邮箱"
         lores:
         -
       skull:
-        name: "&6Skull"
+        name: "&6头骨"
         lores:
         -
       missing-texture:
-        name: "&6Missing Texture"
+        name: "&6缺失纹理"
         lores:
         -
       green-ore:
-        name: "&6Green Ore"
+        name: "&6绿色矿石"
         lores:
         -
       cactusflower:
-        name: "&6Cactusflower"
+        name: "&6仙人掌花"
         lores:
         -
       molten-core:
-        name: "&6Molten Core"
+        name: "&6熔火核心"
         lores:
         -
       reddit:
@@ -3208,35 +3207,35 @@ gui:
         lores:
         -
       diamond-steve-head:
-        name: "&6Diamond Steve Head"
+        name: "&6钻石史蒂夫头"
         lores:
         -
       gold-steve-head:
-        name: "&6Gold Steve Head"
+        name: "&6黄金史蒂夫头"
         lores:
         -
       mushroom-stem:
-        name: "&6Mushroom Stem"
+        name: "&6蘑菇柄"
         lores:
         -
       brown-mushroom:
-        name: "&6Brown Mushroom"
+        name: "&6棕色蘑菇"
         lores:
         -
       cocoa-bean:
-        name: "&6Cocoa Bean"
+        name: "&6可可豆"
         lores:
         -
       light-brown-mushroom:
-        name: "&6Light Brown Mushroom"
+        name: "&6浅棕色蘑菇"
         lores:
         -
       green-ore-2:
-        name: "&6Green Ore"
+        name: "&6绿色矿石"
         lores:
         -
       bundle-of-burnt-torches:
-        name: "&6Bundle of Burnt Torches"
+        name: "&6一捆烧焦的火把"
         lores:
         -
       skype:
@@ -3244,232 +3243,232 @@ gui:
         lores:
         -
       tnt-minecart:
-        name: "&6TNT Minecart"
+        name: "&6TNT 矿车"
         lores:
         -
       furnace-minecart:
-        name: "&6Furnace Minecart"
+        name: "&6熔炉矿车"
         lores:
         -
       chest-minecart:
-        name: "&6Chest Minecart"
+        name: "&6箱子矿车"
         lores:
         -
       command-block-minecart:
-        name: "&6Command Block Minecart"
+        name: "&6命令方块矿车"
         lores:
         -
       scared:
-        name: "&6Scared"
+        name: "&6惊恐"
         lores:
         -
       angel:
-        name: "&6Angel"
+        name: "&6天使"
         lores:
         -
       embarrased:
-        name: "&6Embarrased"
+        name: "&6尴尬"
         lores:
         -
       kissy:
-        name: "&6Kissy"
+        name: "&6亲亲"
         lores:
         -
       sad:
-        name: "&6Sad"
+        name: "&6悲伤"
         lores:
         -
       cool:
-        name: "&6Cool"
+        name: "&6酷"
         lores:
         -
       surprised:
-        name: "&6Surprised"
+        name: "&6惊讶"
         lores:
         -
       dead:
-        name: "&6Dead"
+        name: "&6死亡"
         lores:
         -
       forever-crying:
-        name: "&6Forever Crying"
+        name: "&6泪流不止"
         lores:
         -
       big-grin:
-        name: "&6Big Grin"
+        name: "&6大笑"
         lores:
         -
       wink:
-        name: "&6Wink"
+        name: "&6眨眼"
         lores:
         -
       derp:
-        name: "&6Derp"
+        name: "&6呆萌"
         lores:
         -
       mustache:
-        name: "&6Mustache"
+        name: "&6胡子"
         lores:
         -
       big-smile:
-        name: "&6Big Smile"
+        name: "&6微笑"
         lores:
         -
       smile:
-        name: "&6Smile"
+        name: "&6浅笑"
         lores:
         -
       beehive:
-        name: "&6Beehive"
+        name: "&6蜂巢"
         lores:
         -
       netherlands:
-        name: "&6Netherlands"
+        name: "&6荷兰"
         lores:
         -
       norway:
-        name: "&6Norway"
+        name: "&6挪威"
         lores:
         -
       sweden:
-        name: "&6Sweden"
+        name: "&6瑞典"
         lores:
         -
       egypt:
-        name: "&6Egypt"
+        name: "&6埃及"
         lores:
         -
       chile:
-        name: "&6Chile"
+        name: "&6智利"
         lores:
         -
       monaco:
-        name: "&6Monaco"
+        name: "&6摩纳哥"
         lores:
         -
       canada:
-        name: "&6Canada"
+        name: "&6加拿大"
         lores:
         -
       united-states-of-america:
-        name: "&6United Stated of America"
+        name: "&6美国"
         lores:
         -
       belgium:
-        name: "&6Belgium"
+        name: "&6比利时"
         lores:
         -
       italy:
-        name: "&6Italy"
+        name: "&6意大利"
         lores:
         -
       england:
-        name: "&6England"
+        name: "&6英格兰"
         lores:
         -
       romania:
-        name: "&6Romania"
+        name: "&6罗马尼亚"
         lores:
         -
       germany:
-        name: "&6Germany"
+        name: "&6德国"
         lores:
         -
       singapore:
-        name: "&6Singapore"
+        name: "&6新加坡"
         lores:
         -
       north-korea:
-        name: "&6North Korea"
+        name: "&6朝鲜"
         lores:
         -
       france:
-        name: "&6France"
+        name: "&6法国"
         lores:
         -
       crown:
-        name: "&6Crown"
+        name: "&6王冠"
         lores:
         -
       emerald-steve-head:
-        name: "&6Emerald Steve Head"
+        name: "&6绿宝石史蒂夫头"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     mobs:
-      name: "&6Mobs"
+      name: "&6生物"
       lores:
       -
-      title: "&aMobs"
+      title: "&a生物"
       blaze:
-        name: "&6Blaze"
+        name: "&6烈焰人"
         lores:
         -
       cave-spider:
-        name: "&6Cave Spider"
+        name: "&6洞穴蜘蛛"
         lores:
         -
       ghast:
-        name: "&6Ghast"
+        name: "&6恶魂"
         lores:
         -
       pigzombie:
-        name: "&6Pigzombie"
+        name: "&6僵尸猪人"
         lores:
         -
       enderman:
-        name: "&6Enderman"
+        name: "&6末影人"
         lores:
         -
       lava-slime:
-        name: "&6Lava Slime"
+        name: "&6岩浆怪"
         lores:
         -
       slime:
-        name: "&6Slime"
+        name: "&6史莱姆"
         lores:
         -
       spider:
-        name: "&6Spider"
+        name: "&6蜘蛛"
         lores:
         -
       chicken:
-        name: "&6Chicken"
+        name: "&6鸡"
         lores:
         -
       pig:
-        name: "&6Pig"
+        name: "&6猪"
         lores:
         -
       sheep:
-        name: "&6Sheep"
+        name: "&6羊"
         lores:
         -
       cow:
-        name: "&6Cow"
+        name: "&6牛"
         lores:
         -
       squid:
-        name: "&6Squid"
+        name: "&6鱿鱼"
         lores:
         -
       villager:
-        name: "&6Villager"
+        name: "&6村民"
         lores:
         -
       golem:
-        name: "&6Golem"
+        name: "&6铁傀儡"
         lores:
         -
       herobrine:
@@ -3477,1205 +3476,1205 @@ gui:
         lores:
         -
       mushroom-cow:
-        name: "&6Mushroom Cow"
+        name: "&6哞菇"
         lores:
         -
       ocelot:
-        name: "&6Ocelot"
+        name: "&6豹猫"
         lores:
         -
       horse-head:
-        name: "&6Horse Head"
+        name: "&6马头"
         lores:
         -
       guardian:
-        name: "&6Guardian"
+        name: "&6守卫者"
         lores:
         -
       monkey:
-        name: "&6Monkey"
+        name: "&6猴子"
         lores:
         -
       polar-bear:
-        name: "&6Polar Bear"
+        name: "&6北极熊"
         lores:
         -
       penguin:
-        name: "&6Penguin"
+        name: "&6企鹅"
         lores:
         -
       walrus:
-        name: "&6Walrus"
+        name: "&6海象"
         lores:
         -
       tiger:
-        name: "&6Tiger"
+        name: "&6老虎"
         lores:
         -
       panda:
-        name: "&6Panda"
+        name: "&6熊猫"
         lores:
         -
       cat:
-        name: "&6Cat"
+        name: "&6猫"
         lores:
         -
       angry-wolf:
-        name: "&6Angry Wolf"
+        name: "&6愤怒的狼"
         lores:
         -
       rabbit:
-        name: "&6Rabbit"
+        name: "&6兔子"
         lores:
         -
       koala:
-        name: "&6Koala"
+        name: "&6考拉"
         lores:
         -
       chinese-dragon:
-        name: "&6Chinese Dragon"
+        name: "&6中国龙"
         lores:
         -
       villager-head:
-        name: "&6Villager Head"
+        name: "&6村民头"
         lores:
         -
       pufferfish:
-        name: "&6Pufferfish"
+        name: "&6河豚"
         lores:
         -
       wither-boss:
-        name: "&6Wither Boss"
+        name: "&6凋灵"
         lores:
         -
       snowhead:
-        name: "&6Snowhead"
+        name: "&6雪人头"
         lores:
         -
       snowhead-2:
-        name: "&6Snowhead"
+        name: "&6雪人头"
         lores:
         -
       clownfish:
-        name: "&6Clownfish"
+        name: "&6小丑鱼"
         lores:
         -
       bird:
-        name: "&6Bird"
+        name: "&6鸟"
         lores:
         -
       bee:
-        name: "&6Bee"
+        name: "&6蜜蜂"
         lores:
         -
       enderdragon:
-        name: "&6Enderdragon"
+        name: "&6末影龙"
         lores:
         -
       hermit-crab:
-        name: "&6Hermit Crab"
+        name: "&6寄居蟹"
         lores:
         -
       regular-fish:
-        name: "&6Regular Fish"
+        name: "&6普通鱼"
         lores:
         -
       salmon-fish:
-        name: "&6Salmon Fish"
+        name: "&6鲑鱼"
         lores:
         -
       tortoise:
-        name: "&6Tortoise"
+        name: "&6陆龟"
         lores:
         -
       seagull:
-        name: "&6Seagull"
+        name: "&6海鸥"
         lores:
         -
       ferret:
-        name: "&6Ferret"
+        name: "&6雪貂"
         lores:
         -
       elephant:
-        name: "&6Elephant"
+        name: "&6大象"
         lores:
         -
       furby:
-        name: "&6Furby"
+        name: "&6菲比精灵"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
     pokemon:
-      name: "&6Pokemon"
+      name: "&6宝可梦"
       lores:
       -
-      title: "&aPokemon"
+      title: "&a宝可梦"
       magikarp:
-        name: "&6Magikarp"
+        name: "&6鲤鱼王"
         lores:
         -
       squirtle:
-        name: "&6Squirtle"
+        name: "&6杰尼龟"
         lores:
         -
       unfezant:
-        name: "&6Unfezant"
+        name: "&6高傲雉鸡"
         lores:
         -
       hydreigon:
-        name: "&6Hydreigon"
+        name: "&6三首恶龙"
         lores:
         -
       elektross:
-        name: "&6Elektross"
+        name: "&6麻麻鳗鱼王"
         lores:
         -
       swanna:
-        name: "&6Swanna"
+        name: "&6舞天鹅"
         lores:
         -
       magmar:
-        name: "&6Magmar"
+        name: "&6鸭嘴火兽"
         lores:
         -
       liepard:
-        name: "&6Liepard"
+        name: "&6酷豹"
         lores:
         -
       lilligant:
-        name: "&6Lilligant"
+        name: "&6裙儿小姐"
         lores:
         -
       bisharp:
-        name: "&6Bisharp"
+        name: "&6劈斩司令"
         lores:
         -
       gyarados:
-        name: "&6Gyarados"
+        name: "&6暴鲤龙"
         lores:
         -
       beartic:
-        name: "&6Beartic"
+        name: "&6冻原熊"
         lores:
         -
       scrafty:
-        name: "&6Scrafty"
+        name: "&6头巾混混"
         lores:
         -
       darmanitan:
-        name: "&6Darmanitan"
+        name: "&6达摩狒狒"
         lores:
         -
       axew:
-        name: "&6Axew"
+        name: "&6牙牙"
         lores:
         -
       nurse-joy:
-        name: "&6Nurse Joy"
+        name: "&6乔伊小姐"
         lores:
         -
       patrat:
-        name: "&6Patrat"
+        name: "&6探探鼠"
         lores:
         -
       throh:
-        name: "&6Throh"
+        name: "&6投射鬼"
         lores:
         -
       sawk:
-        name: "&6Sawk"
+        name: "&6打击鬼"
         lores:
         -
       zebstrika:
-        name: "&6Zebstrika"
+        name: "&6雷电斑马"
         lores:
         -
       charmeleon:
-        name: "&6Charmeleon"
+        name: "&6火恐龙"
         lores:
         -
       sylveon:
-        name: "&6Sylveon"
+        name: "&6仙子伊布"
         lores:
         -
       leafeon:
-        name: "&6Leafeon"
+        name: "&6叶伊布"
         lores:
         -
       glaceon:
-        name: "&6Glaceon"
+        name: "&6冰伊布"
         lores:
         -
       umbreon:
-        name: "&6Umbreon"
+        name: "&6月亮伊布"
         lores:
         -
       espeon:
-        name: "&6Espeon"
+        name: "&6太阳伊布"
         lores:
         -
       flareon:
-        name: "&6Flareon"
+        name: "&6火伊布"
         lores:
         -
       vlaporeon:
-        name: "&6Vlaporeon"
+        name: "&6水伊布"
         lores:
         -
       jolteon:
-        name: "&6Jolteon"
+        name: "&6雷伊布"
         lores:
         -
       pikachu:
-        name: "&6Pikachu"
+        name: "&6皮卡丘"
         lores:
         -
       cobalion:
-        name: "&6Cobalion"
+        name: "&6勾帕路翁"
         lores:
         -
       caterpie:
-        name: "&6Caterpie"
+        name: "&6绿毛虫"
         lores:
         -
       ash:
-        name: "&6Ash"
+        name: "&6小智"
         lores:
         -
       xerneas:
-        name: "&6Xerneas"
+        name: "&6哲尔尼亚斯"
         lores:
         -
       delphox:
-        name: "&6Delphox"
+        name: "&6妖火红狐"
         lores:
         -
       chesnaught:
-        name: "&6Chesnaught"
+        name: "&6布里卡隆"
         lores:
         -
       keldeo:
-        name: "&6Keldeo"
+        name: "&6凯路迪欧"
         lores:
         -
       kyurem:
-        name: "&6Kyurem"
+        name: "&6酋雷姆"
         lores:
         -
       zekrom:
-        name: "&6Zekrom"
+        name: "&6捷克罗姆"
         lores:
         -
       reshiram:
-        name: "&6Reshiram"
+        name: "&6莱希拉姆"
         lores:
         -
       scraggy:
-        name: "&6Scraggy"
+        name: "&6滑滑小子"
         lores:
         -
       samurott:
-        name: "&6Samurott"
+        name: "&6大剑鬼"
         lores:
         -
       emboar:
-        name: "&6Emboar"
+        name: "&6炎武王"
         lores:
         -
       serperior:
-        name: "&6Serperior"
+        name: "&6君主蛇"
         lores:
         -
       victini:
-        name: "&6Victini"
+        name: "&6比克提尼"
         lores:
         -
       shaymin:
-        name: "&6Shaymin"
+        name: "&6谢米"
         lores:
         -
       darkrai:
-        name: "&6Darkrai"
+        name: "&6达克莱伊"
         lores:
         -
       giratina:
-        name: "&6Giratina"
+        name: "&6骑拉帝纳"
         lores:
         -
       palkia:
-        name: "&6Palkia"
+        name: "&6帕路奇亚"
         lores:
         -
       dialga:
-        name: "&6Dialga"
+        name: "&6帝牙卢卡"
         lores:
         -
       empoleon:
-        name: "&6Empoleon"
+        name: "&6帝王拿波"
         lores:
         -
       piplup:
-        name: "&6Piplup"
+        name: "&6波加曼"
         lores:
         -
       infernape:
-        name: "&6Infernape"
+        name: "&6烈焰猴"
         lores:
         -
       torterra:
-        name: "&6Torterra"
+        name: "&6土台龟"
         lores:
         -
       deoxys:
-        name: "&6Deoxys"
+        name: "&6代欧奇希斯"
         lores:
         -
       rayquaza:
-        name: "&6Rayquaza"
+        name: "&6烈空坐"
         lores:
         -
       groudon:
-        name: "&6Groudon"
+        name: "&6固拉多"
         lores:
         -
       kyogre:
-        name: "&6Kyogre"
+        name: "&6盖欧卡"
         lores:
         -
       latios:
-        name: "&6Latios"
+        name: "&6拉帝欧斯"
         lores:
         -
       latias:
-        name: "&6Latias"
+        name: "&6拉帝亚斯"
         lores:
         -
       salamence:
-        name: "&6Salamence"
+        name: "&6暴飞龙"
         lores:
         -
       blaziken:
-        name: "&6Blaziken"
+        name: "&6火焰鸡"
         lores:
         -
       sceptile:
-        name: "&6Sceptile"
+        name: "&6蜥蜴王"
         lores:
         -
       ho-oh:
-        name: "&6Ho-Oh"
+        name: "&6凤王"
         lores:
         -
       lugia:
-        name: "&6Lugia"
+        name: "&6洛奇亚"
         lores:
         -
       suicune:
-        name: "&6Suicune"
+        name: "&6水君"
         lores:
         -
       entei:
-        name: "&6Entei"
+        name: "&6炎帝"
         lores:
         -
       raikou:
-        name: "&6Raikou"
+        name: "&6雷公"
         lores:
         -
       typhlosion:
-        name: "&6Typhlosion"
+        name: "&6火暴兽"
         lores:
         -
       meganium:
-        name: "&6Meganium"
+        name: "&6大竺葵"
         lores:
         -
       mewtwo:
-        name: "&6Mewtwo"
+        name: "&6超梦"
         lores:
         -
       dragonite:
-        name: "&6Dragonite"
+        name: "&6快龙"
         lores:
         -
       blastoise:
-        name: "&6Blastoise"
+        name: "&6水箭龟"
         lores:
         -
       venusaur:
-        name: "&6Venusaur"
+        name: "&6妙蛙花"
         lores:
         -
       charizard:
-        name: "&6Charizard"
+        name: "&6喷火龙"
         lores:
         -
       lucario:
-        name: "&6Lucario"
+        name: "&6路卡利欧"
         lores:
         -
       feraligatr:
-        name: "&6Feraligatr"
+        name: "&6大力鳄"
         lores:
         -
       pidgeot:
-        name: "&6Pidgeot"
+        name: "&6大比鸟"
         lores:
         -
       pidgey:
-        name: "&6Pidgey"
+        name: "&6波波"
         lores:
         -
       metapod:
-        name: "&6Metapod"
+        name: "&6铁甲蛹"
         lores:
         -
       butterfree:
-        name: "&6Butterfree"
+        name: "&6巴大蝶"
         lores:
         -
       wartortle:
-        name: "&6Wartortle"
+        name: "&6卡咪龟"
         lores:
         -
       bulbasaur:
-        name: "&6Bulbasaur"
+        name: "&6妙蛙种子"
         lores:
         -
       ivysaur:
-        name: "&6Ivysaur"
+        name: "&6妙蛙草"
         lores:
         -
       swampert:
-        name: "&6Swampert"
+        name: "&6巨沼怪"
         lores:
         -
       growlithe:
-        name: "&6Growlithe"
+        name: "&6卡蒂狗"
         lores:
         -
       greninja:
-        name: "&6Greninja"
+        name: "&6甲贺忍蛙"
         lores:
         -
       charmander:
-        name: "&6Charmander"
+        name: "&6小火龙"
         lores:
         -
       chespin:
-        name: "&6Chespin"
+        name: "&6哈力栗"
         lores:
         -
       terrakion:
-        name: "&6Terrakion"
+        name: "&6代拉基翁"
         lores:
         -
       virizion:
-        name: "&6Virizion"
+        name: "&6毕力吉翁"
         lores:
         -
       noivern:
-        name: "&6Noivern"
+        name: "&6音波龙"
         lores:
         -
       jigglypuff:
-        name: "&6Jigglypuff"
+        name: "&6胖丁"
         lores:
         -
       grovyle:
-        name: "&6Grovyle"
+        name: "&6森林蜥蜴"
         lores:
         -
       gabite:
-        name: "&6Gabite"
+        name: "&6尖牙陆鲨"
         lores:
         -
       pokemon-egg:
-        name: "&6Pokemon Egg"
+        name: "&6宝可梦蛋"
         lores:
         -
       articuno:
-        name: "&6Articuno"
+        name: "&6急冻鸟"
         lores:
         -
       luxray:
-        name: "&6Luxray"
+        name: "&6伦琴猫"
         lores:
         -
       arcanine:
-        name: "&6Arcanine"
+        name: "&6风速狗"
         lores:
         -
       mightyena:
-        name: "&6Mightyena"
+        name: "&6大狼犬"
         lores:
         -
       eevee:
-        name: "&6Eevee"
+        name: "&6伊布"
         lores:
         -
       vulpix:
-        name: "&6Vulpix"
+        name: "&6六尾"
         lores:
         -
       gengar:
-        name: "&6Gengar"
+        name: "&6耿鬼"
         lores:
         -
       raichu:
-        name: "&6Raichu"
+        name: "&6雷丘"
         lores:
         -
       beedrill:
-        name: "&6Beedrill"
+        name: "&6大针蜂"
         lores:
         -
       cubchoo:
-        name: "&6Cubchoo"
+        name: "&6喷嚏熊"
         lores:
         -
       bidoof:
-        name: "&6Bidoof"
+        name: "&6大牙狸"
         lores:
         -
       buizel:
-        name: "&6Buizel"
+        name: "&6泳圈鼬"
         lores:
         -
       arceus:
-        name: "&6Arceus"
+        name: "&6阿尔宙斯"
         lores:
         -
       flaaffy:
-        name: "&6Flaaffy"
+        name: "&6茸茸羊"
         lores:
         -
       deino:
-        name: "&6Deino"
+        name: "&6单首龙"
         lores:
         -
       muk:
-        name: "&6Muk"
+        name: "&6臭臭泥"
         lores:
         -
       oshawott:
-        name: "&6Oshawott"
+        name: "&6水水獭"
         lores:
         -
       cresselia:
-        name: "&6Cresselia"
+        name: "&6克雷色利亚"
         lores:
         -
       yveltal:
-        name: "&6Yveltal"
+        name: "&6伊裴尔塔尔"
         lores:
         -
       wailord:
-        name: "&6Wailord"
+        name: "&6吼鲸王"
         lores:
         -
       moltres:
-        name: "&6Moltress"
+        name: "&6火焰鸟"
         lores:
         -
       mew:
-        name: "&6Mew"
+        name: "&6梦幻"
         lores:
         -
       zygarde:
-        name: "&6Zygarde"
+        name: "&6基格尔德"
         lores:
         -
       zapdos:
-        name: "&6Zapdos"
+        name: "&6闪电鸟"
         lores:
         -
       manaphy:
-        name: "&6Manaphy"
+        name: "&6玛纳霏"
         lores:
         -
       koffing:
-        name: "&6Koffing"
+        name: "&6瓦斯弹"
         lores:
         -
       omanyte:
-        name: "&6Omanyte"
+        name: "&6菊石兽"
         lores:
         -
       cubone:
-        name: "&6Cubone"
+        name: "&6卡拉卡拉"
         lores:
         -
       voltorb:
-        name: "&6Voltorb"
+        name: "&6霹雳电球"
         lores:
         -
       electrode:
-        name: "&6Electrode"
+        name: "&6顽皮雷弹"
         lores:
         -
       weedle:
-        name: "&6Weedle"
+        name: "&6独角虫"
         lores:
         -
       kakuna:
-        name: "&6Kakuna"
+        name: "&6铁壳蛹"
         lores:
         -
       previous-page:
-        name: "&aPrevious Page"
+        name: "&a上一页"
         lores:
         -
       close:
-        name: "&aClose Menu"
+        name: "&a关闭菜单"
         lores:
         -
       next-page:
-        name: "&aNext Page"
+        name: "&a下一页"
         lores:
         -
   banners:
-    name: "&aBanners"
+    name: "&a旗帜"
     lore:
     -
     base-color:
-      title: "&aBase color"
+      title: "&a底色"
       black:
-        name: "&0Black"
+        name: "&0黑色"
         lore:
         -
       red:
-        name: "&4Red"
+        name: "&4红色"
         lore:
         -
       green:
-        name: "&2Green"
+        name: "&2绿色"
         lore:
         -
       brown:
-        name: "&6Brown"
+        name: "&6棕色"
         lore:
         -
       blue:
-        name: "&1Blue"
+        name: "&1蓝色"
         lore:
         -
       purple:
-        name: "&5Purple"
+        name: "&5紫色"
         lore:
         -
       cyan:
-        name: "&bCyan"
+        name: "&b青色"
         lore:
         -
       light-gray:
-        name: "&7Light gray"
+        name: "&7浅灰色"
         lore:
         -
       gray:
-        name: "&8Gray"
+        name: "&8灰色"
         lore:
         -
       pink:
-        name: "&cPink"
+        name: "&c粉红色"
         lore:
         -
       lime:
-        name: "&aLime"
+        name: "&a黄绿色"
         lore:
         -
       yellow:
-        name: "&eYellow"
+        name: "&e黄色"
         lore:
         -
       light-blue:
-        name: "&9Light blue"
+        name: "&9淡蓝色"
         lore:
         -
       magenta:
-        name: "&dMagenta"
+        name: "&d品红色"
         lore:
         -
       orange:
-        name: "&6Orange"
+        name: "&6橙色"
         lore:
         -
       white:
-        name: "&fWhite"
+        name: "&f白色"
         lore:
         -
     color:
-      title: "&aColor"
+      title: "&a颜色"
       black:
-        name: "&0Black"
+        name: "&0黑色"
         lore:
         -
       red:
-        name: "&4Red"
+        name: "&4红色"
         lore:
         -
       green:
-        name: "&2Green"
+        name: "&2绿色"
         lore:
         -
       brown:
-        name: "&6Brown"
+        name: "&6棕色"
         lore:
         -
       blue:
-        name: "&1Blue"
+        name: "&1蓝色"
         lore:
         -
       purple:
-        name: "&5Purple"
+        name: "&5紫色"
         lore:
         -
       cyan:
-        name: "&bCyan"
+        name: "&b青色"
         lore:
         -
       light-gray:
-        name: "&7Light gray"
+        name: "&7浅灰色"
         lore:
         -
       gray:
-        name: "&8Gray"
+        name: "&8灰色"
         lore:
         -
       pink:
-        name: "&cPink"
+        name: "&c粉红色"
         lore:
         -
       lime:
-        name: "&aLime"
+        name: "&a黄绿色"
         lore:
         -
       yellow:
-        name: "&eYellow"
+        name: "&e黄色"
         lore:
         -
       light-blue:
-        name: "&9Light blue"
+        name: "&9淡蓝色"
         lore:
         -
       magenta:
-        name: "&dMagenta"
+        name: "&d品红色"
         lore:
         -
       orange:
-        name: "&6Orange"
+        name: "&6橙色"
         lore:
         -
       white:
-        name: "&fWhite"
+        name: "&f白色"
         lore:
         -
     pattern:
-      title: "&aPattern"
+      title: "&a图案"
       base:
-        name: "&aBase pattern"
+        name: "&a基础图案"
         lore:
         -
       chief:
-        name: "&aChief pattern"
+        name: "&a顶部横带图案"
         lore:
         -
       pale-dexter:
-        name: "&aPale dexter pattern"
+        name: "&a右侧竖带图案"
         lore:
         -
       pale-sinister:
-        name: "&aPale sinister pattern"
+        name: "&a左侧竖带图案"
         lore:
         -
       pale:
-        name: "&aPale pattern"
+        name: "&a竖带图案"
         lore:
         -
       fess:
-        name: "&aFess pattern"
+        name: "&a中央横带图案"
         lore:
         -
       bend:
-        name: "&aBend pattern"
+        name: "&a斜带图案"
         lore:
         -
       bend-sinister:
-        name: "&aBend sinister pattern"
+        name: "&a反向斜带图案"
         lore:
         -
       paly:
-        name: "&aPaly pattern"
+        name: "&a等分竖条图案"
         lore:
         -
       saltire:
-        name: "&aSaltire pattern"
+        name: "&a交叉斜带图案"
         lore:
         -
       cross:
-        name: "&aCross pattern"
+        name: "&a十字图案"
         lore:
         -
       per-bend-sinister:
-        name: "&aPer bend sinister pattern"
+        name: "&a反向斜分图案"
         lore:
         -
       per-bend:
-        name: "&aPer bend pattern"
+        name: "&a斜分图案"
         lore:
         -
       per-bend-inverted:
-        name: "&a Per bend inverted pattern"
+        name: "&a斜分（反转）图案"
         lore:
         -
       per-bend-sinister-inverted:
-        name: "&aPer bend sinister inverted pattern"
+        name: "&a反向斜分（反转）图案"
         lore:
         -
       per-pale:
-        name: "&aPer pale pattern"
+        name: "&a竖分图案"
         lore:
         -
       per-pale-inverted:
-        name: "&aPer pale inverted pattern"
+        name: "&a竖分（反转）图案"
         lore:
         -
       per-fess:
-        name: "&aPer fess pattern"
+        name: "&a横分图案"
         lore:
         -
       per-fess-inverted:
-        name: "&aPer fess inverted pattern"
+        name: "&a横分（反转）图案"
         lore:
         -
       base-dexter-canton:
-        name: "&aBase dexter canton pattern"
+        name: "&a底部右侧角饰图案"
         lore:
         -
       base-sinister-canton:
-        name: "&aBase sinister canton pattern"
+        name: "&a底部左侧角饰图案"
         lore:
         -
       chief-dexter-canton:
-        name: "&aChief dexter canton pattern"
+        name: "&a顶部右侧角饰图案"
         lore:
         -
       chief-sinister-canton:
-        name: "&aChief sinister canton pattern"
+        name: "&a顶部左侧角饰图案"
         lore:
         -
       chevron:
-        name: "&aChevron pattern"
+        name: "&a人字形图案"
         lore:
         -
       inverted-chevron:
-        name: "&aInverted chevron pattern"
+        name: "&a倒人字形图案"
         lore:
         -
       base-indented:
-        name: "&aBase indented pattern"
+        name: "&a底部齿形图案"
         lore:
         -
       chief-indented:
-        name: "&aChief indented pattern"
+        name: "&a顶部齿形图案"
         lore:
         -
       roundel:
-        name: "&aRoundel pattern"
+        name: "&a圆环图案"
         lore:
         -
       lozenge:
-        name: "&aLozenge pattern"
+        name: "&a菱形图案"
         lore:
         -
       bordure:
-        name: "&aBordure pattern"
+        name: "&a边框图案"
         lore:
         -
       dyed-bordure-indented:
-        name: "&aDyed bordure indented pattern"
+        name: "&a染色齿形边框图案"
         lore:
         -
       dyed-field-masoned:
-        name: "&aDyed field masoned pattern"
+        name: "&a染色砖纹底图案"
         lore:
         -
       gradient:
-        name: "&aGradient pattern"
+        name: "&a渐变图案"
         lore:
         -
       base-gradient:
-        name: "&aBase gradient pattern"
+        name: "&a底部渐变图案"
         lore:
         -
       dyed-creeper-charge:
-        name: "&aDyed creeper charge pattern"
+        name: "&a染色苦力怕图案"
         lore:
         -
       dyed-skull-charge:
-        name: "&aDyed skull charge pattern"
+        name: "&a染色骷髅图案"
         lore:
         -
       dyed-flower-charge:
-        name: "&aDyed flower charge pattern"
+        name: "&a染色花朵图案"
         lore:
         -
       dyed-thing:
-        name: "&aDyed thing pattern"
+        name: "&a染色杂物图案"
         lore:
         -
       globe:
-        name: "&aGlobe pattern"
+        name: "&a地球图案"
         lore:
         -
       piglin:
-        name: "&aPiglin pattern"
+        name: "&a猪灵图案"
         lore:
         -
       flow:
-        name: "&aFlow pattern"
+        name: "&a涡流图案"
         lore:
         -
       guster:
-        name: "&aGuster pattern"
+        name: "&a旋风图案"
         lore:
         -
   biome:
-    name: "&aBiomes"
+    name: "&a生物群系"
     lores:
-    - "&7Change the biome of your plot"
-    title: "&aBiomes"
+    - "&7更改你地块的生物群系"
+    title: "&a生物群系"
     snowy-plains:
-      name: "&aSnowy Plains"
+      name: "&a雪原"
       lores:
-      - "&7Change the biome to Snowy Plains"
+      - "&7将生物群系更改为雪原"
     taiga:
-      name: "&aTaiga"
+      name: "&a针叶林"
       lores:
-      - "&7Change the biome to Taiga"
+      - "&7将生物群系更改为针叶林"
     windswept-hills:
-      name: "&aWindswept Hills"
+      name: "&a风袭丘陵"
       lores:
-        - "&7Change the biome to Windswept Hills"
+        - "&7将生物群系更改为风袭丘陵"
     meadow:
-      name: "&aMeadow"
+      name: "&a草甸"
       lores:
-      - "&7Change the biome to Meadow"
+      - "&7将生物群系更改为草甸"
     frozen-peaks:
-      name: "&aFrozen Peaks"
+      name: "&a冰封山峰"
       lores:
-        - "&7Change the biome to Frozen Peaks"
+        - "&7将生物群系更改为冰封山峰"
     stony-peaks:
-      name: "&aStony Peaks"
+      name: "&a尖峭山峰"
       lores:
-        - "&7Change the biome to Stony Peaks"
+        - "&7将生物群系更改为尖峭山峰"
     plains:
-      name: "&aPlains"
+      name: "&a平原"
       lores:
-      - "&7Change the biome to Plains"
+      - "&7将生物群系更改为平原"
     forest:
-      name: "&aForest"
+      name: "&a森林"
       lores:
-      - "&7Change the biome to Forest"
+      - "&7将生物群系更改为森林"
     dark-forest:
-      name: "&aDark Forest"
+      name: "&a黑森林"
       lores:
-      - "&7Change the biome to Dark Forest"
+      - "&7将生物群系更改为黑森林"
     pale-garden:
-      name: "&aPale Garden"
+      name: "&a苍白之园"
       lore:
-      - "&7Change the biome to Pale Garden"
+      - "&7将生物群系更改为苍白之园"
     dappled-forest:
-      name: "&aDappled Forest"
+      name: "&a斑驳森林"
       lore:
-      - "&7Change the biome to Dappled Forest"
+      - "&7将生物群系更改为斑驳森林"
     swamp:
-      name: "&aSwamp"
+      name: "&a沼泽"
       lores:
-      - "&7Change the biome to Swamp"
+      - "&7将生物群系更改为沼泽"
     jungle:
-      name: "&aJungle"
+      name: "&a丛林"
       lores:
-      - "&7Change the biome to Jungle"
+      - "&7将生物群系更改为丛林"
     bamboo-jungle:
-      name: "&aBamboo Jungle"
+      name: "&a竹林"
       lore:
-        - "&7Change the biome to Bamboo Jungle"
+        - "&7将生物群系更改为竹林"
     mushroom-fields:
-      name: "&aMushroom Fields"
+      name: "&a蘑菇岛"
       lores:
-      - "&7Change the biome to Mushroom Fields"
+      - "&7将生物群系更改为蘑菇岛"
     the-end:
-      name: "&aThe End"
+      name: "&a末地"
       lores:
-      - "&7Change the biome to The End"
+      - "&7将生物群系更改为末地"
     desert:
-      name: "&aDesert"
+      name: "&a沙漠"
       lores:
-      - "&7Change the biome to Desert"
+      - "&7将生物群系更改为沙漠"
     savanna:
-      name: "&aSavanna"
+      name: "&a热带草原"
       lores:
-      - "&7Change the biome to Savanna"
+      - "&7将生物群系更改为热带草原"
     badlands:
-      name: "&aBadlands"
+      name: "&a恶地"
       lores:
-      - "&7Change the biome to Badlands"
+      - "&7将生物群系更改为恶地"
     deep-dark:
-      name: "&aDeep Dark"
+      name: "&a深暗之域"
       lores:
-      - "&7Change the biome to Deep Dark"
+      - "&7将生物群系更改为深暗之域"
     sulfur-caves:
-      name: "&aSulfur Caves"
+      name: "&a硫磺洞穴"
       lore:
-        - "&7Change the biome to Sulfur Caves"
+        - "&7将生物群系更改为硫磺洞穴"
     mangrove-swamp:
-      name: "&aMangrove Swamp"
+      name: "&a红树林沼泽"
       lore:
-        - "&7Change the biome to Mangrove Swamp"
+        - "&7将生物群系更改为红树林沼泽"
     nether-wastes:
-      name: "&aNether Wastes"
+      name: "&a下界荒地"
       lores:
-      - "&7Change the biome to Nether Wastes"
+      - "&7将生物群系更改为下界荒地"
     crimson-forest:
-      name: "&aCrimson Forest"
+      name: "&a绯红森林"
       lores:
-      - "&7Change the biome to Crimson Forest"
+      - "&7将生物群系更改为绯红森林"
     soul-sand-valley:
-      name: "&aSoul Sand Valley"
+      name: "&a灵魂沙峡谷"
       lores:
-      - "&7Change the biome to Soul Sand Valley"
+      - "&7将生物群系更改为灵魂沙峡谷"
     warped-forest:
-      name: "&aWarped Forest"
+      name: "&a诡异森林"
       lores:
-      - "&7Change the biome to Warped Forest"
+      - "&7将生物群系更改为诡异森林"
     basalt-deltas:
-      name: "&aBasalt Deltas"
+      name: "&a玄武岩三角洲"
       lore:
-        - "&7Change the biome to Basalt Deltas"
+        - "&7将生物群系更改为玄武岩三角洲"
     ocean:
-      name: "&aOcean"
+      name: "&a海洋"
       lores:
-      - "&7Change the biome to Ocean"
+      - "&7将生物群系更改为海洋"
     the-void:
-      name: "&aThe Void"
+      name: "&a虚空"
       lores:
-      - "&7Change the biome to The Void"
+      - "&7将生物群系更改为虚空"
   close-menu:
-    name: "&aClose menu"
+    name: "&a关闭菜单"
     lores:
-    - "&7Close the options menu"
+    - "&7关闭选项菜单"
 
 spectator-gui:
-  title: "&aSpectator menu"
+  title: "&a旁观者菜单"
   fly-speed:
-    name: "&aFlight speed"
+    name: "&a飞行速度"
     lores:
-    - "&7Change the speed which you fly at"
-    title: "&aSpectator fly speed"
+    - "&7更改你的飞行速度"
+    title: "&a旁观者飞行速度"
     speed-1:
-      name: "&aFly speed 1"
+      name: "&a飞行速度 1"
       lores:
-      - "&7Change your fly speed to 1"
+      - "&7将你的飞行速度设为 1"
     speed-2:
-      name: "&aFly speed 2"
+      name: "&a飞行速度 2"
       lores:
-      - "&7Change your fly speed to 2"
+      - "&7将你的飞行速度设为 2"
     speed-3:
-      name: "&aFly speed 3"
+      name: "&a飞行速度 3"
       lores:
-      - "&7Change your fly speed to 3"
+      - "&7将你的飞行速度设为 3"
     speed-4:
-      name: "&aFly speed 4"
+      name: "&a飞行速度 4"
       lores:
-      - "&7Change your fly speed to 4"
+      - "&7将你的飞行速度设为 4"
     speed-5:
-      name: "&aFly speed 5"
+      name: "&a飞行速度 5"
       lores:
-      - "&7Change your fly speed to 5"
+      - "&7将你的飞行速度设为 5"
     back:
-      name: "&aGo back"
+      name: "&a返回"
       lores:
-      - "&7Go back to the previous menu"
+      - "&7返回上一个菜单"
   close-menu:
-    name: "&aClose menu"
+    name: "&a关闭菜单"
     lores:
-    - "&7Close this menu"
+    - "&7关闭此菜单"
 
 
 variables:
   join-sign:
     status:
-      building: "&7building&r"
-      winning: "&5full&r"
-      voting: "&4voting&r"
-      lobby: "&awaiting&r"
+      building: "&7建造中&r"
+      winning: "&5已满&r"
+      voting: "&4投票中&r"
+      lobby: "&a等待中&r"
 
 scoreboards:
   main:
-    header: "&e&lBuilding Game - Stats"
+    header: "&e&l建筑游戏 - 统计"
     text:
-    - "&5Wins: &a%stat_first%"
-    - "&5Blocks placed: &a%stat_placed%"
-    - "&5Blocks broken: &a%stat_broken%"
+    - "&5胜场：&a%stat_first%"
+    - "&5放置方块：&a%stat_placed%"
+    - "&5破坏方块：&a%stat_broken%"
     - ""
-    - "&5Date: &a%date_month% %date_day_of_month%, %date_year%"
+    - "&5日期：&a%date_year% 年 %date_month% 月 %date_day_of_month% 日"
   lobby:
-    header: "&e&lBuilding Game"
+    header: "&e&l建筑游戏"
     text:
-    - "&5Map:"
+    - "&5地图："
     - "&a%arena%"
     - ""
-    - "&5Players:"
+    - "&5玩家："
     - "&a%players%/%max_players%"
   build:
-    header: "&e&lBuilding Game"
+    header: "&e&l建筑游戏"
     text:
-    - "&5Map:"
+    - "&5地图："
     - "&a%arena%"
     - ""
-    - "&5Players:"
+    - "&5玩家："
     - "&a%players%/%max_players%"
     - " "
-    - "&5Theme:"
+    - "&5主题："
     - "&a%subject%"
   vote:
-    header: "&e&lPoints"
+    header: "&e&l分数"
     text:
-    - "&5Map:"
+    - "&5地图："
     - "&a%arena%"
     - ""
-    - "&5Players:"
+    - "&5玩家："
     - "&a%players%/%max_players%"
     - " "
-    - "&5Theme:"
+    - "&5主题："
     - "&a%subject%"
   win:
-    header: "&e&lBuilding Game"
+    header: "&e&l建筑游戏"
     text:
-    - "&5Map:"
+    - "&5地图："
     - "&a%arena%"
     - ""
-    - "&5Players:"
+    - "&5玩家："
     - "&a%players%/%max_players%"
  
 plots:
   floor:
     forbidden:
-    - "&cThat block is forbidden"
+    - "&c该方块被禁止使用"
     incorrect:
-    - "&cThat is not a block"
+    - "&c这不是一个方块"
     
 leave-item:
-  name: "&6Leave"
+  name: "&6离开"

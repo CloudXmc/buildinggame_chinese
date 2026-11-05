@@ -25,7 +25,7 @@ public class PandaMenu extends BabyMenu {
         //personality
         ItemStack personality = new ItemStack(Material.PLAYER_HEAD);
         ItemMeta personalityMeta = personality.getItemMeta();
-        personalityMeta.setDisplayName(ChatColor.GREEN + "Change the genes");
+        personalityMeta.setDisplayName(ChatColor.GREEN + "更改基因");
         personality.setItemMeta(personalityMeta);
 
         pane.insertItem(new GuiItem(personality, event -> {

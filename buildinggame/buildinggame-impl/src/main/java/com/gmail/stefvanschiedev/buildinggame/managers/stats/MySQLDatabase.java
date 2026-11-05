@@ -47,7 +47,7 @@ public class MySQLDatabase {
      */
     public boolean setup() {
         this.manager = new ConnectionManager(plugin);
-        plugin.getLogger().info("Configuring connection pool...");
+        plugin.getLogger().info("正在配置连接池……");
         
         if (!manager.configureConnPool())
         	return false;
@@ -72,7 +72,7 @@ public class MySQLDatabase {
                     "  `points_given` int(11) NOT NULL DEFAULT '0'\n" +
                     ") ENGINE=InnoDB DEFAULT CHARSET=latin1;");
         } catch (SQLException e) {
-        	plugin.getLogger().info("Failed to create table in database! Returning to file stats.");
+        	plugin.getLogger().info("创建数据库表失败！已回退到文件统计。");
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             return false;
         } finally {
@@ -104,7 +104,7 @@ public class MySQLDatabase {
 
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            plugin.getLogger().warning("Failed to execute update: " + query);
+            plugin.getLogger().warning("执行更新失败：" + query);
         } finally {
             try {
                 statement.close();
@@ -136,7 +136,7 @@ public class MySQLDatabase {
             return statement.executeQuery(query);
         } catch (SQLException exception){
             exception.printStackTrace();
-            plugin.getLogger().warning("Failed to execute request: "+query);
+            plugin.getLogger().warning("执行请求失败："+query);
 
             try {
                 statement.close();
@@ -233,7 +233,7 @@ public class MySQLDatabase {
             while (set.next())
                 uuids.add(UUID.fromString(set.getString(1)));
         } catch (SQLException e) {
-            plugin.getLogger().warning("Error while retrieving data from database");
+            plugin.getLogger().warning("从数据库读取数据时出错");
             e.printStackTrace();
         } finally {
             closeResultSet(set);

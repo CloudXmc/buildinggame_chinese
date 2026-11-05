@@ -70,7 +70,7 @@ public enum ClickEvent {
             contextBag.addContext("location", LocationDataType.getInstance(), event.getClickedBlock().getLocation());
 
             MessageManager.getInstance().send(player,
-                ChatColor.GREEN + "Now click on the other corner");
+                ChatColor.GREEN + "现在点击另一个角");
         } else {
             //second time
             var location = event.getClickedBlock().getLocation();
@@ -83,7 +83,7 @@ public enum ClickEvent {
                 arenas.set(name + '.' + plotID + ".low.world", previousLocation.getWorld().getName());
             } else {
                 MessageManager.getInstance().send(player,
-                    ChatColor.RED + "The world has to be the same");
+                    ChatColor.RED + "必须在同一个世界");
                 event.setCancelled(true);
                 return;
             }
@@ -157,7 +157,7 @@ public enum ClickEvent {
             contextBag.addContext("location", LocationDataType.getInstance(), event.getClickedBlock().getLocation());
 
             MessageManager.getInstance().send(player,
-                ChatColor.GREEN + "Now click on the other corner");
+                ChatColor.GREEN + "现在点击另一个角");
         } else {
             //second time
             var location = event.getClickedBlock().getLocation();
@@ -170,7 +170,7 @@ public enum ClickEvent {
                 arenas.set(name + '.' + plotID + ".floor.low.world", previousLocation.getWorld().getName());
             } else {
                 MessageManager.getInstance().send(player,
-                    ChatColor.RED + "The world has to be the same");
+                    ChatColor.RED + "必须在同一个世界");
                 event.setCancelled(true);
                 return;
             }
@@ -206,7 +206,7 @@ public enum ClickEvent {
 
             plot.setFloor(region);
 
-            MessageManager.getInstance().send(player, ChatColor.GREEN + "Floor set!");
+            MessageManager.getInstance().send(player, ChatColor.GREEN + "地板已设置！");
 
             player.getInventory().setItemInMainHand(null);
         }
@@ -285,7 +285,7 @@ public enum ClickEvent {
         votingPlot.getBoundary().saveSchematic(file, () ->
             MessageManager.getInstance().send(
                 event.getPlayer(),
-                ChatColor.GREEN + "Your report has been saved."
+                ChatColor.GREEN + "你的举报已保存。"
             ));
 
         for (GamePlayer gamePlayer : votingPlot.getGamePlayers()) {
@@ -328,7 +328,7 @@ public enum ClickEvent {
         gamePlayer.connect(mainSpawnManager.getServer(), mainSpawnManager.getMainSpawn());
         plot.removeSpectator(gamePlayer);
 
-        MessageManager.getInstance().send(player, ChatColor.GREEN + "Stopped spectating");
+        MessageManager.getInstance().send(player, ChatColor.GREEN + "已停止旁观");
 
         event.setCancelled(true);
     }),

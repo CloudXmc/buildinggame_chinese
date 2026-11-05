@@ -59,7 +59,7 @@ public final class SettingsManager {
     @Contract("null -> fail")
 	public void setup(Plugin p) {
 		if (!p.getDataFolder().exists() && !p.getDataFolder().mkdir())
-		    p.getLogger().warning("Unable to create data folder");
+		    p.getLogger().warning("无法创建数据文件夹");
 		
 		configFile = new File(p.getDataFolder(), "config.yml");
 		signsFile = new File(p.getDataFolder(), "signs.yml");
@@ -67,7 +67,7 @@ public final class SettingsManager {
 		if (!configFile.exists()) {
 			try {
 				if (!configFile.createNewFile())
-					p.getLogger().warning("Unable to create config file");
+					p.getLogger().warning("无法创建 config.yml 文件");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -75,7 +75,7 @@ public final class SettingsManager {
 		if (!signsFile.exists()) {
 			try {
 				if (!signsFile.createNewFile())
-					p.getLogger().warning("Unable to create singns file");
+					p.getLogger().warning("无法创建 signs.yml 文件");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

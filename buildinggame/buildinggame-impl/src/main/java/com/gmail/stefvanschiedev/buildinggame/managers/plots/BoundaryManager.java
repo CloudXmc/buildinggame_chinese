@@ -77,7 +77,7 @@ public final class BoundaryManager {
                 if (SettingsManager.getInstance().getConfig().getBoolean("debug")) {
                     var logger = Main.getInstance().getLogger();
 
-                    logger.info("Loaded boundary for plot " + plotId + " in arena " + arenaName);
+                    logger.info("已加载地块边界 " + plotId + "，所属竞技场 " + arenaName);
                 }
 			})
 		);

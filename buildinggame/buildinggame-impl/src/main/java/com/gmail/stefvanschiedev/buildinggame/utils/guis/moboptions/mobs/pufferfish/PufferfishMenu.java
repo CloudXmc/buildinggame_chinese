@@ -24,7 +24,7 @@ public class PufferfishMenu extends RemoveMenu {
         //inflation state
         var inflation = new ItemStack(Material.BONE);
         var inflationMeta = inflation.getItemMeta();
-        inflationMeta.setDisplayName(ChatColor.GREEN + "Set inflation state");
+        inflationMeta.setDisplayName(ChatColor.GREEN + "设置膨胀状态");
         inflation.setItemMeta(inflationMeta);
 
         pane.insertItem(new GuiItem(inflation, event -> {

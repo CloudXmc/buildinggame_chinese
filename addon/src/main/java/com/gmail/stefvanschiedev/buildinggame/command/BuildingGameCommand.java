@@ -21,7 +21,7 @@ import org.bukkit.entity.Player;
 public class BuildingGameCommand extends BaseCommand {
 
     @Subcommand("setmainspawn")
-    @Description("Set the main spawn")
+    @Description("设置主出生点")
     @CommandPermission("bg.setmainspawn")
     //ACF may not function correctly when Player is changed to Entity due to the reliance on reflection
     @SuppressWarnings("TypeMayBeWeakened")
@@ -44,7 +44,7 @@ public class BuildingGameCommand extends BaseCommand {
 
         instance.save(BungeeCordHandler.Receiver.MAIN, null);
 
-        player.sendMessage(ChatColor.GREEN + "Main spawn set!");
+        player.sendMessage(ChatColor.GREEN + "主出生点已设置！");
     }
 
 }

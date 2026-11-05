@@ -28,7 +28,7 @@ class LevelSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     LevelSelectionMenu(@NotNull Creature villagerLike) {
-        super(1, ChatColor.GREEN + "Change the level");
+        super(1, ChatColor.GREEN + "更改等级");
 
         Object nmsVillager = null;
         Object villagerData = null;
@@ -39,7 +39,7 @@ class LevelSelectionMenu extends ChestGui {
                 villagerData = ENTITY_ZOMBIE_VILLAGER_GET_VILLAGER_DATA.invoke(nmsVillager);
             } else if (!(villagerLike instanceof Villager)){
                 throw new UnsupportedOperationException(
-                    "Can't set the level of anything other than a Villager or ZombieVillager"
+                    "只能为村民或僵尸村民设置等级"
                 );
             }
         } catch (IllegalAccessException | InvocationTargetException e) {
@@ -54,7 +54,7 @@ class LevelSelectionMenu extends ChestGui {
         //level 1
         ItemStack level1 = new ItemStack(Material.STONE);
         ItemMeta level1Meta = level1.getItemMeta();
-        level1Meta.setDisplayName(ChatColor.GREEN + "Level 1");
+        level1Meta.setDisplayName(ChatColor.GREEN + "等级 1");
         level1.setItemMeta(level1Meta);
 
         pane.addItem(new GuiItem(level1, event -> {
@@ -75,7 +75,7 @@ class LevelSelectionMenu extends ChestGui {
         //level 2
         ItemStack level2 = new ItemStack(Material.IRON_INGOT);
         ItemMeta level2Meta = level2.getItemMeta();
-        level2Meta.setDisplayName(ChatColor.GREEN + "Level 2");
+        level2Meta.setDisplayName(ChatColor.GREEN + "等级 2");
         level2.setItemMeta(level2Meta);
 
         pane.addItem(new GuiItem(level2, event -> {
@@ -96,7 +96,7 @@ class LevelSelectionMenu extends ChestGui {
         //level 3
         ItemStack level3 = new ItemStack(Material.GOLD_INGOT);
         ItemMeta level3Meta = level3.getItemMeta();
-        level3Meta.setDisplayName(ChatColor.GREEN + "Level 3");
+        level3Meta.setDisplayName(ChatColor.GREEN + "等级 3");
         level3.setItemMeta(level3Meta);
 
         pane.addItem(new GuiItem(level3, event -> {
@@ -117,7 +117,7 @@ class LevelSelectionMenu extends ChestGui {
         //level 4
         ItemStack level4 = new ItemStack(Material.EMERALD);
         ItemMeta level4Meta = level4.getItemMeta();
-        level4Meta.setDisplayName(ChatColor.GREEN + "Level 4");
+        level4Meta.setDisplayName(ChatColor.GREEN + "等级 4");
         level4.setItemMeta(level4Meta);
 
         pane.addItem(new GuiItem(level4, event -> {
@@ -138,7 +138,7 @@ class LevelSelectionMenu extends ChestGui {
         //level 5
         ItemStack level5 = new ItemStack(Material.DIAMOND);
         ItemMeta level5Meta = level5.getItemMeta();
-        level5Meta.setDisplayName(ChatColor.GREEN + "Level 5");
+        level5Meta.setDisplayName(ChatColor.GREEN + "等级 5");
         level5.setItemMeta(level5Meta);
 
         pane.addItem(new GuiItem(level5, event -> {

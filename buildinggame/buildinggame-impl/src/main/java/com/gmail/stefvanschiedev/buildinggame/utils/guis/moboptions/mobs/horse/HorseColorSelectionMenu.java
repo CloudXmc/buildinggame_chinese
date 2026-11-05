@@ -20,14 +20,14 @@ class HorseColorSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     HorseColorSelectionMenu(Horse horse) {
-        super(1, ChatColor.GREEN + "Change the horse color");
+        super(1, ChatColor.GREEN + "更改马的颜色");
 
         var pane = new OutlinePane(8, 1);
 
         //black
         var black = new ItemStack(Material.BLACK_WOOL);
         var blackMeta = black.getItemMeta();
-        blackMeta.setDisplayName(ChatColor.GREEN + "Black");
+        blackMeta.setDisplayName(ChatColor.GREEN + "黑色");
         black.setItemMeta(blackMeta);
 
         pane.addItem(new GuiItem(black, event -> {
@@ -39,7 +39,7 @@ class HorseColorSelectionMenu extends ChestGui {
         //brown
         var brown = new ItemStack(Material.BROWN_WOOL);
         var brownMeta = brown.getItemMeta();
-        brownMeta.setDisplayName(ChatColor.GREEN + "Brown");
+        brownMeta.setDisplayName(ChatColor.GREEN + "棕色");
         brown.setItemMeta(brownMeta);
 
         pane.addItem(new GuiItem(brown, event -> {
@@ -51,7 +51,7 @@ class HorseColorSelectionMenu extends ChestGui {
         //chestnut
         var chestnut = new ItemStack(Material.RED_NETHER_BRICKS);
         var chestnutMeta = chestnut.getItemMeta();
-        chestnutMeta.setDisplayName(ChatColor.GREEN + "Chestnut");
+        chestnutMeta.setDisplayName(ChatColor.GREEN + "栗色");
         chestnut.setItemMeta(chestnutMeta);
 
         pane.addItem(new GuiItem(chestnut, event -> {
@@ -63,7 +63,7 @@ class HorseColorSelectionMenu extends ChestGui {
         //creamy
         var creamy = new ItemStack(Material.SANDSTONE);
         var creamyMeta = creamy.getItemMeta();
-        creamyMeta.setDisplayName(ChatColor.GREEN + "Creamy");
+        creamyMeta.setDisplayName(ChatColor.GREEN + "奶油色");
         creamy.setItemMeta(creamyMeta);
 
         pane.addItem(new GuiItem(creamy, event -> {
@@ -75,7 +75,7 @@ class HorseColorSelectionMenu extends ChestGui {
         //dark brown
         var darkBrown = new ItemStack(Material.NETHER_BRICK);
         var darkBrownMeta = darkBrown.getItemMeta();
-        darkBrownMeta.setDisplayName(ChatColor.GREEN + "Dark brown");
+        darkBrownMeta.setDisplayName(ChatColor.GREEN + "深棕色");
         darkBrown.setItemMeta(darkBrownMeta);
 
         pane.addItem(new GuiItem(darkBrown, event -> {
@@ -87,7 +87,7 @@ class HorseColorSelectionMenu extends ChestGui {
         //gray
         var gray = new ItemStack(Material.GRAY_WOOL);
         var grayMeta = gray.getItemMeta();
-        grayMeta.setDisplayName(ChatColor.GREEN + "Gray");
+        grayMeta.setDisplayName(ChatColor.GREEN + "灰色");
         gray.setItemMeta(grayMeta);
 
         pane.addItem(new GuiItem(gray, event -> {
@@ -99,7 +99,7 @@ class HorseColorSelectionMenu extends ChestGui {
         //white
         var white = new ItemStack(Material.WHITE_WOOL);
         var whiteMeta = white.getItemMeta();
-        whiteMeta.setDisplayName(ChatColor.GREEN + "White");
+        whiteMeta.setDisplayName(ChatColor.GREEN + "白色");
         white.setItemMeta(whiteMeta);
 
         pane.addItem(new GuiItem(white, event -> {

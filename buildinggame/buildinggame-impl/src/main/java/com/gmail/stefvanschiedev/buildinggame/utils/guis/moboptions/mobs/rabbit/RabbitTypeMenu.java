@@ -18,14 +18,14 @@ class RabbitTypeMenu extends ChestGui {
      * Constructs a new rabbit type menu
      */
     RabbitTypeMenu(Rabbit rabbit) {
-        super(1, ChatColor.GREEN + "Set rabbit type");
+        super(1, ChatColor.GREEN + "设置兔子类型");
 
         var pane = new OutlinePane(8, 1);
 
         //black type
         var black = new ItemStack(Material.BLACK_WOOL, 1);
         var blackMeta = black.getItemMeta();
-        blackMeta.setDisplayName(ChatColor.GREEN + "Black");
+        blackMeta.setDisplayName(ChatColor.GREEN + "黑色");
         black.setItemMeta(blackMeta);
 
         pane.addItem(new GuiItem(black, event -> {
@@ -37,7 +37,7 @@ class RabbitTypeMenu extends ChestGui {
         //black and white type
         var blackAndWhite = new ItemStack(Material.MUSIC_DISC_STRAD);
         var blackAndWhiteMeta = blackAndWhite.getItemMeta();
-        blackAndWhiteMeta.setDisplayName(ChatColor.GREEN + "Black and white");
+        blackAndWhiteMeta.setDisplayName(ChatColor.GREEN + "黑白");
         blackAndWhite.setItemMeta(blackAndWhiteMeta);
 
         pane.addItem(new GuiItem(blackAndWhite, event -> {
@@ -49,7 +49,7 @@ class RabbitTypeMenu extends ChestGui {
         //brown type
         var brown = new ItemStack(Material.BROWN_WOOL, 1);
         var brownMeta = brown.getItemMeta();
-        brownMeta.setDisplayName(ChatColor.GREEN + "Brown");
+        brownMeta.setDisplayName(ChatColor.GREEN + "棕色");
         brown.setItemMeta(brownMeta);
 
         pane.addItem(new GuiItem(brown, event -> {
@@ -61,7 +61,7 @@ class RabbitTypeMenu extends ChestGui {
         //gold type
         var gold = new ItemStack(Material.GOLD_INGOT);
         var goldMeta = gold.getItemMeta();
-        goldMeta.setDisplayName(ChatColor.GREEN + "Gold");
+        goldMeta.setDisplayName(ChatColor.GREEN + "金色");
         gold.setItemMeta(goldMeta);
 
         pane.addItem(new GuiItem(gold, event -> {
@@ -73,7 +73,7 @@ class RabbitTypeMenu extends ChestGui {
         //salt and pepper type
         var saltAndPepper = new ItemStack(Material.COOKIE);
         var saltAndPepperMeta = saltAndPepper.getItemMeta();
-        saltAndPepperMeta.setDisplayName(ChatColor.GREEN + "Salt and pepper");
+        saltAndPepperMeta.setDisplayName(ChatColor.GREEN + "椒盐");
         saltAndPepper.setItemMeta(saltAndPepperMeta);
 
         pane.addItem(new GuiItem(saltAndPepper, event -> {
@@ -85,7 +85,7 @@ class RabbitTypeMenu extends ChestGui {
         //the killer bunny type
         var theKillerBunny = new ItemStack(Material.IRON_SWORD);
         var theKillerBunnyMeta = theKillerBunny.getItemMeta();
-        theKillerBunnyMeta.setDisplayName(ChatColor.GREEN + "The killer bunny");
+        theKillerBunnyMeta.setDisplayName(ChatColor.GREEN + "杀手兔");
         theKillerBunny.setItemMeta(theKillerBunnyMeta);
 
         pane.addItem(new GuiItem(theKillerBunny, event -> {
@@ -97,7 +97,7 @@ class RabbitTypeMenu extends ChestGui {
         //white type
         var white = new ItemStack(Material.BONE);
         var whiteMeta = white.getItemMeta();
-        whiteMeta.setDisplayName(ChatColor.GREEN + "White");
+        whiteMeta.setDisplayName(ChatColor.GREEN + "白色");
         white.setItemMeta(whiteMeta);
 
         pane.addItem(new GuiItem(white, event -> {

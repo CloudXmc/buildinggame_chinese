@@ -25,7 +25,7 @@ public class FrogMenu extends RemoveMenu {
 
         ItemStack type = new ItemStack(Material.WHITE_WOOL);
         ItemMeta typeMeta = type.getItemMeta();
-        typeMeta.setDisplayName(ChatColor.GREEN + "Change the frog's color");
+        typeMeta.setDisplayName(ChatColor.GREEN + "更改青蛙的颜色");
         type.setItemMeta(typeMeta);
 
         super.pane.insertItem(new GuiItem(type, event -> {

@@ -32,7 +32,7 @@ public class ChickenMenu extends BabyMenu {
         //variant
         ItemStack variant = new ItemStack(Material.WHITE_DYE);
         ItemMeta variantMeta = variant.getItemMeta();
-        Objects.requireNonNull(variantMeta).setDisplayName(ChatColor.GREEN + "Change the chicken's variant");
+        Objects.requireNonNull(variantMeta).setDisplayName(ChatColor.GREEN + "更改鸡的变种");
         variant.setItemMeta(variantMeta);
 
         super.pane.insertItem(new GuiItem(variant, event -> {

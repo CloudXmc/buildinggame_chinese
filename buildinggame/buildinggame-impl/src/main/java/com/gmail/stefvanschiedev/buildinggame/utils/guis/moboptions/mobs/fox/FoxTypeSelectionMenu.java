@@ -22,13 +22,13 @@ class FoxTypeSelectionMenu extends ChestGui {
      * {@inheritDoc}
      */
     FoxTypeSelectionMenu(@NotNull Fox fox) {
-        super(1, ChatColor.GREEN + "Change the fox's type");
+        super(1, ChatColor.GREEN + "更改狐狸的类型");
 
         var pane = new StaticPane(9, 1);
 
         ItemStack red = new ItemStack(Material.RED_DYE);
         ItemMeta redMeta = red.getItemMeta();
-        redMeta.setDisplayName(ChatColor.GREEN + "Red");
+        redMeta.setDisplayName(ChatColor.GREEN + "红色");
         red.setItemMeta(redMeta);
 
         pane.addItem(new GuiItem(red, event -> {
@@ -39,7 +39,7 @@ class FoxTypeSelectionMenu extends ChestGui {
 
         ItemStack snow = new ItemStack(Material.SNOWBALL);
         ItemMeta snowMeta = snow.getItemMeta();
-        snowMeta.setDisplayName(ChatColor.GREEN + "Snow");
+        snowMeta.setDisplayName(ChatColor.GREEN + "雪白");
         snow.setItemMeta(snowMeta);
 
         pane.addItem(new GuiItem(snow, event -> {

@@ -71,7 +71,7 @@ public final class LocationManager {
                 if (SettingsManager.getInstance().getConfig().getBoolean("debug")) {
                     var logger = Main.getInstance().getLogger();
 
-                    logger.info("Loaded spawn for plot " + plotId + " in arena " + arenaName);
+                    logger.info("已加载地块出生点 " + plotId + "，所属竞技场 " + arenaName);
                 }
 			})
 		);

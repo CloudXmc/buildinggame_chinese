@@ -47,7 +47,7 @@ public final class MinPlayersManager {
             arena.setMinPlayers(arenas.getInt(name + ".minplayers", 0));
 
             if (SettingsManager.getInstance().getConfig().getBoolean("debug"))
-                Main.getInstance().getLogger().info("Loaded min players for " + name);
+                Main.getInstance().getLogger().info("已加载最小玩家数：" + name);
 		}
 	}
 }

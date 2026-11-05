@@ -65,7 +65,7 @@ class BiomeMenu {
         InputStream resource = Main.getInstance().getResource(resourceLocation);
 
         if (resource == null) {
-            throw new IllegalStateException("Unable to find file to load biome menu");
+            throw new IllegalStateException("找不到用于加载生物群系菜单的文件");
         }
 
         this.gui = ChestGui.load(this, resource);

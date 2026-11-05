@@ -67,10 +67,10 @@ public class NPCCreate implements Listener {
                     Player player = entry.getValue();
 
                     TextComponent textComponent = TextComponent.of(
-                        "You have spawned an NPC inside a plot, would you like to allow players to use this NPC to change their plot's floor? Please click "
+                        "你在地块内生成了一个 NPC，是否允许玩家通过该 NPC 更改地块地板？请点击 "
                     )
                         .color(TextColor.GOLD)
-                        .append(TextComponent.of("here")
+                        .append(TextComponent.of("这里")
                             .color(TextColor.AQUA)
                             .clickEvent(ClickEvent.runCommand('/' + CommandUtil.createTempCommand(sender -> {
                                 if (!sender.equals(player)) {
@@ -80,10 +80,10 @@ public class NPCCreate implements Listener {
                                 npc.addTrait(new NPCFloorChangeTrait());
 
                                 MessageManager.getInstance().send(player, ChatColor.GREEN +
-                                    "This NPC now allows players to change their plot's floor");
+                                    "该 NPC 现在允许玩家更改地块地板");
                             }))))
                         .append(TextComponent.of(
-                            " if so, otherwise ignore this message. This will expire in 60 seconds."
+                            " 确认，否则请忽略本条消息。该操作将在 60 秒后失效。"
                         )
                             .color(TextColor.GOLD));
 

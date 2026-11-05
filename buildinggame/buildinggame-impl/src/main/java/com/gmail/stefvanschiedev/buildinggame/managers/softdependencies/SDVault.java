@@ -55,7 +55,7 @@ public final class SDVault {
      */
 	public void setup() {
 		if (!setupEconomy()) {
-			Main.getInstance().getLogger().info("Disabled Vault");
+			Main.getInstance().getLogger().info("已禁用 Vault 支持");
 			return;
 		}
 

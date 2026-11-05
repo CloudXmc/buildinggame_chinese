@@ -29,7 +29,7 @@ class PandaGeneMenu extends ChestGui {
      * {@inheritDoc}
      */
     PandaGeneMenu(Panda panda) {
-        super(1, ChatColor.GREEN + "Change the panda's personality");
+        super(1, ChatColor.GREEN + "更改熊猫性格");
 
         var pane = new OutlinePane(7, 1);
 
@@ -38,7 +38,7 @@ class PandaGeneMenu extends ChestGui {
             "7818b681cace1c641919f53edadecb142330d089a826b56219138c33b7a5e0db"
         );
         ItemMeta lazyMeta = lazy.getItemMeta();
-        lazyMeta.setDisplayName(ChatColor.GREEN + "Lazy");
+        lazyMeta.setDisplayName(ChatColor.GREEN + "慵懒");
         lazy.setItemMeta(lazyMeta);
 
         pane.addItem(new GuiItem(lazy, event -> {
@@ -53,7 +53,7 @@ class PandaGeneMenu extends ChestGui {
             "c8e921c57e54dd07337ffba629e72caf3850d836b76562b1bc3bc5949f2d41d"
         );
         ItemMeta worriedMeta = worried.getItemMeta();
-        worriedMeta.setDisplayName(ChatColor.GREEN + "Worried");
+        worriedMeta.setDisplayName(ChatColor.GREEN + "忧愁");
         worried.setItemMeta(worriedMeta);
 
         pane.addItem(new GuiItem(worried, event -> {
@@ -68,7 +68,7 @@ class PandaGeneMenu extends ChestGui {
             "b6463e64ce29764db3cb46806cee606afc24bdf0ce14b6660c270a96c787426"
         );
         ItemMeta playfulMeta = playful.getItemMeta();
-        playfulMeta.setDisplayName(ChatColor.GREEN + "Playful");
+        playfulMeta.setDisplayName(ChatColor.GREEN + "顽皮");
         playful.setItemMeta(playfulMeta);
 
         pane.addItem(new GuiItem(playful, event -> {
@@ -85,7 +85,7 @@ class PandaGeneMenu extends ChestGui {
             "83fe1e782ae96a30336a03ef74681ce3a6905fcc673fa56c046aaee6aa28307d"
         );
         ItemMeta aggressiveMeta = aggressive.getItemMeta();
-        aggressiveMeta.setDisplayName(ChatColor.GREEN + "Aggressive");
+        aggressiveMeta.setDisplayName(ChatColor.GREEN + "好斗");
         aggressive.setItemMeta(aggressiveMeta);
 
         pane.addItem(new GuiItem(aggressive, event -> {
@@ -100,7 +100,7 @@ class PandaGeneMenu extends ChestGui {
             "5c2d25e956337d82791fa0e6617a40086f02d6ebfbfd5a6459889cf206fca787"
         );
         ItemMeta weakMeta = weak.getItemMeta();
-        weakMeta.setDisplayName(ChatColor.GREEN + "Weak");
+        weakMeta.setDisplayName(ChatColor.GREEN + "虚弱");
         weak.setItemMeta(weakMeta);
 
         pane.addItem(new GuiItem(weak, event -> {
@@ -113,7 +113,7 @@ class PandaGeneMenu extends ChestGui {
         //brown
         ItemStack brown = new ItemStack(Material.BROWN_DYE);
         ItemMeta brownMeta = brown.getItemMeta();
-        brownMeta.setDisplayName(ChatColor.GREEN + "Brown");
+        brownMeta.setDisplayName(ChatColor.GREEN + "棕色");
         brown.setItemMeta(brownMeta);
 
         pane.addItem(new GuiItem(brown, event -> {

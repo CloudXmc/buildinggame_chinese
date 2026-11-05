@@ -146,7 +146,7 @@ public class VotingGamePhase extends GamePhase implements JoinObserver, Transiti
 
             gamePhase.onPhaseStart();
         } else {
-            throw new IllegalArgumentException("Game phase must be either plot vote game phase or winning game phase");
+            throw new IllegalArgumentException("游戏阶段必须是地块投票阶段或结算阶段");
         }
     }
 
@@ -356,7 +356,7 @@ public class VotingGamePhase extends GamePhase implements JoinObserver, Transiti
             long seconds = getRemainingTime().getSeconds();
 
             if (seconds > Integer.MAX_VALUE) {
-                Main.getInstance().getLogger().warning("Unable to dispatch commands, too much time left");
+                Main.getInstance().getLogger().warning("时间未到，无法执行命令");
             }
 
             for (String command : VotingGamePhase.this.commands.getOrDefault((int) seconds, Collections.emptySet())) {
@@ -416,7 +416,7 @@ public class VotingGamePhase extends GamePhase implements JoinObserver, Transiti
             Region boundary = this.plot.getBoundary();
 
             if (boundary == null) {
-                throw new IllegalStateException("No boundary set for plot");
+                throw new IllegalStateException("地块尚未设置边界");
             }
 
             Location safeLocation = boundary.getSafeLocation();
@@ -478,7 +478,7 @@ public class VotingGamePhase extends GamePhase implements JoinObserver, Transiti
                                 boolean save = false;
 
                                 if (!messages.contains("voting.items." + identifier + ".name")) {
-                                    messages.set("voting.items." + identifier + ".name", "Type: Null");
+                                    messages.set("voting.items." + identifier + ".name", "类型：无");
                                     save = true;
                                 }
 
@@ -518,7 +518,7 @@ public class VotingGamePhase extends GamePhase implements JoinObserver, Transiti
 
                         if (worldEditEnabled && config.getBoolean("reports.enable")) {
                             player.getInventory().setItem(8, new ItemBuilder(player, Material.BOOK)
-                                .setDisplayName(ChatColor.RED + "Report build")
+                                .setDisplayName(ChatColor.RED + "举报建筑")
                                 .movable(false)
                                 .addContext("arena", ArenaDataType.getInstance(), VotingGamePhase.this.arena)
                                 .setClickEvent(ClickEvent.REPORT_CLICK)

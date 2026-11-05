@@ -61,8 +61,8 @@ public final class MainScoreboardManager {
                 scoreboard.getPlayer().setScoreboard(Bukkit.getScoreboardManager().getMainScoreboard());
 
                 Main.getInstance().getLogger().warning(
-                    "Scoreboard for '" + scoreboard.getPlayer().getName() + "' was unexpectedly unregistered, " +
-                        "they will temporarily be unable to see a scoreboard."
+                    "记分板：'" + scoreboard.getPlayer().getName() + "' 被意外注销，" +
+                        "该玩家将暂时无法看到记分板。"
                 );
 
                 continue;

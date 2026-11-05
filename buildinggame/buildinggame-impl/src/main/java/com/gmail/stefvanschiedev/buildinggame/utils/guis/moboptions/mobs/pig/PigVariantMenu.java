@@ -27,7 +27,7 @@ public class PigVariantMenu extends ChestGui {
      * @since 12.10.0
      */
     PigVariantMenu(@NotNull Pig pig) {
-        super(1, ChatColor.GREEN + "Change the pig's variant");
+        super(1, ChatColor.GREEN + "更改猪的变种");
 
         setOnGlobalClick(event -> event.setCancelled(true));
 
@@ -38,7 +38,7 @@ public class PigVariantMenu extends ChestGui {
         //temperate
         ItemStack temperate = new ItemStack(Material.BROWN_DYE);
         ItemMeta temperateMeta = temperate.getItemMeta();
-        Objects.requireNonNull(temperateMeta).setDisplayName(ChatColor.GREEN + "Temperate");
+        Objects.requireNonNull(temperateMeta).setDisplayName(ChatColor.GREEN + "温带");
         temperate.setItemMeta(temperateMeta);
 
         pane.addItem(new GuiItem(temperate, event -> pig.setVariant(Pig.Variant.TEMPERATE)));
@@ -46,7 +46,7 @@ public class PigVariantMenu extends ChestGui {
         //cold
         ItemStack cold = new ItemStack(Material.WHITE_DYE);
         ItemMeta coldMeta = cold.getItemMeta();
-        Objects.requireNonNull(coldMeta).setDisplayName(ChatColor.GREEN + "Cold");
+        Objects.requireNonNull(coldMeta).setDisplayName(ChatColor.GREEN + "寒冷");
         cold.setItemMeta(coldMeta);
 
         pane.addItem(new GuiItem(cold, event -> pig.setVariant(Pig.Variant.COLD)));
@@ -54,7 +54,7 @@ public class PigVariantMenu extends ChestGui {
         //warm
         ItemStack warm = new ItemStack(Material.BLACK_DYE);
         ItemMeta warmMeta = warm.getItemMeta();
-        Objects.requireNonNull(warmMeta).setDisplayName(ChatColor.GREEN + "Warm");
+        Objects.requireNonNull(warmMeta).setDisplayName(ChatColor.GREEN + "温暖");
         warm.setItemMeta(warmMeta);
 
         pane.addItem(new GuiItem(warm, event -> pig.setVariant(Pig.Variant.WARM)));

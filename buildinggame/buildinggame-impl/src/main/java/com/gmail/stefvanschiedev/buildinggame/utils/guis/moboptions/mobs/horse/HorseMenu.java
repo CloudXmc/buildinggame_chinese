@@ -24,7 +24,7 @@ public class HorseMenu extends BabyMenu {
         //color
         var color = new ItemStack(Material.ORANGE_CONCRETE_POWDER, 1);
         var colorMeta = color.getItemMeta();
-        colorMeta.setDisplayName(ChatColor.GREEN + "Change the color");
+        colorMeta.setDisplayName(ChatColor.GREEN + "更改颜色");
         color.setItemMeta(colorMeta);
 
         pane.insertItem(new GuiItem(color, event -> {
@@ -36,7 +36,7 @@ public class HorseMenu extends BabyMenu {
         //style
         var style = new ItemStack(Material.SNOWBALL);
         var styleMeta = style.getItemMeta();
-        styleMeta.setDisplayName(ChatColor.GREEN + "Change the style");
+        styleMeta.setDisplayName(ChatColor.GREEN + "更改样式");
         style.setItemMeta(styleMeta);
 
         pane.insertItem(new GuiItem(style, event -> {

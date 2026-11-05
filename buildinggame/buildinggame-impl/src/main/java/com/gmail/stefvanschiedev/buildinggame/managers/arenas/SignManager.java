@@ -125,21 +125,21 @@ public final class SignManager {
                     arena.addSign(blockPos);
 
                     if (config.getBoolean("debug"))
-                        Main.getInstance().getLogger().info("Found join sign for arena " + arena.getName());
+                        Main.getInstance().getLogger().info("已找到加入告示牌，所属竞技场：" + arena.getName());
                     break;
                 case "leave":
                     leaveSigns.putIfAbsent(chunkCoordinates, new HashSet<>());
                     leaveSigns.get(chunkCoordinates).add(blockPos);
 
                     if (config.getBoolean("debug"))
-                        Main.getInstance().getLogger().info("Found leave sign");
+                        Main.getInstance().getLogger().info("已找到离开告示牌");
                     break;
                 case "stat":
                     statSigns.add(new StatSign(blockPos, StatType.valueOf(signs.getString(string + ".stat")),
                             Integer.parseInt(signs.getString(string + ".number"))));
 
                     if (config.getBoolean("debug"))
-                        Main.getInstance().getLogger().info("Found stat sign");
+                        Main.getInstance().getLogger().info("已找到统计告示牌");
                     break;
                 case "spectate":
                     UUID uuid = UUID.fromString(signs.getString(string + ".player"));
@@ -148,7 +148,7 @@ public final class SignManager {
                     spectateSigns.get(chunkCoordinates).add(new SpectateSign(blockPos, Bukkit.getOfflinePlayer(uuid)));
 
                     if (config.getBoolean("debug"))
-                        Main.getInstance().getLogger().info("Found spectate sign");
+                        Main.getInstance().getLogger().info("已找到旁观告示牌");
                     break;
             }
 		}
@@ -222,7 +222,7 @@ public final class SignManager {
         String[] lines = getJoinSignLines(arena);
 
         if (lines == null) {
-            throw new IllegalStateException("Unable to find required settings for join signs in messages.yml.");
+            throw new IllegalStateException("在 messages.yml 中找不到加入告示牌所需的配置。");
         }
 
         if (config.getBoolean("bungeecord.enable"))
@@ -305,7 +305,7 @@ public final class SignManager {
         String[] lines = getRandomJoinSignLines();
 
         if (lines == null) {
-            throw new IllegalStateException("Unable to find required settings for random join signs in messages.yml.");
+            throw new IllegalStateException("在 messages.yml 中找不到随机加入告示牌所需的配置。");
         }
 
         sign.setLine(0, lines[0]);
@@ -380,7 +380,7 @@ public final class SignManager {
             return;
         }
 
-        sign.setLine(0, ChatColor.BOLD + "Building Game");
+        sign.setLine(0, ChatColor.BOLD + "建筑游戏");
         sign.setLine(1, "spectate");
         sign.setLine(2, ChatColor.UNDERLINE + spectateSign.getOfflinePlayer().getName());
 

@@ -301,8 +301,8 @@ public abstract class ArenaScoreboard {
             player.setScoreboard(Bukkit.getScoreboardManager().getMainScoreboard());
 
             Main.getInstance().getLogger().warning(
-                "Scoreboard for '" + player.getName() + "' was unexpectedly unregistered, " +
-                    "they will temporarily be unable to see a scoreboard."
+                "记分板：'" + player.getName() + "' 被意外注销，" +
+                    "该玩家将暂时无法看到记分板。"
             );
 
             return;

@@ -146,7 +146,7 @@ public final class SettingsManager {
 
         if (!dataFolder.exists()) {
             if (!dataFolder.mkdir())
-                logger.warning("Unable to create data folder");
+                logger.warning("无法创建数据文件夹");
         }
 
         winnerSchematicsFolder = new File(dataFolder + File.separator + "schematics", "winners");
@@ -168,7 +168,7 @@ public final class SettingsManager {
         if (!arenasFile.exists()) {
 			try {
 				if (!arenasFile.createNewFile())
-				    logger.warning("Unable to create arenas file");
+				    logger.warning("无法创建 arenas.yml 文件");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -176,7 +176,7 @@ public final class SettingsManager {
 		if (!configFile.exists()) {
 			try {
 				if (!configFile.createNewFile())
-				    logger.warning("Unable to create config file");
+				    logger.warning("无法创建 config.yml 文件");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -184,7 +184,7 @@ public final class SettingsManager {
 		if (!messagesFile.exists()) {
 			try {
 				if (!messagesFile.createNewFile())
-				    logger.warning("Unable to create messages file");
+				    logger.warning("无法创建 messages.yml 文件");
 
 				save();
 			} catch (IOException e) {
@@ -194,7 +194,7 @@ public final class SettingsManager {
 		if (!signsFile.exists()) {
 			try {
 				if (!signsFile.createNewFile())
-				    logger.warning("Unable to create signs file");
+				    logger.warning("无法创建 signs.yml 文件");
 
 				save();
 			} catch (IOException e) {
@@ -205,7 +205,7 @@ public final class SettingsManager {
 		if (!statsFile.exists()) {
 			try {
 				if (!statsFile.createNewFile())
-				    logger.warning("Unable to create stats file");
+				    logger.warning("无法创建统计数据文件");
 
 				save();
 			} catch (IOException e) {
@@ -266,14 +266,14 @@ public final class SettingsManager {
                     exception.printStackTrace();
                 }
             } else {
-                logger.warning("Unable to create winner schematics folder");
+                logger.warning("无法创建获胜建筑文件夹");
             }
         }
 
         var worldEditEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldEdit");
 
 		if (!reportSchematicsFolder.exists() && worldEditEnabled && !reportSchematicsFolder.mkdirs()) {
-            logger.warning("Unable to create report schematics folder");
+            logger.warning("无法创建举报建筑文件夹");
         }
 
 		if (worldEditEnabled) {
@@ -490,8 +490,8 @@ public final class SettingsManager {
         if (config.getBoolean("debug")) {
             var logger = Main.getInstance().getLogger();
 
-            logger.info("Found " + settings + " settings");
-        	logger.info("Added " + addedSettings + " new settings");
+            logger.info("找到 " + settings + " 项设置");
+        	logger.info("新增 " + addedSettings + " 项设置");
         }
         
         if (save)
@@ -546,8 +546,8 @@ public final class SettingsManager {
         if (config.getBoolean("debug")) {
             var logger = Main.getInstance().getLogger();
 
-            logger.info("Found " + settings + " settings");
-        	logger.info("Added " + addedSettings + " new settings");
+            logger.info("找到 " + settings + " 项设置");
+        	logger.info("新增 " + addedSettings + " 项设置");
         }
         
         if (save)
@@ -572,7 +572,7 @@ public final class SettingsManager {
 
         if (material == null) {
             Logger logger = Main.getInstance().getLogger();
-            logger.warning("Invalid material found in the config.yml in '" + location + "' ('" +
+            logger.warning("在 config.yml 中发现了无效的材质：'" + location + "' ('" +
                 materialString + "')");
 
             return fallback;

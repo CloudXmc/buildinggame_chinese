@@ -88,7 +88,7 @@ public class WinningGamePhase extends TimedGamePhase<Arena> implements JoinObser
         long seconds = getRemainingTime().getSeconds();
 
         if (seconds > Integer.MAX_VALUE) {
-            Main.getInstance().getLogger().warning("Unable to dispatch commands, too much time left");
+            Main.getInstance().getLogger().warning("时间未到，无法执行命令");
         }
 
         for (String command : this.commands.getOrDefault((int) seconds, Collections.emptySet())) {
@@ -279,7 +279,7 @@ public class WinningGamePhase extends TimedGamePhase<Arena> implements JoinObser
                 }
 
                 if (moneyString == null) {
-                    throw new IllegalStateException("Missing config.yml value for money");
+                    throw new IllegalStateException("config.yml 中缺少 money 相关配置");
                 }
 
                 MathElement element = MathElementFactory.parseText(moneyString.replace("%points%",
@@ -481,7 +481,7 @@ public class WinningGamePhase extends TimedGamePhase<Arena> implements JoinObser
         }
 
         if (Double.isNaN(money)) {
-            Main.getInstance().getLogger().warning("Unable to parse mathematical equation");
+            Main.getInstance().getLogger().warning("无法解析数学算式");
         }
 
         if (!Double.isFinite(money)) {

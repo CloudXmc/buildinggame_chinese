@@ -197,7 +197,7 @@ public final class Report {
         File file = SettingsManager.getInstance().getReports();
 
         if (!file.exists() && !file.createNewFile()) {
-            Main.getInstance().getLogger().warning("Unable to create reports.json file");
+            Main.getInstance().getLogger().warning("无法创建 reports.json 文件");
             return;
         }
 
@@ -269,7 +269,7 @@ public final class Report {
         }
 
         if (reporterUUID == null || reportDate == null || schematicFileName == null) {
-            Main.getInstance().getLogger().warning("Incorrect reports.json file detected");
+            Main.getInstance().getLogger().warning("检测到 reports.json 文件格式不正确");
             return null;
         }
 
@@ -314,7 +314,7 @@ public final class Report {
     public static void delete(@NotNull Collection<Report> reports) {
         reports.forEach(report -> {
             if (!report.getSchematicFile().delete()) {
-                Main.getInstance().getLogger().warning("Unable to delete report");
+                Main.getInstance().getLogger().warning("无法删除举报");
             }
         });
 
@@ -329,7 +329,7 @@ public final class Report {
      */
     public static void delete(@NotNull Report report) {
         if (!report.getSchematicFile().delete()) {
-            Main.getInstance().getLogger().warning("Unable to delete report");
+            Main.getInstance().getLogger().warning("无法删除举报");
         }
 
         REPORTS.remove(report);

@@ -59,7 +59,7 @@ public class SubjectVotePhase extends TimedGamePhase<Arena> implements SubjectVo
                 PotentialLocation location = plot.getLocation();
 
                 if (location == null) {
-                    throw new IllegalStateException("Plot location not set");
+                    throw new IllegalStateException("地块位置未设置");
                 }
 
                 location.teleport(player);
@@ -133,8 +133,8 @@ public class SubjectVotePhase extends TimedGamePhase<Arena> implements SubjectVo
 
         if (item != null && item.getType() != Material.AIR) {
             Main.getInstance().getLogger().warning(
-                "Subject gui item overrides a different item. This other item will not be visible. Please " +
-                    "change the slots in the config.yml file to fix this."
+                "主题菜单物品覆盖了另一个物品，该物品将不可见。请" +
+                    "修改 config.yml 中的槽位以解决此问题。"
             );
         }
 

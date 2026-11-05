@@ -33,7 +33,7 @@ public class IronGolemMenu extends RemoveMenu {
         var cracked = new ItemStack(Material.IRON_CHESTPLATE);
         var crackedMeta = cracked.getItemMeta();
         ((Damageable) crackedMeta).setDamage(ThreadLocalRandom.current().nextInt(MAX_DAMAGE));
-        crackedMeta.setDisplayName(ChatColor.GREEN + "Set the cracked state");
+        crackedMeta.setDisplayName(ChatColor.GREEN + "设置破损程度");
         cracked.setItemMeta(crackedMeta);
 
         pane.insertItem(new GuiItem(cracked, event -> {

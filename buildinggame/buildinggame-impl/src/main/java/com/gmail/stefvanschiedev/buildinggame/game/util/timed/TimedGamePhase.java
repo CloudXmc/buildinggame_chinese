@@ -181,7 +181,7 @@ public abstract class TimedGamePhase<T extends TransitionSystem> extends GamePha
     @Override
     public void onPhaseEnd() {
         if (this.task == null) {
-            throw new IllegalStateException("Phase hasn't started yet");
+            throw new IllegalStateException("该阶段尚未开始");
         }
 
         this.task.cancel();
@@ -284,7 +284,7 @@ public abstract class TimedGamePhase<T extends TransitionSystem> extends GamePha
     private void invokeMethods(@NotNull Collection<? extends Method> toInvoke) {
         for (Method method : toInvoke) {
             if (method.getParameterCount() != 0) {
-                throw new IllegalArgumentException("Unable to invoke method with parameters");
+                throw new IllegalArgumentException("无法调用带参数的方法");
             }
 
             try {

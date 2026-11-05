@@ -75,7 +75,7 @@ public final class MainSpawnManager {
         setServer(arenas.getString("main-spawn.server"));
 
         if (SettingsManager.getInstance().getConfig().getBoolean("debug")) {
-            Main.getInstance().getLogger().info("Loaded main spawn");
+            Main.getInstance().getLogger().info("已加载主出生点");
         }
 	}
 

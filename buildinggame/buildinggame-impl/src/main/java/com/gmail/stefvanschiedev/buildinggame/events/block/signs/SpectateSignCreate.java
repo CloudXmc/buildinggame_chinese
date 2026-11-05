@@ -46,7 +46,7 @@ public class SpectateSignCreate implements Listener {
         String line = e.getLine(2);
 
 		if (line.isEmpty()) {
-		    MessageManager.getInstance().send(player, ChatColor.RED + "Please specify a player");
+		    MessageManager.getInstance().send(player, ChatColor.RED + "请指定一名玩家");
 		    return;
         }
 

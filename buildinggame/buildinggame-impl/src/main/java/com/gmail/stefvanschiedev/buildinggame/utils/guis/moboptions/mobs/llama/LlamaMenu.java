@@ -24,7 +24,7 @@ public class LlamaMenu extends ChestMenu {
         //color
         var color = new ItemStack(Material.ORANGE_CONCRETE_POWDER);
         var colorMeta = color.getItemMeta();
-        colorMeta.setDisplayName(ChatColor.GREEN + "Change the color");
+        colorMeta.setDisplayName(ChatColor.GREEN + "更改颜色");
         color.setItemMeta(colorMeta);
 
         pane.insertItem(new GuiItem(color, event -> {

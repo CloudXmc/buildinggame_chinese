@@ -54,14 +54,14 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("booster")
-    @Description("Activate a booster")
+    @Description("激活一个加成")
     @CommandPermission("bg.booster")
     @CommandCompletion("@nothing @nothing @players")
     public void onBooster(CommandSender sender, float multiplier, int duration, @Optional Player player) {
         new Booster(sender, multiplier, duration, player).start();
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Activated " +
-            (player == null ? "global booster" : "booster for " + player.getName()) + " for " + duration + " seconds");
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "已激活" +
+            (player == null ? "全局加成" : "玩家 " + player.getName() + " 的加成") + "，持续 " + duration + " 秒");
     }
 
     /**
@@ -72,7 +72,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("createarena")
-    @Description("Create an arena")
+    @Description("创建一个竞技场")
     @CommandPermission("bg.createarena")
     public void onCreateArena(CommandSender sender, @Conditions("arenanotexist") @Single String name) {
         YamlConfiguration arenas = SettingsManager.getInstance().getArenas();
@@ -109,7 +109,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("deletearena")
-    @Description("Delete an arena")
+    @Description("删除一个竞技场")
     @CommandPermission("bg.deletearena")
     @CommandCompletion("@arenas")
     public void onDeleteArena(CommandSender sender, Arena arena) {
@@ -134,7 +134,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("deletespawn")
-    @Description("Delete a spawn")
+    @Description("删除一个出生点")
     @CommandPermission("bg.deletespawn")
     @CommandCompletion("@arenas @nothing")
     public void onDeleteSpawn(CommandSender sender, Arena arena, int spawn) {
@@ -145,7 +145,7 @@ public class CommandManager extends BaseCommand {
 
         if (plot == null) {
             MessageManager.getInstance().send(sender,
-                ChatColor.RED + "That's not a valid plot. Try to create one first.");
+                ChatColor.RED + "这不是有效的地块，请先创建一个。");
             return;
         }
 
@@ -181,7 +181,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("enablemoney")
-    @Description("Enable or disable money for an arena")
+    @Description("启用或禁用竞技场的金钱奖励")
     @CommandPermission("bg.enablemoney")
     @CommandCompletion("@arenas true|false")
     public void onEnableMoney(CommandSender sender, Arena arena, boolean enableMoney) {
@@ -193,8 +193,8 @@ public class CommandManager extends BaseCommand {
 
         SettingsManager.getInstance().save();
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + (enableMoney ? "Enabled" : "Disabled") +
-            " money for " + arena.getName());
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + (enableMoney ? "已启用" : "已禁用") +
+            "竞技场 " + arena.getName() + " 的金钱奖励");
     }
 
     /**
@@ -204,7 +204,7 @@ public class CommandManager extends BaseCommand {
      * @param arena the arena, if the sender is a player and the player is in an arena, this may be null
      */
     @Subcommand("forcestart")
-    @Description("Force an arena to start")
+    @Description("强制竞技场开始")
     @CommandPermission("bg.forcestart")
     @CommandCompletion("@arenas")
     public void onForceStart(CommandSender sender, @Optional Arena arena) {
@@ -216,7 +216,7 @@ public class CommandManager extends BaseCommand {
                 GamePhase phase = playerArena.getCurrentPhase();
 
                 if (!(phase instanceof LobbyGamePhase)) {
-                    player.sendMessage(ChatColor.RED + "Game has already started");
+                    player.sendMessage(ChatColor.RED + "游戏已经开始");
                 } else {
                     ((LobbyGamePhase) phase).endTimer();
                 }
@@ -226,20 +226,20 @@ public class CommandManager extends BaseCommand {
         }
 
         if (arena == null) {
-            MessageManager.getInstance().send(sender, ChatColor.RED + "Please specify an arena");
+            MessageManager.getInstance().send(sender, ChatColor.RED + "请指定一个竞技场");
             return;
         }
 
         if (arena.getPlayers() < 1) {
             MessageManager.getInstance().send(sender,
-                ChatColor.RED + "Arena could not start. There are no players!");
+                ChatColor.RED + "竞技场无法开始，没有玩家！");
             return;
         }
 
         GamePhase phase = arena.getCurrentPhase();
 
         if (!(phase instanceof LobbyGamePhase)) {
-            sender.sendMessage(ChatColor.RED + "Game has already started");
+            sender.sendMessage(ChatColor.RED + "游戏已经开始");
         } else {
             ((LobbyGamePhase) phase).endTimer();
         }
@@ -253,7 +253,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("forcetheme")
-    @Description("Force a them to be chosen")
+    @Description("强制指定主题")
     @CommandPermission("bg.forcetheme")
     @CommandCompletion("@arenas @nothing")
     public void onForceTheme(Player player, String theme) {
@@ -262,7 +262,7 @@ public class CommandManager extends BaseCommand {
         var arena = ArenaManager.getInstance().getArena(player);
 
         if (arena == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You aren't in an arena");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你不在竞技场中");
             return;
         }
 
@@ -274,7 +274,7 @@ public class CommandManager extends BaseCommand {
             messages.getStringList("commands.forcetheme.success").forEach(message ->
                 MessageManager.getInstance().send(player, message.replace("%theme%", theme)));
         } else {
-            player.sendMessage(ChatColor.RED + "Unable to force theme as no themes are being chosen currently");
+            player.sendMessage(ChatColor.RED + "当前没有正在选择主题，无法强制指定");
         }
     }
 
@@ -287,7 +287,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("join")
-    @Description("Join an arena")
+    @Description("加入一个竞技场")
     @CommandPermission("bg.join")
     @CommandCompletion("@arenas @players")
     public void onJoin(Player sender, @Optional Arena arena, @Optional @Flags("other") Player player) {
@@ -321,13 +321,13 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("leave")
-    @Description("Leave the arena you're in")
+    @Description("离开你所在的竞技场")
     @CommandPermission("bg.leave")
     public void onLeave(Player player) {
         var arena = ArenaManager.getInstance().getArena(player);
 
         if (arena == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You're not in an arena");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你不在竞技场中");
             return;
         }
 
@@ -341,7 +341,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("list")
-    @Description("List all arenas")
+    @Description("列出所有竞技场")
     @CommandPermission("bg.list")
     public void onList(CommandSender sender) {
         ArenaManager.getInstance().getArenas().forEach(arena ->
@@ -356,7 +356,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("reload")
-    @Description("Reload the plugin")
+    @Description("重载插件")
     @CommandPermission("bg.reload")
     public void onReload(CommandSender sender) {
         ArenaManager.getInstance().getArenas().stream().filter(arena -> arena.getPlayers() > 0).forEach(Arena::stop);
@@ -376,7 +376,7 @@ public class CommandManager extends BaseCommand {
 
         Main.getInstance().loadPlugin(true);
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Reloaded the plugin!");
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "插件已重载！");
     }
 
     /**
@@ -386,11 +386,11 @@ public class CommandManager extends BaseCommand {
      * @since 6.5.0
      */
     @Subcommand("reports")
-    @Description("Show all reports made")
+    @Description("查看所有举报")
     @CommandPermission("bg.reports")
     public void onReports(Player player) {
         if (!Bukkit.getPluginManager().isPluginEnabled("WorldEdit")) {
-            player.sendMessage(ChatColor.RED + "WorldEdit needs to be enabled in order for this feature to work.");
+            player.sendMessage(ChatColor.RED + "需要启用 WorldEdit 才能使用此功能。");
             return;
         }
 
@@ -406,19 +406,19 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setbounds|setboundary")
-    @Description("Set the boundary of a plot (inclusive)")
+    @Description("设置地块边界（含边界）")
     @CommandPermission("bg.setbounds")
     @CommandCompletion("@arenas @nothing")
     public void onSetBounds(Player player, Arena arena, int id) {
         final var plot = arena.getPlot(id);
 
         if (plot == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "That's not a valid plot");
+            MessageManager.getInstance().send(player, ChatColor.RED + "这不是有效的地块");
             return;
         }
 
         player.getInventory().setItemInMainHand(new ItemBuilder(player, Material.STICK)
-            .setDisplayName(ChatColor.LIGHT_PURPLE + "Wand")
+            .setDisplayName(ChatColor.LIGHT_PURPLE + "魔杖")
             .addContext("plot", PlotDataType.getInstance(), plot)
             .setClickEvent(ClickEvent.BOUNDS_CLICK)
             .build()
@@ -434,19 +434,19 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setfloor")
-    @Description("Set the floor of a plot (inclusive)")
+    @Description("设置地块地板（含边界）")
     @CommandPermission("bg.setfloor")
     @CommandCompletion("@arenas @nothing")
     public void onSetFloor(Player player, Arena arena, int id) {
         final var plot = arena.getPlot(id);
 
         if (plot == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "That's not a valid plot");
+            MessageManager.getInstance().send(player, ChatColor.RED + "这不是有效的地块");
             return;
         }
 
         player.getInventory().setItemInMainHand(new ItemBuilder(player, Material.STICK)
-            .setDisplayName(ChatColor.LIGHT_PURPLE + "Wand")
+            .setDisplayName(ChatColor.LIGHT_PURPLE + "魔杖")
             .addContext("plot", PlotDataType.getInstance(), plot)
             .setClickEvent(ClickEvent.FLOOR_CLICK)
             .build()
@@ -462,7 +462,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setgamemode")
-    @Description("Set the game mode of an arena")
+    @Description("设置竞技场的游戏模式")
     @CommandPermission("bg.setgamemode")
     @CommandCompletion("@arenas @arenamodes")
     public void onSetGameMode(CommandSender sender, Arena arena, ArenaMode arenaMode) {
@@ -474,7 +474,7 @@ public class CommandManager extends BaseCommand {
         arena.setMode(arenaMode);
 
         MessageManager.getInstance().send(sender, ChatColor.GREEN +
-            "Successfully changed game mode of arena " + arena.getName() + " to " +
+            "已将竞技场 " + arena.getName() + " 的游戏模式更改为 " +
             arenaMode.toString().toLowerCase(Locale.getDefault()));
     }
 
@@ -486,7 +486,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setlobby")
-    @Description("Set the lobby")
+    @Description("设置大厅")
     @CommandPermission("bg.setlobby")
     @CommandCompletion("@arenas")
     public void onSetLobby(Player player, Arena arena) {
@@ -524,7 +524,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setlobbytimer")
-    @Description("Change the lobby timer")
+    @Description("更改大厅计时器")
     @CommandPermission("bg.setlobbytimer")
     @CommandCompletion("@arenas @nothing")
     public void onSetLobbyTimer(CommandSender sender, Arena arena, int seconds) {
@@ -533,8 +533,8 @@ public class CommandManager extends BaseCommand {
         arenas.set(arena.getName() + ".lobby-timer", seconds);
         SettingsManager.getInstance().save();
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Lobby timer setting for arena '" +
-            arena.getName() + "' changed to '" + seconds + '\'');
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "竞技场 '" + arena.getName() +
+            "' 的大厅计时器已设为 " + seconds + " 秒");
     }
 
     /**
@@ -544,7 +544,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setmainspawn")
-    @Description("Set the main spawn")
+    @Description("设置主出生点")
     @CommandPermission("bg.setmainspawn")
     public void onSetMainSpawn(Player player) {
         YamlConfiguration arenas = SettingsManager.getInstance().getArenas();
@@ -583,7 +583,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setmatches")
-    @Description("Set the amount of matches to play")
+    @Description("设置比赛场数")
     @CommandPermission("bg.setmatches")
     @CommandCompletion("@arenas @nothing")
     public void onSetMatches(CommandSender sender, Arena arena, int matches) {
@@ -591,7 +591,7 @@ public class CommandManager extends BaseCommand {
 
         if (!arena.isEmpty()) {
             MessageManager.getInstance().send(sender, ChatColor.RED +
-                "The arena isn't empty, changing the matches now is likely to cause problems. Please wait until the arena is empty.");
+                "竞技场中还有玩家，此时更改比赛场数可能引发问题。请等竞技场空置后再修改。");
             return;
         }
 
@@ -600,7 +600,7 @@ public class CommandManager extends BaseCommand {
 
         arena.setMaxMatches(matches);
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Amount of matches changed!");
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "比赛场数已更改！");
     }
 
     /**
@@ -612,7 +612,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setmaxplayers")
-    @Description("Set the maximum amount of players in an arena")
+    @Description("设置竞技场的最大玩家数")
     @CommandPermission("bg.setmaxplayers")
     @CommandCompletion("@arenas @nothing")
     public void onSetMaxPlayers(CommandSender sender, Arena arena, int maxPlayers) {
@@ -621,19 +621,19 @@ public class CommandManager extends BaseCommand {
 
         if (arena.getMode() == ArenaMode.SOLO) {
             MessageManager.getInstance().send(sender,
-                ChatColor.RED + "You can only modify the maximum amount of players from arenas which are in team mode");
+                ChatColor.RED + "只能修改团队模式竞技场的最大玩家数");
             return;
         }
 
         if (arena.getPlots().isEmpty()) {
             MessageManager.getInstance().send(sender,
-                ChatColor.RED + "You first need to create plots before setting the max players");
+                ChatColor.RED + "你需要先创建地块才能设置最大玩家数");
             return;
         }
 
         if (maxPlayers % arena.getPlots().size() != 0) {
             MessageManager.getInstance().send(sender, ChatColor.RED +
-                "Your max players has to be a number divisible by " + arena.getPlots().size());
+                "你的最大玩家数必须是 " + arena.getPlots().size() + " 的整数倍");
             return;
         }
 
@@ -651,7 +651,7 @@ public class CommandManager extends BaseCommand {
 
         arena.setMaxPlayers(maxPlayers);
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Max players changed!");
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "最大玩家数已更改！");
     }
 
     /**
@@ -663,7 +663,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setminplayers")
-    @Description("Set the minimum amount of players")
+    @Description("设置最小玩家数")
     @CommandPermission("bg.setminplayers")
     @CommandCompletion("@arenas @nothing")
     public void onSetMinPlayers(CommandSender sender, Arena arena, int minPlayers) {
@@ -686,7 +686,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setspawn")
-    @Description("Set a new spawn")
+    @Description("设置新的出生点")
     @CommandPermission("bg.setspawn")
     @CommandCompletion("@arenas")
     public void onSetSpawn(Player player, Arena arena) {
@@ -733,7 +733,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("settimer")
-    @Description("Change the timer")
+    @Description("更改计时器")
     @CommandPermission("bg.settimer")
     @CommandCompletion("@arenas @nothing")
     public void onSetTimer(CommandSender sender, Arena arena, int seconds) {
@@ -742,8 +742,8 @@ public class CommandManager extends BaseCommand {
         arenas.set(arena.getName() + ".timer", seconds);
         SettingsManager.getInstance().save();
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Timer setting for arena '" +
-            arena.getName() + "' changed to '" + seconds + '\'');
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "竞技场 '" + arena.getName() +
+            "' 的计时器已设为 " + seconds + " 秒");
     }
 
     /**
@@ -755,20 +755,20 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setting")
-    @Description("Change a setting")
+    @Description("更改某项设置")
     @CommandPermission("bg.setting")
     public void onSetting(CommandSender sender, String path, @Split(" ") String[] args) {
         YamlConfiguration config = SettingsManager.getInstance().getConfig();
 
         if (!config.contains(path)) {
-            MessageManager.getInstance().send(sender, ChatColor.RED + "That setting doesn't exist");
+            MessageManager.getInstance().send(sender, ChatColor.RED + "该设置不存在");
             return;
         }
 
         if (config.isList(path)) {
             if (args.length < 2) {
                 MessageManager.getInstance().send(sender, ChatColor.RED +
-                    "Please specify if you want to add or remove this value and the value");
+                    "请指定要添加还是移除该项，并给出对应的值");
                 return;
             }
 
@@ -778,14 +778,14 @@ public class CommandManager extends BaseCommand {
                 list.add(args[1]);
                 config.set(path, list);
 
-                MessageManager.getInstance().send(sender, ChatColor.GREEN + "Value added to config");
+                MessageManager.getInstance().send(sender, ChatColor.GREEN + "已向配置添加值");
             } else if (args[0].equalsIgnoreCase("remove")) {
                 //remove the value
                 List<String> list = config.getStringList(path);
                 list.remove(args[1]);
                 config.set(path, list);
 
-                MessageManager.getInstance().send(sender, ChatColor.GREEN + "Value removed from config");
+                MessageManager.getInstance().send(sender, ChatColor.GREEN + "已从配置移除值");
             }
 
             SettingsManager.getInstance().save();
@@ -800,7 +800,7 @@ public class CommandManager extends BaseCommand {
                 config.set(path, Double.parseDouble(args[0]));
             } catch (NumberFormatException e) {
                 MessageManager.getInstance().send(sender, ChatColor.RED +
-                    "Value type isn't the same as in the config, it should be a double");
+                    "值的类型与配置中不一致，应为小数");
                 return;
             }
         } else if (config.isInt(path)) {
@@ -808,7 +808,7 @@ public class CommandManager extends BaseCommand {
                 config.set(path, Integer.parseInt(args[0]));
             } catch (NumberFormatException e) {
                 MessageManager.getInstance().send(sender, ChatColor.RED +
-                    "Value type isn't the same as in the config, it should be an integer");
+                    "值的类型与配置中不一致，应为整数");
                 return;
             }
         } else if (config.isLong(path)) {
@@ -816,18 +816,18 @@ public class CommandManager extends BaseCommand {
                 config.set(path, Long.parseLong(args[0]));
             } catch (NumberFormatException e) {
                 MessageManager.getInstance().send(sender, ChatColor.RED +
-                    "Value type isn't the same as in the config, it should be a long");
+                    "值的类型与配置中不一致，应为长整数");
                 return;
             }
         } else if (config.isString(path))
             config.set(path, args[0]);
         else {
             MessageManager.getInstance().send(sender, ChatColor.YELLOW +
-                "Unable to change setting with commands, please change this setting by hand");
+                "无法通过命令修改该设置，请手动修改");
             return;
         }
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Value changed in config");
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "已修改配置中的值");
         SettingsManager.getInstance().save();
     }
 
@@ -840,7 +840,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setvotetimer")
-    @Description("Change the vote timer")
+    @Description("更改投票计时器")
     @CommandPermission("bg.setvotetimer")
     @CommandCompletion("@arenas @nothing")
     public void onSetVoteTimer(CommandSender sender, Arena arena, int seconds) {
@@ -849,8 +849,8 @@ public class CommandManager extends BaseCommand {
         arenas.set(arena.getName() + ".vote-timer", seconds);
         SettingsManager.getInstance().save();
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Vote timer setting for arena '" +
-            arena.getName() + "' changed to '" + seconds + '\'');
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "竞技场 '" + arena.getName() +
+            "' 的投票计时器已设为 " + seconds + " 秒");
     }
 
     /**
@@ -862,7 +862,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("setwintimer")
-    @Description("Change the win timer")
+    @Description("更改结算计时器")
     @CommandPermission("bg.setwintimer")
     @CommandCompletion("@arenas @nothing")
     public void onSetWinTimer(CommandSender sender, Arena arena, int seconds) {
@@ -871,8 +871,8 @@ public class CommandManager extends BaseCommand {
         arenas.set(arena.getName() + ".win-timer", seconds);
         SettingsManager.getInstance().save();
 
-        MessageManager.getInstance().send(sender, ChatColor.GREEN + "Win timer setting for arena '" +
-            arena.getName() + "' changed to '" + seconds + '\'');
+        MessageManager.getInstance().send(sender, ChatColor.GREEN + "竞技场 '" + arena.getName() +
+            "' 的结算计时器已设为 " + seconds + " 秒");
     }
 
     /**
@@ -883,18 +883,18 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("spectate")
-    @Description("Spectate a player")
+    @Description("旁观一名玩家")
     @CommandPermission("bg.spectate")
     public void onSpectate(Player player, @Flags("other") Player toSpectate) {
         var arena = ArenaManager.getInstance().getArena(toSpectate);
 
         if (arena == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "Arena not found");
+            MessageManager.getInstance().send(player, ChatColor.RED + "未找到竞技场");
             return;
         }
 
         if (!(arena.getCurrentPhase() instanceof BuildingGamePhase)) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You can't spectate right now");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你现在不能旁观");
             return;
         }
 
@@ -905,12 +905,12 @@ public class CommandManager extends BaseCommand {
             .orElse(null);
 
         if (toSpectateGamePlayer == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "Couldn't find the player to spectate");
+            MessageManager.getInstance().send(player, ChatColor.RED + "未找到可旁观的玩家");
             return;
         }
 
         if (toSpectateGamePlayer.getGamePlayerType() == GamePlayerType.SPECTATOR) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You can't spectate a spectator");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你不能旁观旁观者");
             return;
         }
 
@@ -919,7 +919,7 @@ public class CommandManager extends BaseCommand {
             ArenaManager.getInstance().getArena(player).getPlot(player).getGamePlayer(player)
                 .getGamePlayerType() == GamePlayerType.PLAYER) {
             MessageManager.getInstance().send(player,
-                ChatColor.RED + "You can't spectate while you're in game");
+                ChatColor.RED + "游戏进行中不能旁观");
             return;
         }
 
@@ -941,8 +941,8 @@ public class CommandManager extends BaseCommand {
 
         arena.getPlot(toSpectateGamePlayer.getPlayer()).addSpectator(player, toSpectateGamePlayer);
 
-        MessageManager.getInstance().send(player, ChatColor.GREEN + "Now spectating " +
-            toSpectateGamePlayer.getPlayer().getName() + '!');
+        MessageManager.getInstance().send(player, ChatColor.GREEN + "正在旁观 " +
+            toSpectateGamePlayer.getPlayer().getName() + "！");
     }
 
     /**
@@ -952,7 +952,7 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("stats")
-    @Description("Show your stats")
+    @Description("查看你的统计数据")
     @CommandPermission("bg.stats")
     public void onStats(Player player) {
         YamlConfiguration messages = SettingsManager.getInstance().getMessages();
@@ -992,33 +992,33 @@ public class CommandManager extends BaseCommand {
      * @since 5.8.0
      */
     @Subcommand("vote")
-    @Description("Vote on someone's plot")
+    @Description("为某人的地块投票")
     @CommandPermission("bg.vote")
     @CommandCompletion("@range:1-10")
     public void onVote(Player player, int points) {
         YamlConfiguration messages = SettingsManager.getInstance().getMessages();
 
         if (points < 1 || points > 10) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "Points can only be between 1 and 10");
+            MessageManager.getInstance().send(player, ChatColor.RED + "分数只能在 1 到 10 之间");
             return;
         }
 
         var arena = ArenaManager.getInstance().getArena(player);
 
         if (arena == null) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You're not in an arena");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你不在竞技场中");
             return;
         }
 
         if (arena.getPlot(player).getGamePlayer(player).getGamePlayerType() == GamePlayerType.SPECTATOR) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "Spectators can't vote");
+            MessageManager.getInstance().send(player, ChatColor.RED + "旁观者不能投票");
             return;
         }
 
         GamePhase phase = arena.getCurrentPhase();
 
         if (!(phase instanceof VotingGamePhase)) {
-            MessageManager.getInstance().send(player, ChatColor.RED + "You can't vote at this moment");
+            MessageManager.getInstance().send(player, ChatColor.RED + "你现在不能投票");
             return;
         }
 

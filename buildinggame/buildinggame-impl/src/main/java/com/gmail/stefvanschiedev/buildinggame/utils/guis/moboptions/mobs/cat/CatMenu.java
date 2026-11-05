@@ -25,7 +25,7 @@ public class CatMenu extends ColorMenu {
         //appearance
         ItemStack appearance = new ItemStack(Material.PINK_BANNER);
         ItemMeta appearanceMeta = appearance.getItemMeta();
-        appearanceMeta.setDisplayName(ChatColor.GREEN + "Change the cat's appearance");
+        appearanceMeta.setDisplayName(ChatColor.GREEN + "更改猫的外观");
         appearance.setItemMeta(appearanceMeta);
 
         pane.insertItem(new GuiItem(appearance, event -> {

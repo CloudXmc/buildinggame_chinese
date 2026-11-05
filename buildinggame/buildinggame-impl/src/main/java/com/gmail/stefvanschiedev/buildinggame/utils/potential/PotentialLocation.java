@@ -81,7 +81,7 @@ public class PotentialLocation {
 
         if (world == null) {
             entity.sendMessage(ChatColor.RED +
-                "Unable to teleport you because the world can't be found. Is it perhaps unloaded?");
+                "无法传送你，因为找不到该世界（可能尚未加载）。");
             return;
         }
 

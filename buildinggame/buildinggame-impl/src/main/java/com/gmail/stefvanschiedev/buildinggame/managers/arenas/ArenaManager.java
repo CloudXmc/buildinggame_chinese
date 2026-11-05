@@ -67,7 +67,7 @@ public final class ArenaManager {
 				this.arenas.add(a);
 
 				if (SettingsManager.getInstance().getConfig().getBoolean("debug"))
-					Main.getInstance().getLogger().info("Loaded arena " + arena);
+					Main.getInstance().getLogger().info("已加载竞技场 " + arena);
 			}
 		}
 	}

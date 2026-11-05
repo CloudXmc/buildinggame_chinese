@@ -28,7 +28,7 @@ public class TropicalFishMenu extends RemoveMenu {
         //body color
         var bodyColor = new ItemStack(Material.RED_WOOL);
         var bodyColorMeta = bodyColor.getItemMeta();
-        bodyColorMeta.setDisplayName(ChatColor.GREEN + "Set the body color");
+        bodyColorMeta.setDisplayName(ChatColor.GREEN + "设置身体颜色");
         bodyColor.setItemMeta(bodyColorMeta);
 
         pane.insertItem(new GuiItem(bodyColor, event -> {
@@ -41,7 +41,7 @@ public class TropicalFishMenu extends RemoveMenu {
         var pattern = new ItemStack(Material.WHITE_BANNER);
         var patternMeta = (BannerMeta) pattern.getItemMeta();
         patternMeta.addPattern(new Pattern(DyeColor.RED, PatternType.SQUARE_TOP_LEFT));
-        patternMeta.setDisplayName(ChatColor.GREEN + "Set the pattern");
+        patternMeta.setDisplayName(ChatColor.GREEN + "设置图案");
         pattern.setItemMeta(patternMeta);
 
         pane.insertItem(new GuiItem(pattern, event -> {
@@ -53,7 +53,7 @@ public class TropicalFishMenu extends RemoveMenu {
         //pattern color
         var patternColor = new ItemStack(Material.LIGHT_GRAY_DYE);
         var patternColorMeta = patternColor.getItemMeta();
-        patternColorMeta.setDisplayName(ChatColor.GREEN + "Set the pattern color");
+        patternColorMeta.setDisplayName(ChatColor.GREEN + "设置图案颜色");
         patternColor.setItemMeta(patternColorMeta);
 
         pane.insertItem(new GuiItem(patternColor, event -> {

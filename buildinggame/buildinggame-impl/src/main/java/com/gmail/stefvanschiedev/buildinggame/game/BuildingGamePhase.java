@@ -95,7 +95,7 @@ public class BuildingGamePhase extends TimedGamePhase<Arena> implements JoinObse
                 player.setGameMode(GameMode.CREATIVE);
 
                 if (scoreboardManager == null) {
-                    Main.getInstance().getLogger().warning("Unable to remove scoreboard");
+                    Main.getInstance().getLogger().warning("无法移除记分板");
                 } else {
                     player.setScoreboard(scoreboardManager.getNewScoreboard());
                 }
@@ -172,7 +172,7 @@ public class BuildingGamePhase extends TimedGamePhase<Arena> implements JoinObse
         long seconds = getRemainingTime().toSeconds();
 
         if (seconds > Integer.MAX_VALUE) {
-            Main.getInstance().getLogger().warning("Unable to display level, too much time left");
+            Main.getInstance().getLogger().warning("时间未到，无法显示等级");
             return;
         }
 
@@ -227,7 +227,7 @@ public class BuildingGamePhase extends TimedGamePhase<Arena> implements JoinObse
         long seconds = getRemainingTime().getSeconds();
 
         if (seconds > Integer.MAX_VALUE) {
-            Main.getInstance().getLogger().warning("Unable to dispatch commands, too much time left");
+            Main.getInstance().getLogger().warning("时间未到，无法执行命令");
         }
 
         for (String command : this.commands.getOrDefault((int) seconds, Collections.emptySet())) {
@@ -323,7 +323,7 @@ public class BuildingGamePhase extends TimedGamePhase<Arena> implements JoinObse
                 PotentialLocation location = plot.getLocation();
 
                 if (location == null) {
-                    throw new IllegalStateException("Plot has no location");
+                    throw new IllegalStateException("地块没有位置");
                 }
 
                 location.teleport(gamePlayer.getPlayer());
@@ -420,7 +420,7 @@ public class BuildingGamePhase extends TimedGamePhase<Arena> implements JoinObse
         Plot plot = this.transitionSystem.getPlot(player);
 
         if (plot == null) {
-            throw new IllegalStateException("Joined player does not have plot");
+            throw new IllegalStateException("加入的玩家没有地块");
         }
 
         plot.getBuildScoreboard().show(player);
@@ -454,7 +454,7 @@ public class BuildingGamePhase extends TimedGamePhase<Arena> implements JoinObse
                 BarColor.valueOf(config.getString("bossbar.color", "").toUpperCase(Locale.getDefault())),
                 BarStyle.valueOf(config.getString("bossbar.style", "").toUpperCase(Locale.getDefault())));
         } catch (IllegalArgumentException e) {
-            Main.getInstance().getLogger().warning("Boss bar couldn't be loaded, check the data and try again.");
+            Main.getInstance().getLogger().warning("Boss 栏加载失败，请检查数据后重试。");
         }
     }
 

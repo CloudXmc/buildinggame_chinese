@@ -25,7 +25,7 @@ public class MooshroomMenu extends BabyMenu {
 
         ItemStack type = new ItemStack(Material.ORANGE_CONCRETE_POWDER);
         ItemMeta typeMeta = type.getItemMeta();
-        typeMeta.setDisplayName(ChatColor.GREEN + "Change the mooshroom's type");
+        typeMeta.setDisplayName(ChatColor.GREEN + "更改哞菇类型");
         type.setItemMeta(typeMeta);
 
         pane.insertItem(new GuiItem(type, event -> {

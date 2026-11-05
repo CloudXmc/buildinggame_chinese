@@ -226,13 +226,13 @@ public final class BungeeCordHandler {
      */
     private BungeeCordHandler() {
         client.onConnect(() -> {
-            Main.getInstance().getLogger().info("This server has connected to BungeeCord.");
+            Main.getInstance().getLogger().info("本服务器已连接到 BungeeCord。");
 
             client.readStringAlways(this::onMessageReceived);
         });
 
         client.postDisconnect(() -> {
-            Main.getInstance().getLogger().info("This server has been disconnected from BungeeCord.");
+            Main.getInstance().getLogger().info("本服务器已与 BungeeCord 断开连接。");
 
             connectClient();
         });

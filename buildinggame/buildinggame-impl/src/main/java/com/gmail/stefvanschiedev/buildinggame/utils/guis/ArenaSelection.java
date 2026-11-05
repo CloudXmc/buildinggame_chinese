@@ -26,7 +26,7 @@ public class ArenaSelection extends ChestGui {
      * Constructs a new ArenaSelection
      */
 	public ArenaSelection() {
-		super(6, ChatColor.GREEN + "Select an arena");
+		super(6, ChatColor.GREEN + "选择竞技场");
 	}
 
 	/**

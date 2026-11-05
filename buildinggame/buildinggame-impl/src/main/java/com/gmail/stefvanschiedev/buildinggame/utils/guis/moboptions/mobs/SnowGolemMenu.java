@@ -23,7 +23,7 @@ public class SnowGolemMenu extends RemoveMenu {
 
         var pumpkin = new ItemStack(Material.PUMPKIN);
         var pumpkinMeta = pumpkin.getItemMeta();
-        pumpkinMeta.setDisplayName(ChatColor.GREEN + "Change whether this snow golem has a pumpkin");
+        pumpkinMeta.setDisplayName(ChatColor.GREEN + "更改此雪傀儡是否戴着南瓜");
         pumpkin.setItemMeta(pumpkinMeta);
 
         pane.insertItem(new GuiItem(pumpkin, event -> {

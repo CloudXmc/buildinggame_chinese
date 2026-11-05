@@ -57,7 +57,7 @@ public class ClickLeaveSign implements Listener {
             Arena arena = ArenaManager.getInstance().getArena(player);
 
             if (arena == null) {
-                MessageManager.getInstance().send(player, ChatColor.RED + "You're not in an arena");
+                MessageManager.getInstance().send(player, ChatColor.RED + "你不在竞技场中");
                 return;
             }
 

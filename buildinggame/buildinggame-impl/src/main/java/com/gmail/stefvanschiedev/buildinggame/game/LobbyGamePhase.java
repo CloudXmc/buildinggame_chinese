@@ -117,7 +117,7 @@ public class LobbyGamePhase extends TimedGamePhase<Arena> implements JoinObserve
         long seconds = getRemainingTime().toSeconds();
 
         if (seconds > Integer.MAX_VALUE) {
-            Main.getInstance().getLogger().warning("Unable to display level, too much time left");
+            Main.getInstance().getLogger().warning("时间未到，无法显示等级");
             return;
         }
 
@@ -138,7 +138,7 @@ public class LobbyGamePhase extends TimedGamePhase<Arena> implements JoinObserve
         long seconds = getRemainingTime().getSeconds();
 
         if (seconds > Integer.MAX_VALUE) {
-            Main.getInstance().getLogger().warning("Unable to dispatch commands, too much time left");
+            Main.getInstance().getLogger().warning("时间未到，无法执行命令");
         }
 
         for (String command : this.commands.getOrDefault((int) seconds, Collections.emptySet())) {
@@ -303,8 +303,8 @@ public class LobbyGamePhase extends TimedGamePhase<Arena> implements JoinObserve
 
             if (item != null && item.getType() != Material.AIR) {
                 Main.getInstance().getLogger().warning(
-                    "Subject gui item overrides a different item. This other item will not be visible. Please " +
-                        "change the slots in the config.yml file to fix this."
+                    "主题菜单物品覆盖了另一个物品，该物品将不可见。请" +
+                        "修改 config.yml 中的槽位以解决此问题。"
                 );
             }
 

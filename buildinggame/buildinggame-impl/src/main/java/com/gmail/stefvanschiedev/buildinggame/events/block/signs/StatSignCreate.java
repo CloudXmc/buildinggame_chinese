@@ -48,7 +48,7 @@ public class StatSignCreate implements Listener {
 			type = StatType.valueOf(lineTwo.toUpperCase(Locale.getDefault()));
 		} catch (IllegalArgumentException ex) {
 			MessageManager.getInstance().send(player,
-                    ChatColor.RED + "'" + lineTwo + "' isn't a valid statistic");
+                    ChatColor.RED + "'" + lineTwo + " 不是有效的统计类型");
 			return;
 		}
 		
@@ -58,7 +58,7 @@ public class StatSignCreate implements Listener {
 		try {
 			number = Integer.parseInt(lineThree);
 		} catch (NumberFormatException ex) {
-			MessageManager.getInstance().send(player, ChatColor.RED + "'" + lineThree + "' isn't a valid number");
+			MessageManager.getInstance().send(player, ChatColor.RED + "'" + lineThree + " 不是有效的数字");
 			return;
 		}
 		

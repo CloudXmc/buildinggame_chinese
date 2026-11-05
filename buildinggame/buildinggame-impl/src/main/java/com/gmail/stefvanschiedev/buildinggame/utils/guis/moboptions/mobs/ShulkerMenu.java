@@ -25,7 +25,7 @@ public class ShulkerMenu extends RemoveMenu {
         //color
         var color = new ItemStack(Material.ORANGE_CONCRETE_POWDER);
         var colorMeta = color.getItemMeta();
-        colorMeta.setDisplayName(ChatColor.GREEN + "Change the color of the entity");
+        colorMeta.setDisplayName(ChatColor.GREEN + "更改实体颜色");
         color.setItemMeta(colorMeta);
 
         pane.insertItem(new GuiItem(color, event -> {

@@ -67,7 +67,7 @@ public final class StatManager {
 			}
 
 			database = null;
-			Main.getInstance().getLogger().warning("Database usage failed; returning to flat-file storage");
+			Main.getInstance().getLogger().warning("数据库使用失败，已回退到文件存储");
 		}
 		
 		stats.getKeys(false).forEach(uuid -> {

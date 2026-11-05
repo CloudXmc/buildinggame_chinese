@@ -22,7 +22,7 @@ public class BabyMenu extends RemoveMenu {
 
         var baby = new ItemStack(Material.EGG);
         var babyMeta = baby.getItemMeta();
-        babyMeta.setDisplayName(ChatColor.GREEN + "Change to baby/adult");
+        babyMeta.setDisplayName(ChatColor.GREEN + "切换幼年/成年");
         baby.setItemMeta(babyMeta);
 
         pane.insertItem(new GuiItem(baby, event -> {
@@ -47,7 +47,7 @@ public class BabyMenu extends RemoveMenu {
 
                 piglin.setBaby(!piglin.isBaby());
             } else {
-                throw new IllegalArgumentException("Unable to convert entity from baby to adult or vice versa");
+                throw new IllegalArgumentException("无法在幼年与成年形态之间转换该实体");
             }
 
             event.setCancelled(true);

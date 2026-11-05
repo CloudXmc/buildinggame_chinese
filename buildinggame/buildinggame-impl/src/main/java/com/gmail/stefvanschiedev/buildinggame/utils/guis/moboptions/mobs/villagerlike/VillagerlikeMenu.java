@@ -24,7 +24,7 @@ public class VillagerlikeMenu extends BabyMenu {
         //profession
         var profession = new ItemStack(Material.EMERALD);
         var professionMeta = profession.getItemMeta();
-        professionMeta.setDisplayName(ChatColor.GREEN + "Change the profession");
+        professionMeta.setDisplayName(ChatColor.GREEN + "更改职业");
         profession.setItemMeta(professionMeta);
 
         pane.insertItem(new GuiItem(profession, event -> {
@@ -36,7 +36,7 @@ public class VillagerlikeMenu extends BabyMenu {
         //skin type
         var skinType = new ItemStack(Material.OAK_SAPLING);
         var skinTypeMeta = skinType.getItemMeta();
-        skinTypeMeta.setDisplayName(ChatColor.GREEN + "Change the skin type");
+        skinTypeMeta.setDisplayName(ChatColor.GREEN + "更改皮肤类型");
         skinType.setItemMeta(skinTypeMeta);
 
         pane.insertItem(new GuiItem(skinType, event -> {
@@ -48,7 +48,7 @@ public class VillagerlikeMenu extends BabyMenu {
         //level
         var level = new ItemStack(Material.EXPERIENCE_BOTTLE);
         var levelMeta = level.getItemMeta();
-        levelMeta.setDisplayName(ChatColor.GREEN + "Change the level");
+        levelMeta.setDisplayName(ChatColor.GREEN + "更改等级");
         level.setItemMeta(levelMeta);
 
         pane.insertItem(new GuiItem(level, event -> {

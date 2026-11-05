@@ -26,7 +26,7 @@ public class BeeMenu extends BabyMenu {
         //angry
         ItemStack angry = new ItemStack(Material.DIAMOND_SWORD);
         ItemMeta angryMeta = angry.getItemMeta();
-        angryMeta.setDisplayName(ChatColor.GREEN + "Change whether this bee is angry");
+        angryMeta.setDisplayName(ChatColor.GREEN + "更改此蜜蜂是否愤怒");
         angry.setItemMeta(angryMeta);
 
         pane.insertItem(new GuiItem(angry, event -> {
@@ -38,7 +38,7 @@ public class BeeMenu extends BabyMenu {
         //pollen
         ItemStack pollen = new ItemStack(Material.AZURE_BLUET);
         ItemMeta pollenMeta = pollen.getItemMeta();
-        pollenMeta.setDisplayName(ChatColor.GREEN + "Change whether this bee has pollen on it");
+        pollenMeta.setDisplayName(ChatColor.GREEN + "更改此蜜蜂是否带着花粉");
         pollen.setItemMeta(pollenMeta);
 
         pane.insertItem(new GuiItem(pollen, event -> {
@@ -50,7 +50,7 @@ public class BeeMenu extends BabyMenu {
         //stinger
         ItemStack stinger = new ItemStack(Material.STICK);
         ItemMeta stingerMeta = stinger.getItemMeta();
-        stingerMeta.setDisplayName(ChatColor.GREEN + "Change whether this bee has a stinger");
+        stingerMeta.setDisplayName(ChatColor.GREEN + "更改此蜜蜂是否有螫针");
         stinger.setItemMeta(stingerMeta);
 
         pane.insertItem(new GuiItem(stinger, event -> {

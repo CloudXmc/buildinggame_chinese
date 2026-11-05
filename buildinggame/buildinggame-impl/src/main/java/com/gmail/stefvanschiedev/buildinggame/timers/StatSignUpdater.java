@@ -69,8 +69,8 @@ public class StatSignUpdater extends BukkitRunnable {
 
             } else {
                 lines[0] = "";
-                lines[1] = ChatColor.RED + "Stat type";
-                lines[2] = ChatColor.RED + "is disabled";
+                lines[1] = ChatColor.RED + "统计类型";
+                lines[2] = ChatColor.RED + "已禁用";
                 lines[3] = "";
             }
 

@@ -50,7 +50,7 @@ public class Main extends JavaPlugin {
 		//connects the client to the server
 		BungeeCordHandler.getInstance();
 
-		getLogger().info("BuildingGame - BungeeCord Addon has been enabled");
+		getLogger().info("BuildingGame - BungeeCord 附加组件已启用");
 	}
 
     /**
@@ -62,7 +62,7 @@ public class Main extends JavaPlugin {
 	public void onDisable() {
 		instance = null;
 		
-		getLogger().info("BuildingGame - BungeeCord Addon has been disabled");
+		getLogger().info("BuildingGame - BungeeCord 附加组件已禁用");
 	}
 
     /**

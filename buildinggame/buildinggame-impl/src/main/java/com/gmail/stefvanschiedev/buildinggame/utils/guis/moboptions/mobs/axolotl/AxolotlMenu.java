@@ -24,7 +24,7 @@ public class AxolotlMenu extends BabyMenu {
         //variant
         ItemStack variant = new ItemStack(Material.AXOLOTL_BUCKET);
         ItemMeta variantMeta = variant.getItemMeta();
-        variantMeta.setDisplayName(ChatColor.GREEN + "Change the axolotl's variant");
+        variantMeta.setDisplayName(ChatColor.GREEN + "更改美西螈变种");
         variant.setItemMeta(variantMeta);
 
         pane.insertItem(new GuiItem(variant, event -> {

@@ -24,7 +24,7 @@ public class SizeMenu extends RemoveMenu {
         //size
         var size = new ItemStack(Material.RED_MUSHROOM);
         var sizeMeta = size.getItemMeta();
-        sizeMeta.setDisplayName(ChatColor.GREEN + "Change size");
+        sizeMeta.setDisplayName(ChatColor.GREEN + "更改体型");
         size.setItemMeta(sizeMeta);
 
         pane.insertItem(new GuiItem(size, event -> {
