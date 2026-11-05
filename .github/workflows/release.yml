@@ -1,0 +1,61 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - name: Seed Spigot/Paper NMS artifacts
+        run: python3 ci/seed_spigot.py
+
+      - name: Build main plugin
+        working-directory: buildinggame
+        run: mvn -B -fae -DskipTests -s ../ci/mvn-settings.xml package
+
+      - name: Install main plugin (供 addon / bungeecord 依赖)
+        working-directory: buildinggame
+        run: mvn -B -q -DskipTests -s ../ci/mvn-settings.xml install
+
+      - name: Build addon & bungeecord
+        run: |
+          (cd addon && mvn -B -DskipTests -s ../ci/mvn-settings.xml package)
+          (cd bungeecord && mvn -B -DskipTests -s ../ci/mvn-settings.xml package)
+
+      - name: Collect artifacts
+        run: |
+          mkdir -p dist
+          find buildinggame/buildinggame-impl/target addon/target bungeecord/target \
+            -name '*.jar' ! -name 'original-*' ! -name '*-remapped*' ! -name '*-javadoc*' \
+            -exec cp {} dist/ \;
+          ls -l dist/
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: BuildingGame-zhCN
+          path: dist/*.jar
+
+      - name: GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: RELEASE_NOTES.md
+          generate_release_notes: true
+          files: dist/*.jar

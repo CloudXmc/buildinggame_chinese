@@ -1,37 +1,28 @@
-## Goal
+## 目标
 
-We (the community) highly encourage others to give feedback on the project, share opinions, have discussions and help improve the project.
-To make this an enjoyable experience for everyone there needs to be a set of rules that are enforced to create a healthy workspace, where we
-can all enjoy our time. The rules and standards apply to everyone who contributes to this project (issues, pull requests, etc.) regardless
-of age, ethnicity, religion, role/status, gender identity/expression, nationality, preferences, race, sexual identity/orientation,
-experience, size or personal appearance.
+我们（社区）非常欢迎大家为项目提供反馈、分享观点、参与讨论，一起让项目变得更好。
+为了让每个人都能在这里获得愉快的体验，需要一套共同遵守的规则来维护健康的环境。以下规则与标准适用于所有为本项目做出贡献的人（issue、Pull Request 等），无论其年龄、种族、宗教、角色/身份、性别认同/表达、国籍、偏好、性取向、经验、体型或外貌如何。
 
-## Rules and Standards
+## 规则与标准
 
-* Be welcoming to new users and help them learn about this project if needed
-* Keep conversations on topic: if you think your reply isn't on topic, please refrain from posting and instead create a new issue/pull request
-* Use swearing in moderation and don't target swear words at other users
-* All users are equal regardless of age, ethnicity, religion, role/status, gender identity/expression, nationality, preferences, race, sexual identity/orientation, experience, size or personal appearance.
-* Don't harass others based on their English skills. Correcting them is allowed and encouraged, but should be done in a civil manner
-* All posts should be made in English, or at the very least an English translation should be provided.
-* Do not spread hate towards other (similar) projects/communties
-* Remind others of the rules and standards when needed
-* Don't publish others private information (such as passwords, addresses, etc.) without explicit permission
+* 欢迎新用户，必要时帮助他们了解本项目
+* 讨论请紧扣主题：如果你觉得自己的回复偏离了主题，请克制发言，另开一个 issue 或 Pull Request
+* 可以适度使用粗口，但不要用粗口攻击他人
+* 所有用户一律平等，无论其年龄、种族、宗教、角色/身份、性别认同/表达、国籍、偏好、性取向、经验、体型或外貌如何
+* 不要因为他人的英语水平而攻击对方；指正错误是被允许且受鼓励的，但请保持礼貌
+* 所有发言请使用英语，或至少附上英文翻译
+* 不要对其他（类似的）项目或社区传播敌意
+* 必要时请提醒他人遵守规则与标准
+* 未经明确许可，不要公开他人的隐私信息（如密码、住址等）
 
-## Enforcement
+## 执行
 
-(Continuous) cases of users breaking the rules or not following the standards should be reported to the author of the project or
-any maintainers. You can get in contact by sending a private message on either DevBukkit (stefvanschie) or SpigotMC (Stef), or if
-preferred by mailing to stefvanschiedev@gmail.com. You can also report to these accounts when the author or any maintainer is breaking the
-rules/standards.
+对于（持续）违反规则或不遵守标准的行为，请向项目作者或任意维护者举报。你可以通过 DevBukkit（stefvanschie）或 SpigotMC（Stef）发送私信联系，也可以发送邮件至 stefvanschiedev@gmail.com。如果违规者是作者或维护者本人，同样可以向这些账号举报。
 
-## Responsibility
+## 责任
 
-The author and maintainers try to enforce an enjoyable and healthy workspace for every user. They have the final say and can remove and edit
-any contributions. If you think the actions that were taken are incorrect, you may report this behaviour by contacting anyone as described in the
-enforcement section.
+作者与维护者会尽力为每位用户维护一个愉快、健康的环境。他们拥有最终决定权，可以删除或编辑任何投稿内容。如果你认为相关处理不妥，可以按「执行」一节所述的方式联系任何人进行反馈。
 
 ---
 
-Changes may be made to this document, so please look if something has changed every once in a while. If you think any changes are necessary,
-please let us know.
+本文件内容可能会不时更新，请偶尔查看是否有变动。如果你认为有必要修改，请告诉我们。

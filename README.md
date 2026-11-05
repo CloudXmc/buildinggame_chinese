@@ -133,8 +133,9 @@ java -jar BuildTools.jar --rev 26.2 --remapped --disable-java-check
 mvn clean package
 ```
 
-> 汉化版已在 **JDK 25 + Maven 3.9** 下完整编译通过（16 个模块全部 SUCCESS），产物位于 `dist/`。
-> 另有一条不需要 BuildTools 的捷径：从 CodeMC 镜像拉取 `remapped-obf` jar 与 Mojang 映射表，用 SpecialSource 自行正向重映射后装入本地仓库（详见开发笔记）。
+> 汉化版已在 **JDK 25 + Maven 3.9** 下完整编译通过（16 个模块全部 SUCCESS）。
+>
+> 提示：1.20.5 ~ 26.2 的 Spigot NMS 依赖官方不公开发布，完整构建有两种方式：其一，用上方 BuildTools 流程预编译各版本 Spigot；其二，从 CodeMC 镜像获取 `remapped-obf` jar 与 Mojang 映射表，用 SpecialSource 正向重映射后装入本地 Maven 仓库（本仓库 CI 即采用此方案）。
 
 ## 许可
 
