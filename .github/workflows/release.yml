@@ -39,11 +39,16 @@ jobs:
           (cd bungeecord && mvn -B -DskipTests -s ../ci/mvn-settings.xml package)
 
       - name: Collect artifacts
+        env:
+          VERSION: 14.3.0
         run: |
           mkdir -p dist
           find buildinggame/buildinggame-impl/target addon/target bungeecord/target \
             -name '*.jar' ! -name 'original-*' ! -name '*-remapped*' ! -name '*-javadoc*' \
             -exec cp {} dist/ \;
+          mv dist/buildinggame-impl-*.jar dist/BuildingGame-$VERSION-zhCN.jar
+          mv dist/buildinggame-addon-*.jar dist/BuildingGame-Addon-$VERSION-zhCN.jar
+          mv dist/buildinggame-bungeecord-*.jar dist/BuildingGame-BungeeCord-$VERSION-zhCN.jar
           ls -l dist/
 
       - name: Upload artifacts
