@@ -2,7 +2,7 @@
 
 围绕随机主题限时搭建、再互相打分的竞技小游戏：先投票选出主题 → 限时建造 → 逐一参观所有人的作品并打分 → 分数最高者获胜。
 
-> 详细配置文档见官方 [Wiki](https://github.com/stefvanschie/buildinggame/wiki)（英文）。
+> 详细配置文档见官方 https://github.com/CloudXmc/buildinggame_chinese/wiki
 
 > **简体中文汉化版** — 本仓库的全面汉化由 **Lzasn** 完成。
 > 原始项目：<https://github.com/stefvanschie/buildinggame>，许可证 **Unlicense**（公有领域，可自由修改与再分发）。
